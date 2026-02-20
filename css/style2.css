@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+   --muted:#94a3b8;
+    --orange:#ffa500;
+    --glass: rgba(255,255,255,0.06);
+}
+
+*{
+    font-family: "nunito" , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border:none ;
+    text-decoration: none;
+    transition: all .2s linear;
+    background:linear-gradient(180deg,#071029 0%, #071b2b 100%);
+    color: #fff;
+
+}
+
+.hero{
+    color: #fff;
+    margin: 28px auto;
+    padding: 18px;
+    
+}
+.hero  a.btn-secondary{
+    /*display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: var(--orange);
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s;*/
+    display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: var(--orange);
+  color: #fff;
+  font-size: 1.5rem;
+
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero a.btn-secondary:hover{
+    background: #e55d00;
+}
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.packages .box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+ 
+  max-width: 30px;
+  margin: 0 auto;
+  flex: 1  1  30rem;
+    border-radius: .5rem;
+    padding:1rem ;
+    text-align: center;
+    transition:0.3s;
+}
+.packages .box {
+    flex: 1 1 30rem;
+    border-radius: .5rem ;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    max-width: 30rem;
+}
+.packages .box:hover{
+    transform: scale(1.03);
+    box-shadow: 0 1rem 2rem #fff;
+}
+.packages .box .card img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+.packages .box .card .meta{
+    padding: 0.7rem;
+    font-size: 1.2rem;
+}
+.packages .price-row .price{
+    font-size: 2rem;
+    padding-top: .1rem ;
+}
+.packages .price-row .btn{
+    display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: var(--orange);
+  color: #fff;
+  font-size: 1.5rem;
+
+  text-decoration: none;
+  transition: 0.3s;
+}
+.packages .price-row .btn:hover{
+    background:  #e55d00;
+}
+.packages a{
+    text-align: center;
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--orange);
+    border-top: .1rem solid rgba(255, 255,255, 0.2);
+    
+}
+.packages a:hover{
+    
+    box-shadow: 0 1rem 2rem var(--orange)
+}
