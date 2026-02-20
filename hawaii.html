@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawaii Travel · book your paradise</title>
+  <!-- Google Fonts & simple icon library (Font Awesome via CDN for clean icons) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ----------------------------------------------
+    🌺 CSS variables – tropical palette & modern defaults
+    ------------------------------------------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --deep-blue: #ffa500;        /* ocean depth */
+      --turquoise: #ffa500;         /* lagoon */
+      --sunshine: #f9c74f;          /* golden hour */
+      --white-soft: #f8fafc;        /* foam */
+      --white-pure: #383b3e;
+      --gray-mist: #383b3e;
+      --text-dark: #ffffff;
+      --text-soft: white;
+      --shadow-card: 0 12px 28px -8px rgba(0, 40, 60, 0.15);
+      --shadow-hover: 0 20px 32px -10px rgba(0, 80, 100, 0.25);
+      --radius-card: 1.5rem;
+      --radius-btn: 40px;
+      --transition: all 0.2s ease;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--white-soft);
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+
+    /* reusable container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ----------------------------------------------
+    🏝️ header / navbar
+    ------------------------------------------------ */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: var(--white-pure);
+      box-shadow: 0 4px 16px rgba(0,30,40,0.05);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--deep-blue) 20%, var(--turquoise) 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      font-weight: 500;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--text-soft);
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+
+    .nav-menu a:hover {
+      color: var(--turquoise);
+    }
+
+    .booking-btn {
+      background: var(--turquoise);
+      color: white !important;
+      padding: 0.6rem 1.8rem;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      box-shadow: 0 8px 18px -6px rgba(43, 156, 156, 0.4);
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+
+    .booking-btn:hover {
+      background: #1f7a7a;
+      transform: scale(1.02);
+    }
+
+    /* ----------------------------------------------
+    🌊 hero section
+    ------------------------------------------------ */
+    .hero {
+      background: linear-gradient(rgba(20, 60, 100, 0.25), rgba(10, 40, 60, 0.35)),
+                  url('image/hawaii.jpg') center/cover no-repeat;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      padding: 3rem 1.5rem;
+      border-bottom-left-radius: 3rem;
+      border-bottom-right-radius: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      backdrop-filter: blur(2px);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 700;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.2);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .search-bar {
+      display: flex;
+      background: white;
+      padding: 0.5rem;
+      border-radius: 60px;
+      box-shadow: var(--shadow-card);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .search-bar input, .search-bar select {
+      border: none;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      background: transparent;
+      outline: none;
+      color: var(--text-dark);
+      flex: 1 1 160px;
+      border-radius: 40px;
+    }
+
+    .search-bar select {
+      cursor: pointer;
+      background-color: transparent;
+    }
+
+    .search-btn {
+      background: var(--sunshine);
+      border: none;
+      padding: 0.8rem 2.2rem;
+      border-radius: 40px;
+      font-weight: 700;
+      color: var(--deep-blue);
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 8px 16px -8px #e6b02e;
+      font-size: 1rem;
+    }
+
+    .search-btn:hover {
+      background: #f5b62e;
+      transform: scale(1.02);
+    }
+
+    /* section titles */
+    .section-title {
+      font-size: 2.3rem;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+      color: var(--deep-blue);
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 4px;
+      background: var(--sunshine);
+      border-radius: 4px;
+      margin-top: 0.4rem;
+    }
+
+    /* cards grid base */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    /* popular destination card */
+    .dest-card {
+      background: blanchedalmond;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+    }
+    .dest-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .dest-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .dest-info {
+      padding: 1.5rem 1.2rem 1.2rem;
+    }
+    .dest-info h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .dest-price {
+      color: var(--turquoise);
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 0.5rem 0 0.3rem;
+    }
+    .rating {
+      color: #f5b342;
+      letter-spacing: 2px;
+    }
+
+    /* hotel cards */
+    .hotel-card {
+      background:blanchedalmond;
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    .hotel-card img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .hotel-body {
+      padding: 1.5rem;
+    }
+    .hotel-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .stars {
+      color: var(--sunshine);
+      margin: 0.4rem 0;
+    }
+    .price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--turquoise);
+    }
+    .price small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--text-soft);
+    }
+    .book-now {
+      background: var(--turquoise);
+      border: none;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 1.2rem;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 6px 12px rgba(43,156,156,0.3);
+    }
+    .book-now:hover {
+      background: #1f7a7a;
+    }
+
+    /* tour package cards */
+    .tour-card {
+      background: var(--white-pure);
+      border-radius: var(--radius-card);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      text-align: center;
+    }
+    .tour-card:hover {
+      transform: scale(1.02);
+    }
+    .tour-icon {
+      font-size: 2.8rem;
+      color: var(--turquoise);
+      margin-bottom: 1rem;
+    }
+    .tour-duration {
+      display: inline-block;
+      background: #eef7f7;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      color: var(--deep-blue);
+      font-size: 0.9rem;
+      margin: 1rem 0 0.5rem;
+      font-weight: 500;
+    }
+    .tour-price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--deep-blue);
+    }
+
+    /* why choose us (icons + flex) */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 3rem;
+    }
+    .feature-item {
+      text-align: center;
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 2rem;
+      box-shadow: var(--shadow-card);
+    }
+    .feature-item i {
+      font-size: 2.8rem;
+      color: var(--sunshine);
+      background: #fff5dd;
+      padding: 1rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .feature-item h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    /* testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .testimonial-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 2rem 1.5rem;
+      box-shadow: var(--shadow-card);
+    }
+    .testimonial-card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--sunshine);
+      margin-bottom: 1rem;
+    }
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .testimonial-rating {
+      color: #f5b342;
+      margin: 0.3rem 0 0.8rem;
+    }
+
+    /* newsletter */
+    .newsletter {
+      background: linear-gradient(120deg, #e0f2f2, #d4eaf0);
+      border-radius: 3rem;
+      padding: 3.5rem 2rem;
+      text-align: center;
+      margin: 4rem 0;
+    }
+    .newsletter h2 {
+      font-size: 2.2rem;
+      color: var(--deep-blue);
+    }
+    .newsletter-flex {
+      display: flex;
+      max-width: 600px;
+      margin: 2rem auto 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .newsletter-flex input {
+      flex: 3 1 260px;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 60px;
+      font-size: 1rem;
+      outline: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+    .newsletter-flex button {
+      flex: 1 1 auto;
+      background: var(--turquoise);
+      border: none;
+      padding: 1rem 2.2rem;
+      border-radius: 60px;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .newsletter-flex button:hover {
+      background: #1f7a7a;
+    }
+
+    /* footer */
+    .footer {
+      background: var(--deep-blue);
+      color: white;
+      padding: 3rem 2rem 1.5rem;
+      border-radius: 3rem 3rem 0 0;
+      margin-top: 3rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-col p, .footer-col a {
+      color: #cddfe6;
+      text-decoration: none;
+      line-height: 2;
+    }
+    .footer-col a:hover {
+      color: var(--sunshine);
+    }
+    .social-icons {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1rem 0 2rem;
+      font-size: 1.6rem;
+    }
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2f587b;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      color: #aac3d4;
+    }
+
+    /* responsiveness fine-tuning */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+      .nav-menu {
+        justify-content: center;
+      }
+      .search-bar {
+        flex-direction: column;
+        background: transparent;
+        box-shadow: none;
+        gap: 0.8rem;
+      }
+      .search-bar input, .search-bar select, .search-btn {
+        width: 100%;
+        border-radius: 60px;
+        background: white;
+      }
+      .hero {
+        border-radius: 0 0 2rem 2rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 1rem; }
+      .section-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 1️⃣ header / navbar -->
+  <header>
+    <nav class="navbar container" style="max-width: 1400px; margin:0 auto;">
+      <span class="logo">🌺 Hawaii Travel</span>
+      <div class="nav-menu">
+        <a href="#">Home</a>
+        <a href="#">Destinations</a>
+        <a href="#">Hotels</a>
+        <a href="#">Flights</a>
+        <a href="#">Tours</a>
+        <a href="#">Contact</a>
+      </div>
+      <a href="#" class="booking-btn" style="color:white;">Book now</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 2️⃣ hero section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Discover Paradise in Hawaii</h1>
+        <p>Book Your Dream Vacation Now</p>
+        <div class="search-bar">
+          <input type="text" placeholder="Destination: Waikiki, Maui ...">
+          <input type="text" placeholder="Sep 2025 – Oct 2025">
+          <select>
+            <option>2 adults · 1 room</option>
+            <option>1 adult · 1 room</option>
+            <option>4 adults · 2 rooms</option>
+          </select>
+          <button class="search-btn"><i class="fas fa-search" style="margin-right:6px;"></i>Search</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- 3️⃣ popular destinations -->
+      <h2 class="section-title">Popular destinations</h2>
+      <div class="card-grid">
+        <div class="dest-card">
+          <img src="image/img1.png" alt="Waikiki beach">
+          <div class="dest-info">
+            <h3>Waikiki</h3>
+            <div class="rating">★★★★★</div>
+            <div class="dest-price">from $299</div>
+          </div>
+        </div>
+        <div class="dest-card">
+          <img src="https://images.unsplash.com/photo-1542198730-7b0c1a41d269?q=80&w=1974&auto=format&fit=crop" alt="Maui coast">
+          <div class="dest-info">
+            <h3>Maui</h3>
+            <div class="rating">★★★★★</div>
+            <div class="dest-price">from $429</div>
+          </div>
+        </div>
+        <div class="dest-card">
+          <img src="image/img3.png" alt="Honolulu skyline">
+          <div class="dest-info">
+            <h3>Honolulu</h3>
+            <div class="rating">★★★★☆</div>
+            <div class="dest-price">from $279</div>
+          </div>
+        </div>
+        <div class="dest-card">
+          <img src="https://images.unsplash.com/photo-1599179415033-d9b5e84b5b9f?q=80&w=1974&auto=format&fit=crop" alt="Kauai cliffs">
+          <div class="dest-info">
+            <h3>Kauai</h3>
+            <div class="rating">★★★★★</div>
+            <div class="dest-price">from $359</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4️⃣ Hotels & resorts -->
+      <h2 class="section-title">Relax at luxury resorts</h2>
+      <div class="card-grid">
+        <div class="hotel-card">
+          <img src="image/im1.png" alt="pool resort">
+          <div class="hotel-body">
+            <div class="hotel-name">Moana Surfrider</div>
+            <div class="stars">★★★★★</div>
+            <div class="price">$520 <small>/ night</small></div>
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+        <div class="hotel-card">
+          <img src="image/im2.png" alt="oceanfront">
+          <div class="hotel-body">
+            <div class="hotel-name">Grand Wailea</div>
+            <div class="stars">★★★★★</div>
+            <div class="price">$699 <small>/ night</small></div>
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+        <div class="hotel-card">
+          <img src="image/im3.png" alt="beachside">
+          <div class="hotel-body">
+            <div class="hotel-name">Royal Hawaiian</div>
+            <div class="stars">★★★★☆</div>
+            <div class="price">$410 <small>/ night</small></div>
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+        <div class="hotel-card">
+          <img src="image/im4.png" alt="modern resort">
+          <div class="hotel-body">
+            <div class="hotel-name">1 Hotel Hanalei</div>
+            <div class="stars">★★★★★</div>
+            <div class="price">$850 <small>/ night</small></div>
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5️⃣ Tour packages -->
+      <h2 class="section-title">Unforgettable tours</h2>
+      <div class="card-grid">
+        <div class="tour-card"><div class="tour-icon">🏄</div><h3>Surfing</h3><div class="tour-duration">2 hours</div><div class="tour-price">$89</div></div>
+        <div class="tour-card"><div class="tour-icon">🌋</div><h3>Volcano Tour</h3><div class="tour-duration">6 hours</div><div class="tour-price">$159</div></div>
+        <div class="tour-card"><div class="tour-icon">🚤</div><h3>Island Tour</h3><div class="tour-duration">full day</div><div class="tour-price">$229</div></div>
+        <div class="tour-card"><div class="tour-icon">⛵</div><h3>Boat Trip</h3><div class="tour-duration">3 hours</div><div class="tour-price">$119</div></div>
+      </div>
+
+      <!-- 6️⃣ Why choose us -->
+      <h2 class="section-title">Why Hawaii with us</h2>
+      <div class="features-grid">
+        <div class="feature-item"><i class="fas fa-tag"></i><h4>Best Prices</h4><p>Unbeatable rates</p></div>
+        <div class="feature-item"><i class="fas fa-headset"></i><h4>24/7 Support</h4><p>We're here for you</p></div>
+        <div class="feature-item"><i class="fas fa-lock"></i><h4>Secure Booking</h4><p>Your data, safe</p></div>
+        <div class="feature-item"><i class="fas fa-handshake"></i><h4>Trusted Partners</h4><p>Local experts</p></div>
+      </div>
+
+      <!-- 7️⃣ Testimonials -->
+      <h2 class="section-title">Aloha from our guests</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card"><img src="image/s1.png" alt="client"><div class="testimonial-name">Michael S.</div><div class="testimonial-rating">★★★★★</div><p>"Magical experience, every detail was perfect."</p></div>
+        <div class="testimonial-card"><img src="https://images.unsplash.com/photo-1494790108777-296fd5c6ab92?w=150&h=150&fit=crop" alt="client"><div class="testimonial-name">Leilani K.</div><div class="testimonial-rating">★★★★★</div><p>"Booked hotels and volcano tour – seamless!"</p></div>
+        <div class="testimonial-card"><img src="image/s2.png" alt="client"><div class="testimonial-name">David Chen</div><div class="testimonial-rating">★★★★☆</div><p>"Beautiful island, will come back with family."</p></div>
+      </div>
+
+      <!-- 8️⃣ Newsletter -->
+      <section class="newsletter">
+        <h2>Don't miss Hawaii deals</h2>
+        <p style="margin-bottom: 1rem;">Subscribe to our newsletter</p>
+        <div class="newsletter-flex">
+          <input type="email" placeholder="Your email">
+          <button type="submit">Subscribe</button>
+        </div>
+      </section>
+    </div> <!-- end container -->
+  </main>
+
+  <!-- 9️⃣ footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>About us</h4><p>Local island experts, sharing paradise since 2012.</p></div>
+      <div class="footer-col"><h4>Quick links</h4><p><a href="#">Destinations</a><br><a href="#">Hotels</a><br><a href="#">Tours</a><br><a href="#">Contact</a></p></div>
+      <div class="footer-col"><h4>Follow us</h4><div class="social-icons"><i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fab fa-youtube"></i></div></div>
+    </div>
+    <div class="copyright">
+      © 2025 Hawaii Travel · All rights reserved · Booking simplified
+    </div>
+  </footer>
+
+  <!-- placeholder images from unsplash, google font, font awesome for icons, fully responsive, grid & flex, css variables -->
+</body>
+</html>
