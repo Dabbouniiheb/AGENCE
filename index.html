@@ -17,6 +17,8 @@
     
     <!--debut de la section d'en-tete-->
     <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+
         <a href="#" class="logo"><span>V</span>oyages</a>
         <nav class="navbar">
             <a href="#accueil">accueil</a>
@@ -27,11 +29,32 @@
             <a href="#reserver">reserver</a>
             <a href="#contact">contact</a>
         </nav>
-        
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="racherche ici...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
     </header>
-    
+    <!--login form container-->
+    <div class="login-form-container">
 
+        <i class="fas fa-times" id="form-close"></i>
+        <form action="">
+            <h3>login</h3>
+            <input type="email" class="box" placeholder="entrer votre email">
+            <input type="password" class="box" placeholder="entrer votre mode passe">
+            <input type="submit" value="login mantenant" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remember">remember me</label>
+            <p>forget password? <a href="#">click here</a></p>
+            <p>don't have and account? <a href="#">register now</a></p>
+        </form>
     </div>
+
+   
 
 
     <!--debut de la section accueil-->
@@ -77,7 +100,7 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">$90.00 <span>$120.00</span></div>
-                    <br>
+                    <br><a href="" class="btn">detail</a>
                     <button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html" >Ajouter au panier</a></button>-->
                 </div>
             </div>
@@ -95,6 +118,7 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">$90.00 <span>$120.00</span></div>
+                    <br><a href="" class="btn">detail</a>
                     <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
                 </div>
             </div>
@@ -114,6 +138,7 @@
                     </div>
                     
                     <div class="price">$90.00 <span>$120.00</span></div>
+                    <br><a href="" class="btn">detail</a>
                     <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
                  </div>
             </div>
@@ -133,6 +158,7 @@
                     </div>
                     
                     <div class="price">$90.00 <span>$120.00</span></div>
+                    <br><a href="" class="btn">detail</a>
                     <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
                  </div>
             </div>
@@ -152,6 +178,7 @@
                     </div>
                     
                     <div class="price">$90.00 <span>$120.00</span></div>
+                    <br><a href="" class="btn">detail</a>
                     <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
                  </div>
             </div>
@@ -170,62 +197,74 @@
                     </div>
                     
                     <div class="price">$90.00 <span>$120.00</span></div>
+                    <br><a href="" class="btn">detail</a>
                     <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
                 </div>
             </div>
 
-            <div class="box">
-                <img src="image/camping-tents-new-m.webp" alt=""  width="200" height="200">
-                <div class="content">
-                    <h3> <i class="fas fa-map-marker-alt"></i>camping</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, corrupti?</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    
-                    <div class="price">$90.00 <span>$120.00</span></div>
-                    <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
-                 </div>
-            </div>
+        </div>
 
-            <div class="box">
-                <img src="image/3omra.jpeg" alt=""  width="200" height="200">
-                <div class="content">
-                    <h3> <i class="fas fa-map-marker-alt"></i>omra</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, corrupti?</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+        <div class="show-more-container">
+            <button id="showMoreBtn">↓ Voir plus</button>
+        </div>
+        <div id="moreCards" style="display: none;">   
+            <div class="box-container">
+                <div class="box">
+                    <img src="image/camping-tents-new-m.webp" alt=""  width="200" height="200">
+                    <div class="content">
+                        <h3> <i class="fas fa-map-marker-alt"></i>camping</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, corrupti?</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        
+                        <div class="price">$90.00 <span>$120.00</span></div>
+                        <br><a href="" class="btn">detail</a>
+                        <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
                     </div>
-                    
-                    <div class="price">$90.00 <span>$120.00</span></div>
-                    <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
-                 </div>
-            </div>
+                </div>
 
-            <div class="box">
-                <img src="image/tunisie.jpg" alt=""  width="200" height="200">
-                <div class="content">
-                    <h3> <i class="fas fa-map-marker-alt"></i>tunisie</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, corrupti?</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+                <div class="box">
+                    <img src="image/3omra.jpeg" alt=""  width="200" height="200">
+                    <div class="content">
+                        <h3> <i class="fas fa-map-marker-alt"></i>omra</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, corrupti?</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        
+                        <div class="price">$90.00 <span>$120.00</span></div>
+                        <br><a href="" class="btn">detail</a>
+                        <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
                     </div>
-                    
-                    <div class="price">$90.00 <span>$120.00</span></div>
-                    <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
-                 </div>
+                </div>
+
+                <div class="box">
+                    <img src="image/tunisie.jpg" alt=""  width="200" height="200">
+                    <div class="content">
+                        <h3> <i class="fas fa-map-marker-alt"></i>tunisie</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, corrupti?</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        
+                        <div class="price">$90.00 <span>$120.00</span></div>
+                        <br><a href="" class="btn">detail</a>
+                        <br><button onclick="addToCart('Voyage à Hawaii', 2500)"> <!--<a href="index_panier.html">Ajouter au panier</a></button>-->
+                    </div>
+                </div>
             </div>
         </div>
     </section><br><br>
@@ -637,6 +676,57 @@ stars.forEach(star => {
     });
   });
 });
+
+
+let searchBtn=document.querySelector('#search-btn');
+let searchBar=document.querySelector('.search-bar-container');
+
+let formBtn=document.querySelector('#login-btn');
+let loginForm=document.querySelector('.login-form-container');
+let formClose=document.querySelector('#form-close');
+
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+
+
+window.onscroll = () =>{
+    searchBtn.classList.remove('fa-times');
+    searchBar.classList.remove('active');
+
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+    loginForm.classList.remove('active');
+}
+menu.addEventListener('click', () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+});
+
+searchBtn.addEventListener('click', () =>{
+    searchBtn.classList.toggle('fa-times');
+    searchBar.classList.toggle('active');
+});
+
+formBtn.addEventListener('click', () =>{
+    loginForm.classList.add('active');
+});
+formClose.addEventListener('click', () =>{
+    loginForm.classList.remove('active');
+});
+
+/*bouton voir plus*/
+const btn = document.getElementById("showMoreBtn");
+    const moreCards = document.getElementById("moreCards");
+
+    btn.addEventListener("click", function () {
+        if (moreCards.style.display === "none") {
+            moreCards.style.display = "block";
+            btn.innerHTML = "↑ Voir moins";
+        } else {
+            moreCards.style.display = "none";
+            btn.innerHTML = "↓ Voir plus";
+        }
+    });
 </script>
 
     
