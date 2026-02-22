@@ -32,10 +32,10 @@
                 <h2>welcome! <br><span>To Our New Website.</span></h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, quaerat?</p>
                 <div class="social-icons">
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.linkedin.com/in/voyage" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.facebook.com/voyage" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/voyage" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://x.com/voyage" target="_blank"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                         <a href="#">Forgot password?</a>
                     </div>
 
-                    <button type="submit" class="btn">Sign In</button>
+                    <button type="submit" class="btn"><a href="index.html">Sign In</a></button>
 
                     <div class="login-register">
                         <p>Don't have an account?<a href="#" class="register-link">Sign up</a></p>
@@ -98,10 +98,10 @@
                         
                     </div>
 
-                    <button type="submit" class="btn">Sign Up</button>
+                    <button type="submit" class="btn"><a href="index.html">Sign Up</a></button>
 
                     <div class="login-register">
-                        <p>Already have an account?<a href="#" class="login-link">Sign ip</a></p>
+                        <p>Already have an account?<a href="#" class="login-link">Sign in</a></p>
                     </div>
                 </form>
             </div>
@@ -112,12 +112,15 @@
 
 
     <script>
-        const logreBox = document.querySelector('logreg-box');
-        const loginLink = document.querySelector('login-link');
-        const registerLink = document.querySelector('register-link');
+        const logreBox = document.querySelector('.logreg-box');
+        const loginLink = document.querySelector('.login-link');
+        const registerLink = document.querySelector('.register-link');
 
         registerLink.addEventListener('click', () => {
             logreBox.classList.add('active');
+        });
+        loginLink.addEventListener('click', () => {
+            logreBox.classList.remove('active');
         });
     </script>
 </body>
