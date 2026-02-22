@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tunisie - Découvrez le Sud Tunisien</title>
+  <link rel="stylesheet" href="css/tunisie.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-logo">LOGO</div>
+    <ul class="navbar-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Offers</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="navbar-btn" aria-label="Message">✉</button>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>TUNISIE</h1>
+      <h2>Découvrez le Sud Tunisien</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-container">
+
+    <!-- SIDEBAR FILTERS -->
+    <aside class="filters">
+      <h3 class="filters-title">FILTERS</h3>
+
+      <!-- Prix -->
+      <div class="filter-group">
+        <label class="filter-label">Prix</label>
+        <span class="filter-sublabel">Price Range</span>
+        <input type="range" class="range-slider" id="priceRange" min="0" max="5000" value="2500" />
+        <div class="range-labels">
+          <span>Min</span>
+          <span>Max</span>
+        </div>
+      </div>
+
+      <!-- Wilayet -->
+      <div class="filter-group">
+        <label class="filter-label">Wilayet</label>
+        <div class="select-wrapper">
+          <select class="filter-select" id="locationSelect">
+            <option value="">Select Locations</option>
+            <option value="tunis">Tunis</option>
+            <option value="sousse">Sousse</option>
+            <option value="tozeur">Tozeur</option>
+            <option value="jendouba">Jendouba</option>
+            <option value="sfax">Sfax</option>
+          </select>
+        </div>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" id="tunis" /> Tunis
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="sousse" checked /> Sousse
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="tozeur" checked /> Tozeur
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="other" /> Other...
+          </label>
+        </div>
+      </div>
+
+      <!-- Etoiles -->
+      <div class="filter-group">
+        <label class="filter-label">Etoiles</label>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" id="stars3" /> 3 Stars
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="stars4" checked /> 4 Stars
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="stars5" checked /> 5 Stars
+          </label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- PACKAGES -->
+    <section class="packages">
+      <h3 class="packages-title">OUR PACKAGES</h3>
+      <div class="packages-grid">
+
+        <!-- Card 1 -->
+        <div class="package-card">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-top">TOP</span>
+            <img
+              src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=600&q=80"
+              alt="Tour du Sud Tunisien"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Tour du Sud Tunisien</h4>
+            <p class="card-location">📍 Tozeur</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 7 jours</span>
+              <span class="card-price">1200 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★★</span>
+              <span class="stars empty">★★★★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Transport climatisé</li>
+                <li>✔ Hôtel 4★</li>
+                <li>✔ Petit déjeuner</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Vol aller-retour</li>
+                <li class="excluded-item">☑ Dépenses personnes</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel1')">&#8249;</button>
+              <div class="carousel-track" id="carousel1">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel1')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="package-card">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-nature">Nature</span>
+            <img
+              src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80"
+              alt="Camping Ain Draham"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Camping 2 jours à Ain Draham</h4>
+            <p class="card-location">📍 Jendouba</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 2 jours</span>
+              <span class="card-price">350 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled partial">★★</span>
+              <span class="stars empty">★★★★★★★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Tente fournie</li>
+                <li>✔ Activités guidées</li>
+                <li>✔ Feu de camp</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Transport jusqu'au camping</li>
+                <li class="excluded-item">☑ Repas</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel2')">&#8249;</button>
+              <div class="carousel-track" id="carousel2">
+                <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel2')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="package-card">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-promo">PROMO</span>
+            <img
+              src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=600&q=80"
+              alt="Djerba Plage"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Séjour Djerba Plage</h4>
+            <p class="card-location">📍 Djerba</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 5 jours</span>
+              <span class="card-price">800 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★★★★★★</span>
+              <span class="stars empty">★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Hôtel 5★ bord de mer</li>
+                <li>✔ Pension complète</li>
+                <li>✔ Activités nautiques</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Vol aller-retour</li>
+                <li class="excluded-item">☑ Excursions optionnelles</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel3')">&#8249;</button>
+              <div class="carousel-track" id="carousel3">
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel3')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="package-card">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-top">TOP</span>
+            <img
+              src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=600&q=80"
+              alt="Sahara Douz"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Nuit dans le Sahara - Douz</h4>
+            <p class="card-location">📍 Douz</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 3 jours</span>
+              <span class="card-price">650 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★★★★</span>
+              <span class="stars empty">★★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Nuit en tente berbère</li>
+                <li>✔ Balade à dos de chameau</li>
+                <li>✔ Dîner traditionnel</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Transport depuis Tunis</li>
+                <li class="excluded-item">☑ Petit déjeuner</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel4')">&#8249;</button>
+              <div class="carousel-track" id="carousel4">
+                <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel4')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="js/tunisie.js"></script>
+</body>
+</html>
