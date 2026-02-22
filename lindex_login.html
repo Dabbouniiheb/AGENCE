@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/style_login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#">accueil</a>
+            <a href="#">forfait</a>
+            <a href="#">service</a>
+            <a href="#">galerie</a>
+            <a href="#">avis</a>
+            <a href="#">reserver</a>
+            <a href="#">contact</a>
+        </nav>
+        <form action="#" class="search-bar">
+            <input type="text" placeholder="recherche...">
+            <button type="submit"><i class='bx bx-search'></i></button>
+        </form>
+    </header>
+
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+            <h2 class="logo"><i class='bx bxl-firebase'></i>Codehal</h2>
+            <div class="text-sci">
+                <h2>welcome! <br><span>To Our New Website.</span></h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, quaerat?</p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+        </div>
+            
+        <div class="logreg-box">
+            <div class="form-box login">
+                <form action="#">
+                    <h2>Sign In</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" required>
+                        <label for="">password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label for=""><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn">Sign In</button>
+
+                    <div class="login-register">
+                        <p>Don't have an account?<a href="#" class="register-link">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+        
+
+
+            <div class="form-box register">
+                <form action="#">
+                    <h2>Sign Up</h2>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user'></i></i></span>
+                        <input type="text" required>
+                        <label for="">Name</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" required>
+                        <label for="">password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label for=""><input type="checkbox">agree to the terms & condition</label>
+                        
+                    </div>
+
+                    <button type="submit" class="btn">Sign Up</button>
+
+                    <div class="login-register">
+                        <p>Already have an account?<a href="#" class="login-link">Sign ip</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const logreBox = document.querySelector('logreg-box');
+        const loginLink = document.querySelector('login-link');
+        const registerLink = document.querySelector('register-link');
+
+        registerLink.addEventListener('click', () => {
+            logreBox.classList.add('active');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Agence Voyage</title>
+<link rel="stylesheet" href="css/style_login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-card">
+        <h2>Bienvenue ✈</h2>
+        <p>Connectez-vous à votre compte</p>
+
+        <form>
+            <div class="input-box">
+                <input type="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Mot de passe" required>
+            </div>
+
+            <div class="options">
+                <label>
+                    <input type="checkbox"> Se souvenir de moi
+                </label>
+                <a href="#">Mot de passe oublié ?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Se connecter</button>
+        </form>
+
+        <div class="register-link">
+            Pas encore de compte ? <a href="#">S'inscrire</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>-->
