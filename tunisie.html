@@ -59,6 +59,11 @@
             <option value="tozeur">Tozeur</option>
             <option value="jendouba">Jendouba</option>
             <option value="sfax">Sfax</option>
+            <option value="monastir">Monastir</option>
+            <option value="nabeul">Nabeul</option>
+            <option value="djerba">Djerba</option>
+            <option value="gabes">Gabès</option>
+            <option value="kairouan">Kairouan</option>
           </select>
         </div>
         <div class="checkbox-group">
@@ -69,7 +74,28 @@
             <input type="checkbox" id="sousse" checked /> Sousse
           </label>
           <label class="checkbox-item">
-            <input type="checkbox" id="tozeur" checked /> Tozeur
+            <input type="checkbox" id="tozeur" /> Tozeur
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="jendouba" /> Jendouba
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="sfax" /> Sfax
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="monastir" /> Monastir
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="nabeul" /> Nabeul
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="djerba" /> Djerba
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="gabes" /> Gabès
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="kairouan" /> Kairouan
           </label>
           <label class="checkbox-item">
             <input type="checkbox" id="other" /> Other...
@@ -82,13 +108,16 @@
         <label class="filter-label">Etoiles</label>
         <div class="checkbox-group">
           <label class="checkbox-item">
+            <input type="checkbox" id="starsAll" checked /> All
+          </label>
+          <label class="checkbox-item">
             <input type="checkbox" id="stars3" /> 3 Stars
           </label>
           <label class="checkbox-item">
-            <input type="checkbox" id="stars4" checked /> 4 Stars
+            <input type="checkbox" id="stars4" /> 4 Stars
           </label>
           <label class="checkbox-item">
-            <input type="checkbox" id="stars5" checked /> 5 Stars
+            <input type="checkbox" id="stars5" /> 5 Stars
           </label>
         </div>
       </div>
@@ -100,7 +129,7 @@
       <div class="packages-grid">
 
         <!-- Card 1 -->
-        <div class="package-card">
+        <div class="package-card" data-wilaya="tozeur">
           <div class="card-image-wrapper">
             <span class="card-badge badge-top">TOP</span>
             <img
@@ -117,14 +146,14 @@
               <span class="card-price">1200 DT</span>
             </div>
             <div class="card-stars">
-              <span class="stars filled">★★★★★</span>
-              <span class="stars empty">★★★★★</span>
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
             </div>
             <div class="card-included">
               <strong>Inclus</strong>
               <ul>
                 <li>✔ Transport climatisé</li>
-                <li>✔ Hôtel 4★</li>
+                <li>✔ Hôtel 3★</li>
                 <li>✔ Petit déjeuner</li>
               </ul>
             </div>
@@ -151,7 +180,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="package-card">
+        <div class="package-card" data-wilaya="jendouba">
           <div class="card-image-wrapper">
             <span class="card-badge badge-nature">Nature</span>
             <img
@@ -168,13 +197,13 @@
               <span class="card-price">350 DT</span>
             </div>
             <div class="card-stars">
-              <span class="stars filled partial">★★</span>
-              <span class="stars empty">★★★★★★★★</span>
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
             </div>
             <div class="card-included">
               <strong>Inclus</strong>
               <ul>
-                <li>✔ Tente fournie</li>
+                <li>✔ Hôtel 3★ / Tente fournie</li>
                 <li>✔ Activités guidées</li>
                 <li>✔ Feu de camp</li>
               </ul>
@@ -202,7 +231,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="package-card">
+        <div class="package-card" data-wilaya="djerba">
           <div class="card-image-wrapper">
             <span class="card-badge badge-promo">PROMO</span>
             <img
@@ -219,13 +248,13 @@
               <span class="card-price">800 DT</span>
             </div>
             <div class="card-stars">
-              <span class="stars filled">★★★★★★★★★</span>
-              <span class="stars empty">★</span>
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
             </div>
             <div class="card-included">
               <strong>Inclus</strong>
               <ul>
-                <li>✔ Hôtel 5★ bord de mer</li>
+                <li>✔ Hôtel 3★ bord de mer</li>
                 <li>✔ Pension complète</li>
                 <li>✔ Activités nautiques</li>
               </ul>
@@ -253,7 +282,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="package-card">
+        <div class="package-card" data-wilaya="tozeur">
           <div class="card-image-wrapper">
             <span class="card-badge badge-top">TOP</span>
             <img
@@ -270,13 +299,13 @@
               <span class="card-price">650 DT</span>
             </div>
             <div class="card-stars">
-              <span class="stars filled">★★★★★★★</span>
-              <span class="stars empty">★★★</span>
+              <span class="stars filled">★★★★</span>
+              <span class="stars empty">★</span>
             </div>
             <div class="card-included">
               <strong>Inclus</strong>
               <ul>
-                <li>✔ Nuit en tente berbère</li>
+                <li>✔ Hébergement 4★ (tente berbère)</li>
                 <li>✔ Balade à dos de chameau</li>
                 <li>✔ Dîner traditionnel</li>
               </ul>
@@ -299,6 +328,846 @@
               </div>
               <button class="carousel-btn" onclick="nextSlide('carousel4')">&#8250;</button>
             </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="package-card" data-wilaya="tunis">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-top">TOP</span>
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80" alt="Sidi Bou Said" class="card-image" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Sidi Bou Said & Carthage</h4>
+            <p class="card-location">📍 Tunis</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 1 jour</span>
+              <span class="card-price">120 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Guide francophone</li>
+                <li>✔ Transport</li>
+                <li>✔ Entrées musées</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Déjeuner</li>
+                <li class="excluded-item">☑ Pourboires</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel5')">&#8249;</button>
+              <div class="carousel-track" id="carousel5">
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel5')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="package-card" data-wilaya="nabeul">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-promo">PROMO</span>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Hammamet" class="card-image" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Séjour Hammamet Plage</h4>
+            <p class="card-location">📍 Hammamet</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 4 jours</span>
+              <span class="card-price">550 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Hôtel 3★ bord de mer</li>
+                <li>✔ Demi-pension</li>
+                <li>✔ Piscine</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Vol</li>
+                <li class="excluded-item">☑ Excursions</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel6')">&#8249;</button>
+              <div class="carousel-track" id="carousel6">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel6')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="package-card" data-wilaya="kairouan">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-nature">Nature</span>
+            <img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=600&q=80" alt="Kairouan" class="card-image" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Kairouan & El Jem</h4>
+            <p class="card-location">📍 Kairouan</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 2 jours</span>
+              <span class="card-price">280 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Transport climatisé</li>
+                <li>✔ Guide</li>
+                <li>✔ Entrée amphithéâtre</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Hébergement</li>
+                <li class="excluded-item">☑ Repas</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel7')">&#8249;</button>
+              <div class="carousel-track" id="carousel7">
+                <img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel7')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="package-card" data-wilaya="gabes">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-top">TOP</span>
+            <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" alt="Matmata" class="card-image" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Matmata - Maisons troglodytes</h4>
+            <p class="card-location">📍 Matmata</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 2 jours</span>
+              <span class="card-price">420 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Hôtel 3★ / Nuit chez l'habitant</li>
+                <li>✔ Dîner berbère</li>
+                <li>✔ Visite Star Wars</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Transport</li>
+                <li class="excluded-item">☑ Petit déjeuner</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel8')">&#8249;</button>
+              <div class="carousel-track" id="carousel8">
+                <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel8')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="package-card" data-wilaya="sousse">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-nature">Nature</span>
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80" alt="Sousse" class="card-image" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Sousse Médina & Plage</h4>
+            <p class="card-location">📍 Sousse</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 3 jours</span>
+              <span class="card-price">450 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Hôtel 3★</li>
+                <li>✔ Petit déjeuner</li>
+                <li>✔ Visite médina</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Transport</li>
+                <li class="excluded-item">☑ Déjeuner & dîner</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel9')">&#8249;</button>
+              <div class="carousel-track" id="carousel9">
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel9')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="package-card" data-wilaya="monastir">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-promo">PROMO</span>
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80" alt="Monastir" class="card-image" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Monastir - Ribat & Plages</h4>
+            <p class="card-location">📍 Monastir</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 3 jours</span>
+              <span class="card-price">380 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Hôtel 3★ proche plage</li>
+                <li>✔ Petit déjeuner</li>
+                <li>✔ Visite Ribat</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Vol</li>
+                <li class="excluded-item">☑ Repas midi & soir</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel10')">&#8249;</button>
+              <div class="carousel-track" id="carousel10">
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel10')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="package-card" data-wilaya="jendouba">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-nature">Nature</span>
+            <img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=600&q=80" alt="Tabarka" class="card-image" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Tabarka - Plongée & Nature</h4>
+            <p class="card-location">📍 Jendouba</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 2 jours</span>
+              <span class="card-price">320 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★</span>
+              <span class="stars empty">★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Initiation plongée</li>
+                <li>✔ Hôtel 3★</li>
+                <li>✔ Petit déjeuner</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Transport</li>
+                <li class="excluded-item">☑ Équipement plongée</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel11')">&#8249;</button>
+              <div class="carousel-track" id="carousel11">
+                <img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel11')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="package-card" data-wilaya="nabeul">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-top">TOP</span>
+            <img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=600&q=80" alt="Cap Bon" class="card-image" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Cap Bon - Dégustation vins</h4>
+            <p class="card-location">📍 Nabeul</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 1 jour</span>
+              <span class="card-price">95 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★</span>
+              <span class="stars empty">★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Visite domaine viticole</li>
+                <li>✔ Dégustation</li>
+                <li>✔ Transport</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Déjeuner</li>
+                <li class="excluded-item">☑ Achats</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel12')">&#8249;</button>
+              <div class="carousel-track" id="carousel12">
+                <img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel12')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="package-card" data-wilaya="sfax">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-promo">PROMO</span>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" alt="Sfax" class="card-image" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Sfax - Médina authentique</h4>
+            <p class="card-location">📍 Sfax</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 2 jours</span>
+              <span class="card-price">250 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Hôtel 3★ centre-ville</li>
+                <li>✔ Petit déjeuner</li>
+                <li>✔ Visite guidée médina</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Transport</li>
+                <li class="excluded-item">☑ Repas</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel13')">&#8249;</button>
+              <div class="carousel-track" id="carousel13">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel13')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Card 14 -->
+        <div class="package-card" data-wilaya="other">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-nature">Nature</span>
+            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=600&q=80" alt="Tataouine" class="card-image" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Tataouine - Ksour du désert</h4>
+            <p class="card-location">📍 Tataouine</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 3 jours</span>
+              <span class="card-price">580 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Transport 4x4</li>
+                <li>✔ Guide local</li>
+                <li>✔ Nuit bivouac</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Repas</li>
+                <li class="excluded-item">☑ Vol</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('carousel14')">&#8249;</button>
+              <div class="carousel-track" id="carousel14">
+                <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="img5" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('carousel14')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Tunis +3 -->
+        <div class="package-card" data-wilaya="tunis">
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80" alt="La Marsa" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">La Marsa & Gammarth</h4><p class="card-location">📍 Tunis</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">85 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel 4★</li><li>✔ Transport</li><li>✔ Plage privée</li><li>✔ Déjeuner</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Hébergement</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel15')">&#8249;</button><div class="carousel-track" id="carousel15"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel15')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="tunis">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=600&q=80" alt="Bardo" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Musée du Bardo</h4><p class="card-location">📍 Tunis</p>
+            <div class="card-meta"><span class="card-duration">🗓 0.5 jour</span><span class="card-price">45 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Entrée musée</li><li>✔ Guide</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Transport</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel16')">&#8249;</button><div class="carousel-track" id="carousel16"><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel16')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="tunis">
+          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Zarzis" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Balade Tunis by night</h4><p class="card-location">📍 Tunis</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 soir</span><span class="card-price">65 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Guide</li><li>✔ Dégustation</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Dîner</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel17')">&#8249;</button><div class="carousel-track" id="carousel17"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel17')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Sousse +3 -->
+        <div class="package-card" data-wilaya="sousse">
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80" alt="Port" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Port El Kantaoui</h4><p class="card-location">📍 Sousse</p>
+            <div class="card-meta"><span class="card-duration">🗓 2 jours</span><span class="card-price">380 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel 4★</li><li>✔ Demi-pension</li><li>✔ Marina</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Vol</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel18')">&#8249;</button><div class="carousel-track" id="carousel18"><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel18')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="sousse">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Plage" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Sousse Ribat & Musée</h4><p class="card-location">📍 Sousse</p>
+            <div class="card-meta"><span class="card-duration">🗓 0.5 jour</span><span class="card-price">55 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Entrées</li><li>✔ Guide</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Transport</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel19')">&#8249;</button><div class="carousel-track" id="carousel19"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel19')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="sousse">
+          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80" alt="Sousse" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Sousse Plage 5 jours</h4><p class="card-location">📍 Sousse</p>
+            <div class="card-meta"><span class="card-duration">🗓 5 jours</span><span class="card-price">720 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel 5★</li><li>✔ Pension complète</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Vol</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel20')">&#8249;</button><div class="carousel-track" id="carousel20"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel20')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Tozeur +2, Jendouba +2 -->
+        <div class="package-card" data-wilaya="tozeur">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80" alt="Nefta" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Nefta - Corbeille</h4><p class="card-location">📍 Tozeur</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">180 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Guide</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Hébergement</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel21')">&#8249;</button><div class="carousel-track" id="carousel21"><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel21')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="tozeur">
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" alt="Chott" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Chott el Jerid</h4><p class="card-location">📍 Tozeur</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">150 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ 4x4</li><li>✔ Déjeuner</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Hébergement</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel22')">&#8249;</button><div class="carousel-track" id="carousel22"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel22')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="jendouba">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=600&q=80" alt="Bulla" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Bulla Regia</h4><p class="card-location">📍 Jendouba</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">95 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Entrée site</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Repas</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel23')">&#8249;</button><div class="carousel-track" id="carousel23"><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel23')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="jendouba">
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=600&q=80" alt="Chemtou" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Chemtou - Marbre antique</h4><p class="card-location">📍 Jendouba</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">110 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Guide</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Repas</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel24')">&#8249;</button><div class="carousel-track" id="carousel24"><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel24')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Sfax +3, Monastir +3, Nabeul +2 -->
+        <div class="package-card" data-wilaya="sfax">
+          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" alt="Kerkennah" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Kerkennah - Îles</h4><p class="card-location">📍 Sfax</p>
+            <div class="card-meta"><span class="card-duration">🗓 2 jours</span><span class="card-price">290 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Ferry</li><li>✔ Hôtel</li><li>✔ Repas poisson</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Transport Sfax</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel25')">&#8249;</button><div class="carousel-track" id="carousel25"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel25')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="sfax">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=600&q=80" alt="Sfax" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Sfax Thyna Plage</h4><p class="card-location">📍 Sfax</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">75 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Parasol</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Repas</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel26')">&#8249;</button><div class="carousel-track" id="carousel26"><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel26')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="sfax">
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=600&q=80" alt="Sfax" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Sfax 3 jours - Découverte</h4><p class="card-location">📍 Sfax</p>
+            <div class="card-meta"><span class="card-duration">🗓 3 jours</span><span class="card-price">420 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel 4★</li><li>✔ Pension complète</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Transport</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel27')">&#8249;</button><div class="carousel-track" id="carousel27"><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel27')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="monastir">
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80" alt="Monastir" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Monastir Plage 4 jours</h4><p class="card-location">📍 Monastir</p>
+            <div class="card-meta"><span class="card-duration">🗓 4 jours</span><span class="card-price">520 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel 4★</li><li>✔ Demi-pension</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Vol</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel28')">&#8249;</button><div class="carousel-track" id="carousel28"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel28')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="monastir">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80" alt="Skanes" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Skanes - Golf & Mer</h4><p class="card-location">📍 Monastir</p>
+            <div class="card-meta"><span class="card-duration">🗓 2 jours</span><span class="card-price">340 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel golf</li><li>✔ Petit déj</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Transport</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel29')">&#8249;</button><div class="carousel-track" id="carousel29"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel29')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="monastir">
+          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Monastir" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Bourgiba - Mausolée</h4><p class="card-location">📍 Monastir</p>
+            <div class="card-meta"><span class="card-duration">🗓 0.5 jour</span><span class="card-price">40 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Entrée</li><li>✔ Guide</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Transport</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel30')">&#8249;</button><div class="carousel-track" id="carousel30"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel30')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="nabeul">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80" alt="Kelibia" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Kelibia - Forteresse</h4><p class="card-location">📍 Nabeul</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">88 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Entrée forteresse</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Repas</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel31')">&#8249;</button><div class="carousel-track" id="carousel31"><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel31')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="nabeul">
+          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=600&q=80" alt="Nabeul" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Nabeul Médina & Poterie</h4><p class="card-location">📍 Nabeul</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">70 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Atelier poterie</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Achats</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel32')">&#8249;</button><div class="carousel-track" id="carousel32"><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel32')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Djerba +3, Gabès +3, Kairouan +3, Other +3 -->
+        <div class="package-card" data-wilaya="djerba">
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=600&q=80" alt="Houmt Souk" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Houmt Souk - Médina</h4><p class="card-location">📍 Djerba</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">95 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Guide</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Hébergement</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel33')">&#8249;</button><div class="carousel-track" id="carousel33"><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel33')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="djerba">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80" alt="Midoun" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Midoun - Marché & Plages</h4><p class="card-location">📍 Djerba</p>
+            <div class="card-meta"><span class="card-duration">🗓 2 jours</span><span class="card-price">340 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel 3★</li><li>✔ Petit déj</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Vol</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel34')">&#8249;</button><div class="carousel-track" id="carousel34"><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel34')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="djerba">
+          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Djerba" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Djerba 7 jours All inclusive</h4><p class="card-location">📍 Djerba</p>
+            <div class="card-meta"><span class="card-duration">🗓 7 jours</span><span class="card-price">1450 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel 5★</li><li>✔ All inclusive</li><li>✔ Spa</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Vol</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel35')">&#8249;</button><div class="carousel-track" id="carousel35"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel35')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="gabes">
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" alt="Gabès" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Gabès - Oasis & Golfe</h4><p class="card-location">📍 Gabès</p>
+            <div class="card-meta"><span class="card-duration">🗓 2 jours</span><span class="card-price">270 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel oasis</li><li>✔ Visite palmeraie</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Transport</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel36')">&#8249;</button><div class="carousel-track" id="carousel36"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel36')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="gabes">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=600&q=80" alt="Chenini" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Chenini - Village troglodyte</h4><p class="card-location">📍 Gabès</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">120 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Guide</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Repas</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel37')">&#8249;</button><div class="carousel-track" id="carousel37"><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel37')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="gabes">
+          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80" alt="Zarzis" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Zarzis - Plages & Thalasso</h4><p class="card-location">📍 Gabès</p>
+            <div class="card-meta"><span class="card-duration">🗓 3 jours</span><span class="card-price">480 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel 4★</li><li>✔ Spa thalasso</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Vol</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel38')">&#8249;</button><div class="carousel-track" id="carousel38"><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel38')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="kairouan">
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=600&q=80" alt="Kairouan" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Grande Mosquée Kairouan</h4><p class="card-location">📍 Kairouan</p>
+            <div class="card-meta"><span class="card-duration">🗓 0.5 jour</span><span class="card-price">50 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Guide</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Repas</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel39')">&#8249;</button><div class="carousel-track" id="carousel39"><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel39')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="kairouan">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=600&q=80" alt="Kairouan" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Kairouan - Tapis & Médina</h4><p class="card-location">📍 Kairouan</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">130 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Atelier tapis</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Achats</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel40')">&#8249;</button><div class="carousel-track" id="carousel40"><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel40')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="kairouan">
+          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80" alt="Kairouan" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Kairouan 2 jours Complet</h4><p class="card-location">📍 Kairouan</p>
+            <div class="card-meta"><span class="card-duration">🗓 2 jours</span><span class="card-price">220 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel</li><li>✔ Tous sites</li><li>✔ Repas</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Transport</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel41')">&#8249;</button><div class="carousel-track" id="carousel41"><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel41')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="other">
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=600&q=80" alt="Ksar" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Ksar Ouled Soltane</h4><p class="card-location">📍 Tataouine</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">140 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ 4x4</li><li>✔ Guide Star Wars</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Hébergement</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel42')">&#8249;</button><div class="carousel-track" id="carousel42"><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel42')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="other">
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=600&q=80" alt="Kebili" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Kebili - Douz & Chott</h4><p class="card-location">📍 Kebili</p>
+            <div class="card-meta"><span class="card-duration">🗓 2 jours</span><span class="card-price">380 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Bivouac désert</li><li>✔ Chameau</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Transport Tunis</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel43')">&#8249;</button><div class="carousel-track" id="carousel43"><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel43')">&#8250;</button></div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+        <div class="package-card" data-wilaya="other">
+          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80" alt="Medenine" class="card-image" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Médenine - Ksour & Marché</h4><p class="card-location">📍 Médenine</p>
+            <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">125 DT</span></div>
+            <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
+            <div class="card-included"><strong>Inclus</strong><ul><li>✔ Transport</li><li>✔ Guide</li></ul></div>
+            <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Repas</li></ul></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel44')">&#8249;</button><div class="carousel-track" id="carousel44"><img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel44')">&#8250;</button></div>
             <button class="btn-reserver">Réserver Maintenant</button>
           </div>
         </div>

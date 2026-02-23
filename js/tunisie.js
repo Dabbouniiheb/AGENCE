@@ -45,28 +45,13 @@ if (priceRange) {
   const minLabel = priceRange.parentElement.querySelector('.range-labels span:first-child');
   const maxLabel = priceRange.parentElement.querySelector('.range-labels span:last-child');
 
-  priceRange.addEventListener('input', () => {
-    const value = parseInt(priceRange.value);
-    filterPackagesByPrice(value);
-  });
+  priceRange.addEventListener('input', () => applyAllFilters());
 }
 
-function filterPackagesByPrice(maxPrice) {
-  const cards = document.querySelectorAll('.package-card');
-  cards.forEach(card => {
-    const priceEl = card.querySelector('.card-price');
-    if (!priceEl) return;
-    const priceText = priceEl.textContent.replace(/[^0-9]/g, '');
-    const price = parseInt(priceText);
-    if (price <= maxPrice || maxPrice >= 5000) {
-      card.style.display = '';
-      card.style.opacity = '1';
-    } else {
-      card.style.opacity = '0.3';
-      card.style.pointerEvents = 'none';
-    }
-  });
-}
+// =====================
+// WILAYA IDs (for filters)
+// =====================
+const wilayaCheckboxIds = ['tunis', 'sousse', 'tozeur', 'jendouba', 'sfax', 'monastir', 'nabeul', 'djerba', 'gabes', 'kairouan', 'other'];
 
 // =====================
 // LOCATION SELECT SYNC
@@ -75,81 +60,97 @@ const locationSelect = document.getElementById('locationSelect');
 if (locationSelect) {
   locationSelect.addEventListener('change', () => {
     const selected = locationSelect.value;
-    const checkboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]');
-    checkboxes.forEach(cb => {
-      if (selected && cb.id === selected) {
-        cb.checked = true;
-      }
+    wilayaCheckboxIds.forEach(id => {
+      const cb = document.getElementById(id);
+      if (cb) cb.checked = (cb.id === selected);
     });
-    filterPackagesByLocation();
+    applyAllFilters();
   });
 }
 
 // =====================
 // CHECKBOX FILTER
 // =====================
-const checkboxes = document.querySelectorAll('.filters input[type="checkbox"]');
-checkboxes.forEach(cb => {
-  cb.addEventListener('change', filterPackagesByLocation);
+const wilayaCheckboxes = wilayaCheckboxIds.map(id => document.getElementById(id)).filter(Boolean);
+
+// Wilaya: single select - khi yclick 3la wa7da lo5ra, elli 9balha tethat
+wilayaCheckboxes.forEach(cb => {
+  cb.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      wilayaCheckboxes.forEach(other => {
+        if (other !== e.target) other.checked = false;
+      });
+      if (locationSelect) locationSelect.value = e.target.id === 'other' ? '' : e.target.id;
+    }
+    applyAllFilters();
+  });
 });
 
-function filterPackagesByLocation() {
+// Etoiles: single select - khi yclick 3la etoile jdida, elli 9balha tethat
+const starCheckboxes = document.querySelectorAll('#starsAll, #stars3, #stars4, #stars5');
+starCheckboxes.forEach(cb => {
+  cb.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      starCheckboxes.forEach(other => {
+        if (other !== e.target) other.checked = false;
+      });
+    }
+    applyAllFilters();
+  });
+});
+
+// Apply wilaya + stars + price - el client ya5tar wilaya awel, mba3d etoiles
+function applyAllFilters() {
+  const cards = document.querySelectorAll('.package-card');
+
+  // 1. Wilaya filter
   const locationCheckboxes = document.querySelectorAll(
-    '#tunis, #sousse, #tozeur, #other'
+    '#tunis, #sousse, #tozeur, #jendouba, #sfax, #monastir, #nabeul, #djerba, #gabes, #kairouan, #other'
   );
-  const checkedLocations = Array.from(locationCheckboxes)
+  const checkedWilayet = Array.from(locationCheckboxes)
     .filter(cb => cb.checked)
     .map(cb => cb.id.toLowerCase());
 
-  const cards = document.querySelectorAll('.package-card');
+  // 2. Stars filter (single select) - starsAll = afficher kol l hotels mta3 wilaya
+  const checkedStar = Array.from(starCheckboxes).find(cb => cb.checked);
+  const starValue = checkedStar && checkedStar.id !== 'starsAll' 
+    ? parseInt(checkedStar.id.replace('stars', '')) 
+    : null;
 
-  if (checkedLocations.length === 0) {
-    cards.forEach(card => {
-      card.style.display = '';
-      card.style.opacity = '1';
-      card.style.pointerEvents = '';
-    });
-    return;
-  }
+  // 3. Price filter
+  const maxPrice = priceRange ? parseInt(priceRange.value) || 5000 : 5000;
 
   cards.forEach(card => {
-    const locationEl = card.querySelector('.card-location');
-    if (!locationEl) return;
-    const locationText = locationEl.textContent.toLowerCase();
-    const matches = checkedLocations.some(loc =>
-      locationText.includes(loc) || loc === 'other'
-    );
-    card.style.display = matches ? '' : 'none';
-  });
-}
+    let show = true;
 
-// =====================
-// STAR FILTER
-// =====================
-const starCheckboxes = document.querySelectorAll('#stars3, #stars4, #stars5');
-starCheckboxes.forEach(cb => {
-  cb.addEventListener('change', filterPackagesByStars);
-});
+    // Wilaya
+    if (checkedWilayet.length > 0) {
+      const wilaya = (card.getAttribute('data-wilaya') || '').toLowerCase();
+      show = show && checkedWilayet.includes(wilaya);
+    }
 
-function filterPackagesByStars() {
-  const checked = Array.from(starCheckboxes).filter(cb => cb.checked).map(cb => {
-    if (cb.id === 'stars3') return 3;
-    if (cb.id === 'stars4') return 4;
-    if (cb.id === 'stars5') return 5;
-    return 0;
-  });
+    // Stars
+    if (starValue !== null) {
+      const filledStars = card.querySelector('.stars.filled');
+      const cardStars = filledStars ? filledStars.textContent.length : 0;
+      show = show && (cardStars === starValue);
+    }
 
-  if (checked.length === 0) return;
+    // Price
+    const priceEl = card.querySelector('.card-price');
+    if (priceEl && maxPrice < 5000) {
+      const price = parseInt(priceEl.textContent.replace(/[^0-9]/g, ''));
+      show = show && (price <= maxPrice);
+    }
 
-  const cards = document.querySelectorAll('.package-card');
-  cards.forEach(card => {
-    const filledStars = card.querySelector('.stars.filled');
-    if (!filledStars) return;
-    const starCount = filledStars.textContent.length;
-    const show = checked.some(s => starCount >= s);
     card.style.display = show ? '' : 'none';
+    card.style.opacity = show ? '1' : '';
+    card.style.pointerEvents = show ? '' : 'none';
   });
 }
+
+// Initial apply (page load)
+applyAllFilters();
 
 // =====================
 // CAROUSEL THUMBNAIL CLICK → MAIN IMAGE

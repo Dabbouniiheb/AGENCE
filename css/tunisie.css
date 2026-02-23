@@ -124,11 +124,12 @@ ul {
 }
 
 /* =====================
-   MAIN CONTAINER
+   MAIN CONTAINER - 80% axe X (abscisses)
    ===================== */
 .main-container {
   display: flex;
   gap: 24px;
+  width: 80%;
   max-width: 1100px;
   margin: 24px auto 40px;
   padding: 0 16px;
@@ -139,12 +140,12 @@ ul {
    FILTERS SIDEBAR
    ===================== */
 .filters {
-  width: 240px;
-  min-width: 200px;
+  width: 320px;
+  min-width: 280px;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 20px 18px;
+  padding: 24px 22px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   position: sticky;
   top: 80px;
