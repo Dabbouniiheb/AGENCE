@@ -44,14 +44,29 @@ const priceRange = document.getElementById('priceRange');
 if (priceRange) {
   const minLabel = priceRange.parentElement.querySelector('.range-labels span:first-child');
   const maxLabel = priceRange.parentElement.querySelector('.range-labels span:last-child');
+  const currentLabel = priceRange.parentElement.querySelector('.range-current');
 
-  priceRange.addEventListener('input', () => applyAllFilters());
+  const minValue = priceRange.min || '80';
+  const maxValue = priceRange.max || '2500';
+
+  function updatePriceLabels() {
+    if (minLabel) minLabel.textContent = `${minValue} DT`;
+    if (maxLabel) maxLabel.textContent = `${maxValue} DT`;
+    if (currentLabel) currentLabel.textContent = `≤ ${priceRange.value} DT`;
+  }
+
+  updatePriceLabels();
+
+  priceRange.addEventListener('input', () => {
+    updatePriceLabels();
+    applyAllFilters();
+  });
 }
 
 // =====================
 // WILAYA IDs (for filters)
 // =====================
-const wilayaCheckboxIds = ['tunis', 'sousse', 'tozeur', 'jendouba', 'sfax', 'monastir', 'nabeul', 'djerba', 'gabes', 'kairouan', 'other'];
+const wilayaCheckboxIds = ['wilayaAll', 'tunis', 'sousse', 'tozeur', 'jendouba', 'sfax', 'monastir', 'nabeul', 'djerba', 'gabes', 'kairouan', 'other'];
 
 // =====================
 // LOCATION SELECT SYNC
@@ -76,12 +91,27 @@ const wilayaCheckboxes = wilayaCheckboxIds.map(id => document.getElementById(id)
 // Wilaya: single select - khi yclick 3la wa7da lo5ra, elli 9balha tethat
 wilayaCheckboxes.forEach(cb => {
   cb.addEventListener('change', (e) => {
-    if (e.target.checked) {
+    const clickedId = e.target.id;
+
+    if (clickedId === 'wilayaAll') {
+      // All wilayas: khalli kol card yodhher
+      if (e.target.checked) {
+        wilayaCheckboxes.forEach(other => {
+          if (other.id !== 'wilayaAll') other.checked = false;
+        });
+        if (locationSelect) locationSelect.value = '';
+      }
+    } else if (e.target.checked) {
+      // Wilaya spécifique: activeha bark, w hat All off
       wilayaCheckboxes.forEach(other => {
         if (other !== e.target) other.checked = false;
       });
+      const allCb = document.getElementById('wilayaAll');
+      if (allCb) allCb.checked = false;
+
       if (locationSelect) locationSelect.value = e.target.id === 'other' ? '' : e.target.id;
     }
+
     applyAllFilters();
   });
 });
@@ -118,7 +148,7 @@ function applyAllFilters() {
     : null;
 
   // 3. Price filter
-  const maxPrice = priceRange ? parseInt(priceRange.value) || 5000 : 5000;
+  const maxPrice = priceRange ? parseInt(priceRange.value) || 2500 : 2500;
 
   cards.forEach(card => {
     let show = true;
@@ -138,7 +168,7 @@ function applyAllFilters() {
 
     // Price
     const priceEl = card.querySelector('.card-price');
-    if (priceEl && maxPrice < 5000) {
+    if (priceEl && maxPrice < 2500) {
       const price = parseInt(priceEl.textContent.replace(/[^0-9]/g, ''));
       show = show && (price <= maxPrice);
     }
@@ -151,6 +181,40 @@ function applyAllFilters() {
 
 // Initial apply (page load)
 applyAllFilters();
+
+// =====================
+// SHOW ALL PACKAGES BUTTON
+// =====================
+const showAllBtn = document.getElementById('showAllPackagesBtn');
+if (showAllBtn) {
+  showAllBtn.addEventListener('click', () => {
+    // reset wilaya checkboxes
+    wilayaCheckboxIds.forEach(id => {
+      const cb = document.getElementById(id);
+      if (!cb) return;
+      cb.checked = (id === 'wilayaAll');
+    });
+
+    // reset select wilaya
+    if (locationSelect) locationSelect.value = '';
+
+    // reset stars → All
+    const starsAll = document.getElementById('starsAll');
+    if (starsAll) {
+      starsAll.checked = true;
+      document.querySelectorAll('#stars3, #stars4, #stars5').forEach(cb => {
+        cb.checked = false;
+      });
+    }
+
+    // reset price slider to max
+    if (priceRange) {
+      priceRange.value = priceRange.max || 5000;
+    }
+
+    applyAllFilters();
+  });
+}
 
 // =====================
 // CAROUSEL THUMBNAIL CLICK → MAIN IMAGE
@@ -173,6 +237,7 @@ document.querySelectorAll('.card-carousel').forEach(carousel => {
 // =====================
 document.querySelectorAll('.btn-reserver').forEach(btn => {
   btn.addEventListener('click', () => {
+    // infos package (yemken nesta3mlhom baad ken theb)
     const card = btn.closest('.package-card');
     const title = card.querySelector('.card-title').textContent;
     const price = card.querySelector('.card-price').textContent;
@@ -184,10 +249,7 @@ document.querySelectorAll('.btn-reserver').forEach(btn => {
     btn.style.color = '#fff';
 
     setTimeout(() => {
-      btn.textContent = original;
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      btn.style.color = '';
+      window.location.href = 'index.html#reserver';
     }, 2000);
 
     console.log(`Réservation: ${title} - ${price}`);
