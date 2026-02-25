@@ -5,20 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tunisie - Découvrez le Sud Tunisien</title>
   <link rel="stylesheet" href="css/tunisie.css" />
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-logo">LOGO</div>
-    <ul class="navbar-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Offers</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <button class="navbar-btn" aria-label="Message">✉</button>
-  </nav>
+  <!--debut de la section d'en-tete-->
+  <header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><span>V</span>oyages</a>
+    <nav class="navbar">
+        <a href="#accueil">accueil</a>
+        <a href="#forfait">forfait</a>
+        <a href="#service">service</a>
+        <a href="#galerie">galerie</a>
+        <a href="#avis">avis</a>
+        <a href="#reserver">reserver</a>
+        <a href="#contact">contact</a>
+    </nav>
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <a href="lindex_login.html">
+            <i class="fas fa-user" id="login-btn"></i>
+        </a>
+    </div>
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="racherche ici...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+  </header>
+
+  <!--login form container-->
+  <div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+    <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="entrer votre email">
+        <input type="password" class="box" placeholder="entrer votre mode passe">
+        <input type="submit" value="login mantenant" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="#">register now</a></p>
+    </form>
+  </div>
 
   <!-- HERO BANNER -->
   <section class="hero">
@@ -235,7 +269,7 @@
           <div class="card-image-wrapper">
             <span class="card-badge badge-promo">PROMO</span>
             <img
-              src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=600&q=80"
+              src="image/plage.avif"
               alt="Djerba Plage"
               class="card-image"
             />
@@ -269,11 +303,11 @@
             <div class="card-carousel">
               <button class="carousel-btn" onclick="prevSlide('carousel3')">&#8249;</button>
               <div class="carousel-track" id="carousel3">
-                <img src="tel1.jpg"  />
-                <img src="tel2.jpg"  />
-                <img src="tel3.jpg"  />                                                           
-                <img src="tel4.jpg"  />
-                <img src="tel5.jpg"  />
+                <img src="image/dar1.jpg" alt="img1" />
+                <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=80&h=60&q=70" alt="img2" />
+                <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=80&h=60&q=70" alt="img3" />
+                <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=80&h=60&q=70" alt="img4" />
+                <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=80&h=60&q=70" alt="img5" />
               </div>
               <button class="carousel-btn" onclick="nextSlide('carousel3')">&#8250;</button>
             </div>
@@ -1028,7 +1062,7 @@
 
         <!-- Djerba +3, Gabès +3, Kairouan +3, Other +3 -->
         <div class="package-card" data-wilaya="djerba">
-          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=600&q=80" alt="Houmt Souk" class="card-image" /></div>
+          <div class="card-image-wrapper"><span class="card-badge badge-top">TOP</span><img src="image/plage.avif" alt="Houmt Souk" class="card-image" /></div>
           <div class="card-body">
             <h4 class="card-title">Houmt Souk - Médina</h4><p class="card-location">📍 Djerba</p>
             <div class="card-meta"><span class="card-duration">🗓 1 jour</span><span class="card-price">95 DT</span></div>
@@ -1040,26 +1074,26 @@
           </div>
         </div>
         <div class="package-card" data-wilaya="djerba">
-          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80" alt="Midoun" class="card-image" /></div>
+          <div class="card-image-wrapper"><span class="card-badge badge-nature">Nature</span><img src="image/plage.avif" alt="Midoun" class="card-image" /></div>
           <div class="card-body">
             <h4 class="card-title">Midoun - Marché & Plages</h4><p class="card-location">📍 Djerba</p>
             <div class="card-meta"><span class="card-duration">🗓 2 jours</span><span class="card-price">340 DT</span></div>
             <div class="card-stars"><span class="stars filled">★★★★</span><span class="stars empty">★</span></div>
             <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel 3★</li><li>✔ Petit déj</li></ul></div>
             <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Vol</li></ul></div>
-            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel34')">&#8249;</button><div class="carousel-track" id="carousel34"><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel34')">&#8250;</button></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel34')">&#8249;</button><div class="carousel-track" id="carousel34"><img src="image/plage.avif" alt="1" /><img src="image/montaine.avif" alt="2" /><img src="image/personne4.avif" alt="3" /><img src="image/bateau2.avif" alt="4" /><img src="image/image6.avif" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel34')">&#8250;</button></div>
             <button class="btn-reserver">Réserver Maintenant</button>
           </div>
         </div>
         <div class="package-card" data-wilaya="djerba">
-          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Djerba" class="card-image" /></div>
+          <div class="card-image-wrapper"><span class="card-badge badge-promo">PROMO</span><img src="image/plage.avif" alt="Djerba" class="card-image" /></div>
           <div class="card-body">
             <h4 class="card-title">Djerba 7 jours All inclusive</h4><p class="card-location">📍 Djerba</p>
             <div class="card-meta"><span class="card-duration">🗓 7 jours</span><span class="card-price">1450 DT</span></div>
             <div class="card-stars"><span class="stars filled">★★★★★</span><span class="stars empty"></span></div>
             <div class="card-included"><strong>Inclus</strong><ul><li>✔ Hôtel 5★</li><li>✔ All inclusive</li><li>✔ Spa</li></ul></div>
             <div class="card-excluded"><strong>Non inclus</strong><ul><li class="excluded-item">☑ Vol</li></ul></div>
-            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel35')">&#8249;</button><div class="carousel-track" id="carousel35"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=80&h=60&q=70" alt="1" /><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=80&h=60&q=70" alt="2" /><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=80&h=60&q=70" alt="3" /><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=80&h=60&q=70" alt="4" /><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel35')">&#8250;</button></div>
+            <div class="card-carousel"><button class="carousel-btn" onclick="prevSlide('carousel35')">&#8249;</button><div class="carousel-track" id="carousel35"><img src="image/plage.avif" alt="1" /><img src="image/montaine.avif" alt="2" /><img src="image/personne4.avif" alt="3" /><img src="image/bateau2.avif" alt="4" /><img src="image/image6.avif" alt="5" /></div><button class="carousel-btn" onclick="nextSlide('carousel35')">&#8250;</button></div>
             <button class="btn-reserver">Réserver Maintenant</button>
           </div>
         </div>
@@ -1175,6 +1209,33 @@
       </div>
     </section>
   </main>
+
+  <script>
+  let menu = document.querySelector('#menu-bar');
+  let navbar = document.querySelector('.navbar');
+  let searchBtn = document.querySelector('#search-btn');
+  let searchBar = document.querySelector('.search-bar-container');
+  let formBtn = document.querySelector('#login-btn');
+  let formClose = document.querySelector('#form-close');
+  let loginForm = document.querySelector('.login-form-container');
+
+  menu.addEventListener('click', () =>{
+      menu.classList.toggle('fa-times');
+      navbar.classList.toggle('active');
+  });
+
+  searchBtn.addEventListener('click', () =>{
+      searchBtn.classList.toggle('fa-times');
+      searchBar.classList.toggle('active');
+  });
+
+  formBtn.addEventListener('click', () =>{
+      loginForm.classList.add('active');
+  });
+  formClose.addEventListener('click', () =>{
+      loginForm.classList.remove('active');
+  });
+  </script>
 
   <script src="js/tunisie.js"></script>
 </body>
