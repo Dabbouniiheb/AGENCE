@@ -129,7 +129,10 @@ starCheckboxes.forEach(cb => {
   });
 });
 
-// Apply wilaya + stars + price - el client ya5tar wilaya awel, mba3d etoiles
+// Search term (header search bar)
+let currentSearchTerm = '';
+
+// Apply wilaya + stars + price + text search
 function applyAllFilters() {
   const cards = document.querySelectorAll('.package-card');
 
@@ -173,6 +176,13 @@ function applyAllFilters() {
       show = show && (price <= maxPrice);
     }
 
+    // Text search (hotel name only)
+    if (currentSearchTerm) {
+      const titleEl = card.querySelector('.card-title');
+      const name = titleEl ? titleEl.textContent : '';
+      show = show && name.toLowerCase().includes(currentSearchTerm);
+    }
+
     card.style.display = show ? '' : 'none';
     card.style.opacity = show ? '1' : '';
     card.style.pointerEvents = show ? '' : 'none';
@@ -181,6 +191,17 @@ function applyAllFilters() {
 
 // Initial apply (page load)
 applyAllFilters();
+
+// =====================
+// HEADER SEARCH BAR → LIVE FILTER
+// =====================
+const headerSearchInput = document.getElementById('search-bar');
+if (headerSearchInput) {
+  headerSearchInput.addEventListener('input', () => {
+    currentSearchTerm = headerSearchInput.value.trim().toLowerCase();
+    applyAllFilters();
+  });
+}
 
 // =====================
 // SHOW ALL PACKAGES BUTTON

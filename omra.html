@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omra - Forfaits Omra & Hajj</title>
+  <link rel="stylesheet" href="css/tunisie.css" />
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azurG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><span>V</span>oyages</a>
+    <nav class="navbar">
+        <a href="#accueil">accueil</a>
+        <a href="#forfait">forfaits omra</a>
+        <a href="#service">services</a>
+        <a href="#galerie">galerie</a>
+        <a href="#avis">avis</a>
+        <a href="#reserver">reserver</a>
+        <a href="#contact">contact</a>
+    </nav>
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <a href="lindex_login.html">
+          <i class="fas fa-user" id="login-btn"></i>
+        </a>
+    </div>
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="rechercher un hôtel Omra..." />
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+  </header>
+
+  <!-- Login form -->
+  <div class="login-form-container">
+    <i class="fas fa-times" id="form-close"></i>
+    <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="entrer votre email">
+        <input type="password" class="box" placeholder="entrer votre mot de passe">
+        <input type="submit" value="login maintenant" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have an account? <a href="#">register now</a></p>
+    </form>
+  </div>
+
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>OMRA</h1>
+      <h2>Forfaits Omra & Hajj au départ de Tunisie</h2>
+      <p>Découvrez nos séjours Omra organisés vers La Mecque et Médine, avec un accompagnement complet et professionnel.</p>
+    </div>
+  </section>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="main-container">
+
+    <!-- FILTRES LATERAUX -->
+    <aside class="filters">
+      <h3 class="filters-title">FILTERS</h3>
+
+      <!-- Prix -->
+      <div class="filter-group">
+        <label class="filter-label">Budget</label>
+        <span class="filter-sublabel">Plage de prix</span>
+        <input type="range" class="range-slider" id="priceRange" min="1500" max="8000" value="8000" />
+        <div class="range-labels">
+          <span>1500 DT</span>
+          <span>8000 DT</span>
+        </div>
+        <div class="range-current" id="priceCurrent">≤ 8000 DT</div>
+        <div class="range-steps">
+          <span>1500</span>
+          <span>3000</span>
+          <span>4500</span>
+          <span>6000</span>
+          <span>7000</span>
+          <span>8000</span>
+        </div>
+      </div>
+
+      <!-- Types de forfaits (recyclage logique "wilaya") -->
+      <div class="filter-group">
+        <label class="filter-label">Type de forfait</label>
+        <div class="select-wrapper">
+          <select class="filter-select" id="locationSelect">
+            <option value="">Tous les types</option>
+            <option value="tunis">Économique</option>
+            <option value="sousse">Standard</option>
+            <option value="djerba">Famille</option>
+            <option value="tozeur">Confort</option>
+            <option value="jendouba">VIP</option>
+            <option value="sfax">Ramadan</option>
+            <option value="monastir">Hajj</option>
+            <option value="nabeul">Groupe</option>
+            <option value="gabes">Jeunes</option>
+            <option value="kairouan">Seniors</option>
+          </select>
+        </div>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" id="wilayaAll" checked /> Tous
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="tunis" /> Économique
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="sousse" /> Standard
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="tozeur" /> Confort
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="jendouba" /> VIP
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="sfax" /> Ramadan
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="monastir" /> Hajj
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="nabeul" /> Groupe
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="djerba" /> Famille
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="gabes" /> Jeunes
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="kairouan" /> Seniors
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="other" /> Autres...
+          </label>
+        </div>
+      </div>
+
+      <!-- Etoiles -->
+      <div class="filter-group">
+        <label class="filter-label">Catégorie d'hôtel</label>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" id="starsAll" checked /> Tous
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="stars3" /> 3 Étoiles
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="stars4" /> 4 Étoiles
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="stars5" /> 5 Étoiles
+          </label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- FORFAITS OMRA -->
+    <section class="packages" id="forfait">
+      <div class="packages-header">
+        <h3 class="packages-title">NOS FORFAITS OMRA</h3>
+        <button class="packages-all-btn" id="showAllPackagesBtn">
+          <i class="fas fa-layer-group"></i>
+          <span>Tous</span>
+        </button>
+      </div>
+
+      <div class="packages-grid">
+
+        <!-- Omra Économique -->
+        <div class="package-card" data-wilaya="tunis">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-top">TOP</span>
+            <img
+              src="https://images.unsplash.com/photo-1541417904950-b855846fe074?w=600&q=80"
+              alt="Omra économique proche Haram"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Omra Économique 10 jours</h4>
+            <p class="card-location">📍 Départ: Tunis | Séjour: La Mecque & Médine</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 10 jours</span>
+              <span class="card-price">3500 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Vols réguliers Tunis – Jeddah – Tunis</li>
+                <li>✔ Hôtels 3★ à La Mecque & Médine</li>
+                <li>✔ Transferts internes en bus climatisé</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Dépenses personnelles</li>
+                <li class="excluded-item">☑ Assurance voyage</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('omra-carousel1')">&#8249;</button>
+              <div class="carousel-track" id="omra-carousel1">
+                <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074?w=80&h=60&q=70" alt="Kaaba nuit" />
+                <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=80&h=60&q=70" alt="Médine mosquée" />
+                <img src="https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?w=80&h=60&q=70" alt="Groupe Omra" />
+                <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?w=80&h=60&q=70" alt="Hôtel à La Mecque" />
+                <img src="https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=80&h=60&q=70" alt="Transport bus" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('omra-carousel1')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Omra Standard -->
+        <div class="package-card" data-wilaya="sousse">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-nature">Famille</span>
+            <img
+              src="https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=600&q=80"
+              alt="Omra standard famille"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Omra Standard 14 jours</h4>
+            <p class="card-location">📍 Départ: Sousse & Tunis</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 14 jours</span>
+              <span class="card-price">4800 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★</span>
+              <span class="stars empty">★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Vols directs avec compagnie régulière</li>
+                <li>✔ Hôtels 4★ à proximité du Haram</li>
+                <li>✔ Petit-déjeuner quotidien</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Déjeuners & dîners</li>
+                <li class="excluded-item">☑ Tests médicaux éventuels</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('omra-carousel2')">&#8249;</button>
+              <div class="carousel-track" id="omra-carousel2">
+                <img src="https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=80&h=60&q=70" alt="Famille devant Kaaba" />
+                <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074?w=80&h=60&q=70" alt="Tawaf" />
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=80&h=60&q=70" alt="Chambre hôtel" />
+                <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?w=80&h=60&q=70" alt="Lobby hôtel" />
+                <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=80&h=60&q=70" alt="Mosquée de Médine" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('omra-carousel2')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Omra Confort -->
+        <div class="package-card" data-wilaya="tozeur">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-promo">PROMO</span>
+            <img
+              src="https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?w=600&q=80"
+              alt="Omra confort"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Omra Confort 12 jours</h4>
+            <p class="card-location">📍 Départ: Tunis | Séjour: hôtels 4★</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 12 jours</span>
+              <span class="card-price">5200 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★</span>
+              <span class="stars empty">★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Visa Omra</li>
+                <li>✔ Hôtels 4★ avec petit-déjeuner</li>
+                <li>✔ Assistance 24/7 par notre équipe sur place</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Frais de passeport</li>
+                <li class="excluded-item">☑ Services non mentionnés</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('omra-carousel3')">&#8249;</button>
+              <div class="carousel-track" id="omra-carousel3">
+                <img src="https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?w=80&h=60&q=70" alt="Groupe en Ihram" />
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=80&h=60&q=70" alt="Chambre moderne" />
+                <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?w=80&h=60&q=70" alt="Réception hôtel" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="Vue ville de nuit" />
+                <img src="https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=80&h=60&q=70" alt="Bus de transfert" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('omra-carousel3')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Omra VIP -->
+        <div class="package-card" data-wilaya="jendouba">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-top">VIP</span>
+            <img
+              src="https://images.unsplash.com/photo-1541417904950-b855846fe074?w=600&q=80"
+              alt="Omra VIP"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Omra VIP 10 jours</h4>
+            <p class="card-location">📍 Départ: Tunis | Hôtels 5★ front Haram</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 10 jours</span>
+              <span class="card-price">7800 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★★</span>
+              <span class="stars empty"></span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Hôtels 5★ à La Mecque & Médine</li>
+                <li>✔ Pension complète</li>
+                <li>✔ Transferts privés en véhicule de luxe</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Pourboires</li>
+                <li class="excluded-item">☑ Services personnels (spa, etc.)</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('omra-carousel4')">&#8249;</button>
+              <div class="carousel-track" id="omra-carousel4">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=80&h=60&q=70" alt="Suite 5 étoiles" />
+                <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?w=80&h=60&q=70" alt="Lobby luxe" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="Vue Haram" />
+                <img src="https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=80&h=60&q=70" alt="Voiture privée" />
+                <img src="https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?w=80&h=60&q=70" alt="Groupe VIP" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('omra-carousel4')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Omra Ramadan -->
+        <div class="package-card" data-wilaya="sfax">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-promo">RAMADAN</span>
+            <img
+              src="https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?w=600&q=80"
+              alt="Omra Ramadan"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Omra Ramadan 15 derniers jours</h4>
+            <p class="card-location">📍 La Mecque & Médine pendant le mois sacré</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 15 jours</span>
+              <span class="card-price">7200 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★</span>
+              <span class="stars empty">★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Iftar & Suhoor inclus</li>
+                <li>✔ Hôtels 4★ proches du Haram</li>
+                <li>✔ Encadrement religieux francophone</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Dépenses personnelles</li>
+                <li class="excluded-item">☑ Assurance médicale</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('omra-carousel5')">&#8249;</button>
+              <div class="carousel-track" id="omra-carousel5">
+                <img src="https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?w=80&h=60&q=70" alt="Ramadan à La Mecque" />
+                <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=80&h=60&q=70" alt="Mosquée illuminée" />
+                <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?w=80&h=60&q=70" alt="Iftar buffet" />
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=80&h=60&q=70" alt="Chambre d'hôtel" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="Nuit de prière" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('omra-carousel5')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Omra Famille -->
+        <div class="package-card" data-wilaya="djerba">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-nature">Famille</span>
+            <img
+              src="https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=600&q=80"
+              alt="Omra famille"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Omra Famille 12 jours</h4>
+            <p class="card-location">📍 Chambres familiales & suites communicantes</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 12 jours</span>
+              <span class="card-price">5600 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★</span>
+              <span class="stars empty">★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Chambres adaptées aux familles</li>
+                <li>✔ Assistance pour enfants & personnes âgées</li>
+                <li>✔ Ziyarats à Médine en groupe</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Poussettes & fauteuils roulants</li>
+                <li class="excluded-item">☑ Activités optionnelles</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('omra-carousel6')">&#8249;</button>
+              <div class="carousel-track" id="omra-carousel6">
+                <img src="https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=80&h=60&q=70" alt="Famille en Ihram" />
+                <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?w=80&h=60&q=70" alt="Lobby famille" />
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=80&h=60&q=70" alt="Chambre familiale" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="Vue de la ville" />
+                <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=80&h=60&q=70" alt="Mosquée de Médine" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('omra-carousel6')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Omra Groupe Jeunes -->
+        <div class="package-card" data-wilaya="gabes">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-top">GROUPE</span>
+            <img
+              src="https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?w=600&q=80"
+              alt="Omra groupe jeunes"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Omra Groupe Jeunes 9 jours</h4>
+            <p class="card-location">📍 Programme dynamique pour jeunes adultes</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 9 jours</span>
+              <span class="card-price">3300 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★</span>
+              <span class="stars empty">★★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Séances d’orientation religieuse</li>
+                <li>✔ Hébergement en chambres partagées</li>
+                <li>✔ Visites guidées des lieux historiques</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Repas hors programme</li>
+                <li class="excluded-item">☑ Activités extra</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('omra-carousel7')">&#8249;</button>
+              <div class="carousel-track" id="omra-carousel7">
+                <img src="https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?w=80&h=60&q=70" alt="Groupe jeunes" />
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=80&h=60&q=70" alt="Chambres partagées" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="Ville de nuit" />
+                <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?w=80&h=60&q=70" alt="Hall hôtel" />
+                <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=80&h=60&q=70" alt="Mosquée" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('omra-carousel7')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+        <!-- Omra Seniors -->
+        <div class="package-card" data-wilaya="kairouan">
+          <div class="card-image-wrapper">
+            <span class="card-badge badge-nature">Seniors</span>
+            <img
+              src="https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=600&q=80"
+              alt="Omra seniors"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Omra Seniors 12 jours</h4>
+            <p class="card-location">📍 Programme adapté aux seniors</p>
+            <div class="card-meta">
+              <span class="card-duration">🗓 12 jours</span>
+              <span class="card-price">5400 DT</span>
+            </div>
+            <div class="card-stars">
+              <span class="stars filled">★★★★</span>
+              <span class="stars empty">★</span>
+            </div>
+            <div class="card-included">
+              <strong>Inclus</strong>
+              <ul>
+                <li>✔ Assistance spéciale aéroport & hôtels</li>
+                <li>✔ Rythme de visites adapté</li>
+                <li>✔ Accompagnateur médical (selon départ)</li>
+              </ul>
+            </div>
+            <div class="card-excluded">
+              <strong>Non inclus</strong>
+              <ul>
+                <li class="excluded-item">☑ Médicaments personnels</li>
+                <li class="excluded-item">☑ Examens médicaux avant départ</li>
+              </ul>
+            </div>
+            <div class="card-carousel">
+              <button class="carousel-btn" onclick="prevSlide('omra-carousel8')">&#8249;</button>
+              <div class="carousel-track" id="omra-carousel8">
+                <img src="https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=80&h=60&q=70" alt="Couple seniors" />
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=80&h=60&q=70" alt="Chambre accessible" />
+                <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?w=80&h=60&q=70" alt="Accueil hôtel" />
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=80&h=60&q=70" alt="Ville" />
+                <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=80&h=60&q=70" alt="Mosquée" />
+              </div>
+              <button class="carousel-btn" onclick="nextSlide('omra-carousel8')">&#8250;</button>
+            </div>
+            <button class="btn-reserver">Réserver Maintenant</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+  let menu = document.querySelector('#menu-bar');
+  let navbar = document.querySelector('.navbar');
+  let searchBtn = document.querySelector('#search-btn');
+  let searchBar = document.querySelector('.search-bar-container');
+  let formBtn = document.querySelector('#login-btn');
+  let formClose = document.querySelector('#form-close');
+  let loginForm = document.querySelector('.login-form-container');
+
+  menu.addEventListener('click', () =>{
+      menu.classList.toggle('fa-times');
+      navbar.classList.toggle('active');
+  });
+
+  searchBtn.addEventListener('click', () =>{
+      searchBtn.classList.toggle('fa-times');
+      searchBar.classList.toggle('active');
+  });
+
+  formBtn.addEventListener('click', () =>{
+      loginForm.classList.add('active');
+  });
+  formClose.addEventListener('click', () =>{
+      loginForm.classList.remove('active');
+  });
+  </script>
+
+  <script src="js/tunisie.js"></script>
+
+  <!-- Footer -->
+  <section class="footer" id="contact">
+    <div class="box-container">
+        <div class="box">
+            <h3>À propos de nous</h3>
+            <p>Agence spécialisée dans l’organisation de voyages Omra & Hajj, avec un accompagnement complet depuis la Tunisie.</p>
+        </div>
+        <div class="box">
+            <h3>nos agences</h3>
+            <a href="#">Tunis</a>
+            <a href="#">Sousse</a>
+            <a href="#">Sfax</a>
+            <a href="#">Gabès</a>
+        </div>
+        <div class="box">
+          <h3>liens rapides </h3>
+          <a href="#accueil">accueil</a>
+          <a href="#forfait">forfaits omra</a>
+          <a href="#service">services</a>
+          <a href="#galerie">galerie</a>
+          <a href="#avis">avis</a>
+          <a href="#reserver">reserver</a>
+          <a href="#contact">contact</a>
+        </div>
+        <div class="box">
+            <h3>contactez-nous</h3>
+            
+            <a href="https://www.facebook.com/voyage" target="_blank">
+              <img src="image/facebook.png" alt="Facebook" width="20rem" height="20rem" /> Facebook
+            </a>
+            <a href="https://www.instagram.com/voyage" target="_blank">
+              <img src="image/instagrame.avif" alt="Instagram" width="20rem" height="20rem" /> Instagram
+            </a>
+            <a href="https://x.com/voyage" target="_blank">
+              <img src="image/twitter.avif" alt="twitter" width="20rem" height="20rem"/> twitter
+            </a>
+            <a href="https://www.linkedin.com/in/voyage" target="_blank">
+              <img src="image/linkedin.webp" alt="LinkedIn" width="20rem" height="20rem" /> LinkedIn
+            </a>
+            <h5>Email : omra@traveltourisme.com</h5>
+            <h5>phone : +216 71 000 000</h5>
+            <h5>Adresse : 10, Avenue de la Omra, Tunis</h5>
+        </div>
+    </div>
+    <h1 class="credit"> 2025/2026  créer par | <span>yassmine ben hmida</span> | </h1>
+  </section>
+
+</body>
+</html>
+
