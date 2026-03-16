@@ -1,0 +1,1280 @@
+<!-- HERO BANNER -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>CAMPING</h1>
+    <h2>Séjours Camping & Aventures en Pleine Nature</h2>
+    <p>Des nuits sous les étoiles, des forêts verdoyantes et des paysages sauvages : découvrez nos séjours camping organisés avec encadrement professionnel.</p>
+  </div>
+</section>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="main-container">
+
+  <!-- FILTRES LATERAUX -->
+  <aside class="filters">
+    <h3 class="filters-title">FILTERS</h3>
+
+    <!-- Prix -->
+    <div class="filter-group">
+      <label class="filter-label">Budget</label>
+      <span class="filter-sublabel">Plage de prix</span>
+      <input type="range" class="range-slider" id="priceRange" min="80" max="2500" value="2500" />
+      <div class="range-labels">
+        <span>80 DT</span>
+        <span>2500 DT</span>
+      </div>
+      <div class="range-current" id="priceCurrent">≤ 2500 DT</div>
+      <div class="range-steps">
+        <span>80</span>
+        <span>500</span>
+        <span>1000</span>
+        <span>1500</span>
+        <span>2000</span>
+        <span>2500</span>
+      </div>
+    </div>
+
+    <!-- Types de séjours -->
+    <div class="filter-group">
+      <label class="filter-label">Type de séjour</label>
+      <div class="select-wrapper">
+        <select class="filter-select" id="locationSelect">
+          <option value="">Tous les types</option>
+          <option value="tunis">Montagne</option>
+          <option value="sousse">Plage</option>
+          <option value="djerba">Famille</option>
+          <option value="tozeur">Désert</option>
+          <option value="jendouba">Forêt</option>
+          <option value="sfax">Aventure</option>
+          <option value="monastir">Luxe</option>
+          <option value="nabeul">Groupe</option>
+          <option value="gabes">Jeunes</option>
+          <option value="kairouan">Seniors</option>
+        </select>
+      </div>
+      <div class="checkbox-group">
+        <label class="checkbox-item">
+          <input type="checkbox" id="wilayaAll" checked /> Tous
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="tunis" /> Montagne
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="sousse" /> Plage
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="tozeur" /> Désert
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="jendouba" /> Forêt
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="sfax" /> Aventure
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="monastir" /> Luxe
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="nabeul" /> Groupe
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="djerba" /> Famille
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="gabes" /> Jeunes
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="kairouan" /> Seniors
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="other" /> Autres...
+        </label>
+      </div>
+    </div>
+
+    <!-- Confort (étoiles) -->
+    <div class="filter-group">
+      <label class="filter-label">Confort du camp</label>
+      <div class="checkbox-group">
+        <label class="checkbox-item">
+          <input type="checkbox" id="starsAll" checked /> Tous
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="stars3" /> Standard
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="stars4" /> Confort
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="stars5" /> Premium
+        </label>
+      </div>
+    </div>
+  </aside>
+
+  <!-- FORFAITS CAMPING -->
+  <section class="packages" id="forfait">
+    <div class="packages-header">
+      <h3 class="packages-title">NOS SÉJOURS CAMPING</h3>
+      <button class="packages-all-btn" id="showAllPackagesBtn">
+        <i class="fas fa-layer-group"></i>
+        <span>Tous</span>
+      </button>
+    </div>
+
+    <div class="packages-grid">
+
+      <!-- ==================== MONTAGNE (tunis) - 4 FORFAITS ==================== -->
+      <!-- Montagne 5 étoiles 1 -->
+      <div class="package-card" data-wilaya="tunis">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">PREMIUM 5★</span>
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Camping montagne luxe" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Montagne Prestige</h4>
+          <p class="card-location">📍 Djebel Ressas - Camp d'altitude</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">890 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes de luxe avec matelas épais</li>
+              <li>✔ Guide privé de haute montagne</li>
+              <li>✔ Pension complète (repas chauds)</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Montagne 5 étoiles 2 -->
+      <div class="package-card" data-wilaya="tunis">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">CONFORT 5★</span>
+          <img src="https://images.unsplash.com/photo-1526491109672-74740652b963?w=600&q=80" alt="Camping montagne confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Escape Montagne</h4>
+          <p class="card-location">📍 Zaghouan - Plateau des pins</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">650 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes équipées (lits de camp)</li>
+              <li>✔ Randonnée guidée + pique-nique</li>
+              <li>✔ Transfert 4x4 depuis Tunis</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Montagne 4 étoiles -->
+      <div class="package-card" data-wilaya="tunis">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">4★ CONFORT</span>
+          <img src="https://images.unsplash.com/photo-1508261306211-45a1c5c2a5c5?w=600&q=80" alt="Camping montagne confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weekend Montagne Confort</h4>
+          <p class="card-location">📍 Djebel Ressas & hauteurs de Zaghouan</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">420 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★</span>
+            <span class="stars empty">★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Transport A/R en bus climatisé</li>
+              <li>✔ Tentes confort & matelas</li>
+              <li>✔ Randonnée guidée & feu de camp</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Montagne 3 étoiles -->
+      <div class="package-card" data-wilaya="tunis">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">3★ STANDARD</span>
+          <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=600&q=80" alt="Camping montagne standard" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weekend Montagne Standard</h4>
+          <p class="card-location">📍 Djebel Ressas & hauteurs de Zaghouan</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">280 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★</span>
+            <span class="stars empty">★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Transport A/R en bus</li>
+              <li>✔ Tentes partagées & matelas</li>
+              <li>✔ Randonnée guidée & feu de camp</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- ==================== PLAGE (sousse) - 4 FORFAITS ==================== -->
+      <!-- Plage 5 étoiles 1 -->
+      <div class="package-card" data-wilaya="sousse">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">LUXE 5★</span>
+          <img src="https://images.unsplash.com/photo-1520454974749-611b7248ff73?w=600&q=80" alt="Camping plage luxe" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Plage Élite</h4>
+          <p class="card-location">📍 Mahdia - Côte sauvage</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">950 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes vue mer avec terrasse</li>
+              <li>✔ Repas gastronomiques poissons</li>
+              <li>✔ Activités nautiques incluses</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Plage 5 étoiles 2 -->
+      <div class="package-card" data-wilaya="sousse">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">PRESTIGE 5★</span>
+          <img src="https://images.unsplash.com/photo-1505238680356-667803448bb6?w=600&q=80" alt="Plage prestige" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Paradise Beach</h4>
+          <p class="card-location">📍 Hammamet - Baie privée</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 4 jours / 3 nuits</span>
+            <span class="card-price">1250 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Bungalows de plage 5★</li>
+              <li>✔ Chef privé & service en chambre</li>
+              <li>✔ Sports nautiques illimités</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Plage 4 étoiles -->
+      <div class="package-card" data-wilaya="sousse">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">4★ CONFORT</span>
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80" alt="Camping plage confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Camping Plage & Surf</h4>
+          <p class="card-location">📍 Côtes de Nabeul & Cap Bon</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">490 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★</span>
+            <span class="stars empty">★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Emplacements tentes en bord de mer</li>
+              <li>✔ Petit-déjeuner & un repas par jour</li>
+              <li>✔ Initiation surf / kayak</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Plage 3 étoiles -->
+      <div class="package-card" data-wilaya="sousse">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">3★ STANDARD</span>
+          <img src="https://images.unsplash.com/photo-1507525425510-56f1c3f2a8c1?w=600&q=80" alt="Camping plage standard" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weekend Plage</h4>
+          <p class="card-location">📍 Côtes de Nabeul</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">320 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★</span>
+            <span class="stars empty">★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Emplacement tente</li>
+              <li>✔ Petit-déjeuner inclus</li>
+              <li>✔ Accès plage</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- ==================== DÉSERT (tozeur) - 4 FORFAITS ==================== -->
+      <!-- Désert 5 étoiles 1 -->
+      <div class="package-card" data-wilaya="tozeur">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">ROYAL 5★</span>
+          <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=600&q=80" alt="Désert luxe" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Désert Royal</h4>
+          <p class="card-location">📍 Douz - Campement de luxe</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">1100 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes bédouines luxueuses (vrai lit)</li>
+              <li>✔ Dîner aux chandelles dans les dunes</li>
+              <li>✔ Balade en 4x4 privatif</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Désert 5 étoiles 2 -->
+      <div class="package-card" data-wilaya="tozeur">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">PREMIUM 5★</span>
+          <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=600&q=80" alt="Désert premium" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Oasis Prestige</h4>
+          <p class="card-location">📍 Tozeur - Palmeraie</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">780 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Campement au cœur de l'oasis</li>
+              <li>✔ Repas traditionnels & musique</li>
+              <li>✔ Excursion en dromadaire</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Désert 4 étoiles -->
+      <div class="package-card" data-wilaya="tozeur">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">4★ CONFORT</span>
+          <img src="https://images.unsplash.com/photo-1529927066849-66e1abc70a2e?w=600&q=80" alt="Désert confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Nuit sous les étoiles</h4>
+          <p class="card-location">📍 Dunes de Douz & Sahara tunisien</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">350 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★</span>
+            <span class="stars empty">★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Balade à dos de dromadaire</li>
+              <li>✔ Dîner traditionnel autour du feu</li>
+              <li>✔ Tentes bédouines confortables</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Désert 3 étoiles -->
+      <div class="package-card" data-wilaya="tozeur">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">3★ STANDARD</span>
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Désert standard" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Bivouac Désert</h4>
+          <p class="card-location">📍 Dunes de Douz</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 1 jour / 1 nuit</span>
+            <span class="card-price">220 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★</span>
+            <span class="stars empty">★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tente collective</li>
+              <li>✔ Dîner & petit-déjeuner</li>
+              <li>✔ Balade dromadaire</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- ==================== FORÊT (jendouba) - 4 FORFAITS ==================== -->
+      <!-- Forêt 5 étoiles 1 -->
+      <div class="package-card" data-wilaya="jendouba">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">LUXE 5★</span>
+          <img src="https://images.unsplash.com/photo-1445308394109-4ec2920981b1?w=600&q=80" alt="Forêt luxe" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Forest Lodge</h4>
+          <p class="card-location">📍 Aïn Draham - Cèdres millénaires</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">920 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Cabanes en bois tout confort</li>
+              <li>✔ Spa & bain nordique en forêt</li>
+              <li>✔ Guide nature & observation</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Forêt 5 étoiles 2 -->
+      <div class="package-card" data-wilaya="jendouba">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">PRESTIGE 5★</span>
+          <img src="https://images.unsplash.com/photo-1500879747858-bb1845b61beb?w=600&q=80" alt="Forêt prestige" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Escape Forest</h4>
+          <p class="card-location">📍 Béja - Forêts de chênes-lièges</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">680 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes lodge avec poêle</li>
+              <li>✔ Repas du terroir & vin chaud</li>
+              <li>✔ Randonnée guidée en forêt</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Forêt 4 étoiles -->
+      <div class="package-card" data-wilaya="jendouba">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">4★ CONFORT</span>
+          <img src="https://images.unsplash.com/photo-1508261306213-0a5a36a9a7c2?w=600&q=80" alt="Forêt confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Camping Forêt d'Aïn Draham</h4>
+          <p class="card-location">📍 Aïn Draham & forêts du Nord-Ouest</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">420 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★</span>
+            <span class="stars empty">★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Campement aménagé en pleine forêt</li>
+              <li>✔ Petit-déjeuner & dîner inclus</li>
+              <li>✔ Encadrement par guides certifiés</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Forêt 3 étoiles -->
+      <div class="package-card" data-wilaya="jendouba">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">3★ STANDARD</span>
+          <img src="https://images.unsplash.com/photo-1517824806704-9040b037703b?w=600&q=80" alt="Forêt standard" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weekend Forêt</h4>
+          <p class="card-location">📍 Aïn Draham</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">280 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★</span>
+            <span class="stars empty">★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes collectives</li>
+              <li>✔ Petit-déjeuner inclus</li>
+              <li>✔ Randonnée guidée</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- ==================== AVENTURE (sfax) - 4 FORFAITS ==================== -->
+      <!-- Aventure 5 étoiles 1 -->
+      <div class="package-card" data-wilaya="sfax">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">EXPÉDITION 5★</span>
+          <img src="https://images.unsplash.com/photo-1532339142462-fd0a1e6e7a1e?w=600&q=80" alt="Aventure luxe" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Grand Trek</h4>
+          <p class="card-location">📍 Kasserine - Monts de Tébessa</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 5 jours / 4 nuits</span>
+            <span class="card-price">1450 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Expédition complète avec porteurs</li>
+              <li>✔ Matériel technique haut de gamme</li>
+              <li>✔ Guide de haute montagne diplômé</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Aventure 5 étoiles 2 -->
+      <div class="package-card" data-wilaya="sfax">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">AVENTURE 5★</span>
+          <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?w=600&q=80" alt="Aventure confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Trek & Bivouac</h4>
+          <p class="card-location">📍 Siliana - Parc national</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">820 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Bivouacs confort en pleine nature</li>
+              <li>✔ Équipement technique inclus</li>
+              <li>✔ Encadrement professionnel</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Aventure 4 étoiles -->
+      <div class="package-card" data-wilaya="sfax">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">4★ CONFORT</span>
+          <img src="https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=600&q=80" alt="Aventure confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Trek & Camping Aventure</h4>
+          <p class="card-location">📍 Itinéraire variable selon saison</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 4 jours / 3 nuits</span>
+            <span class="card-price">690 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★</span>
+            <span class="stars empty">★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Encadrement par guides de montagne</li>
+              <li>✔ Matériel de camping collectif</li>
+              <li>✔ Pension complète sur le camp</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Aventure 3 étoiles -->
+      <div class="package-card" data-wilaya="sfax">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">3★ STANDARD</span>
+          <img src="https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=600&q=80" alt="Aventure standard" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weekend Aventure</h4>
+          <p class="card-location">📍 Parc national de Zaghouan</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">390 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★</span>
+            <span class="stars empty">★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes collectives</li>
+              <li>✔ Repas inclus</li>
+              <li>✔ Randonnée guidée</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- ==================== LUXE (monastir) - 4 FORFAITS ==================== -->
+      <!-- Luxe 5 étoiles 1 -->
+      <div class="package-card" data-wilaya="monastir">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">GLAMPING 5★</span>
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Glamping luxe" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Glamping Luxe</h4>
+          <p class="card-location">📍 Campement de charme, désert & oasis</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">1150 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes suites équipées (lit, salle d'eau privée)</li>
+              <li>✔ Dîners gastronomiques sous les étoiles</li>
+              <li>✔ Transferts privés 4x4</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Luxe 5 étoiles 2 -->
+      <div class="package-card" data-wilaya="monastir">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">VIP 5★</span>
+          <img src="https://images.unsplash.com/photo-1528215747454-3d0e0902fff2?w=600&q=80" alt="Glamping vip" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Glamping VIP</h4>
+          <p class="card-location">📍 Monastir - Bord de mer privé</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">1350 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Suite tente avec jacuzzi privé</li>
+              <li>✔ Chef personnel & room service</li>
+              <li>✔ Activités sur mesure</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Luxe 4 étoiles -->
+      <div class="package-card" data-wilaya="monastir">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">GLAMPING 4★</span>
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Glamping confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Glamping Confort</h4>
+          <p class="card-location">📍 Sousse - Corniche</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">550 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★</span>
+            <span class="stars empty">★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes spacieuses avec électricité</li>
+              <li>✔ Petit-déjeuner & dîner inclus</li>
+              <li>✔ Accès plage privée</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Luxe 3 étoiles -->
+      <div class="package-card" data-wilaya="monastir">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">GLAMPING 3★</span>
+          <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=600&q=80" alt="Glamping standard" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Glamping Découverte</h4>
+          <p class="card-location">📍 Mahdia - Camping organisé</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">380 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★</span>
+            <span class="stars empty">★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes standards sur plateforme</li>
+              <li>✔ Petit-déjeuner inclus</li>
+              <li>✔ Animation collective</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- ==================== GROUPE (nabeul) - 4 FORFAITS ==================== -->
+      <!-- Groupe 5 étoiles 1 -->
+      <div class="package-card" data-wilaya="nabeul">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">GROUPE</span>
+          <img src="https://images.unsplash.com/photo-1516567727245-6bc7f9a0f17c?w=600&q=80" alt="Camping groupe" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weekend Groupe entre Amis</h4>
+          <p class="card-location">📍 Cap Bon & Forêts de Kroumirie</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">320 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes collectives spacieuses</li>
+              <li>✔ Soirée animée avec feu de camp</li>
+              <li>✔ Petit-déjeuner & barbecue inclus</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Groupe 5 étoiles 2 -->
+      <div class="package-card" data-wilaya="nabeul">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">GROUPE 5★</span>
+          <img src="https://images.unsplash.com/photo-1517451330947-7809dead78ef?w=600&q=80" alt="Groupe premium" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Team Building Premium</h4>
+          <p class="card-location">📍 Cap Bon - Resort nature</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">680 DT/pers</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Hébergement en lodges collectifs</li>
+              <li>✔ Activités team building encadrées</li>
+              <li>✔ Repas & soirée animée</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Groupe 4 étoiles -->
+      <div class="package-card" data-wilaya="nabeul">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">GROUPE 4★</span>
+          <img src="https://images.unsplash.com/photo-1517824806704-9040b037703b?w=600&q=80" alt="Groupe confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weekend Groupe Confort</h4>
+          <p class="card-location">📍 Korbous - Source thermale</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">420 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★</span>
+            <span class="stars empty">★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Campement aménagé pour groupe</li>
+              <li>✔ Repas inclus & barbecue</li>
+              <li>✔ Randonnée guidée</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Groupe 3 étoiles -->
+      <div class="package-card" data-wilaya="nabeul">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">GROUPE 3★</span>
+          <img src="https://images.unsplash.com/photo-1508261306211-45a1c5c2a5c5?w=600&q=80" alt="Groupe standard" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Camp Groupe</h4>
+          <p class="card-location">📍 Forêt de Dar Chichou</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">280 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★</span>
+            <span class="stars empty">★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes collectives</li>
+              <li>✔ Petit-déjeuner & dîner</li>
+              <li>✔ Animation soirée</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- ==================== FAMILLE (djerba) - 4 FORFAITS ==================== -->
+      <!-- Famille 5 étoiles 1 -->
+      <div class="package-card" data-wilaya="djerba">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">Famille</span>
+          <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?w=600&q=80" alt="Camping famille" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Camping Famille & Découverte</h4>
+          <p class="card-location">📍 Parcs naturels & lacs du Nord</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">520 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes familiales & aire de jeux</li>
+              <li>✔ Activités nature pour enfants</li>
+              <li>✔ Pension complète</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Famille 5 étoiles 2 -->
+      <div class="package-card" data-wilaya="djerba">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">FAMILLE 5★</span>
+          <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80" alt="Famille luxe" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Family Resort Nature</h4>
+          <p class="card-location">📍 Djerba - Camping de luxe</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 4 jours / 3 nuits</span>
+            <span class="card-price">1250 DT/famille</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Bungalows familiaux tout confort</li>
+              <li>✔ Club enfants & animations</li>
+              <li>✔ Pension complète & piscine</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Famille 4 étoiles -->
+      <div class="package-card" data-wilaya="djerba">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">FAMILLE 4★</span>
+          <img src="https://images.unsplash.com/photo-1517824806704-9040b037703b?w=600&q=80" alt="Famille confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weekend Famille Confort</h4>
+          <p class="card-location">📍 Cap Bon - Plage</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">380 DT/famille</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★</span>
+            <span class="stars empty">★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tente familiale</li>
+              <li>✔ Petit-déjeuner & dîner</li>
+              <li>✔ Activités enfants</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Famille 3 étoiles -->
+      <div class="package-card" data-wilaya="djerba">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">FAMILLE 3★</span>
+          <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=600&q=80" alt="Famille standard" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weekend Famille</h4>
+          <p class="card-location">📍 Zarzis - Camping plage</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">290 DT/famille</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★</span>
+            <span class="stars empty">★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Emplacement tente familiale</li>
+              <li>✔ Petit-déjeuner inclus</li>
+              <li>✔ Aire de jeux enfants</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- ==================== JEUNES (gabes) - 4 FORFAITS ==================== -->
+      <!-- Jeunes 5 étoiles 1 -->
+      <div class="package-card" data-wilaya="gabes">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">JEUNES</span>
+          <img src="https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=600&q=80" alt="Camping jeunes" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Camping Aventure Jeunes</h4>
+          <p class="card-location">📍 Dunes de Douz & Oasis</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">390 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Bivouac en pleine nature</li>
+              <li>✔ Balade à dos de dromadaire</li>
+              <li>✔ Ambiance jeune & soirées guidées</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Jeunes 5 étoiles 2 -->
+      <div class="package-card" data-wilaya="gabes">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">JEUNES 5★</span>
+          <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?w=600&q=80" alt="Jeunes prestige" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Adventure Camp</h4>
+          <p class="card-location">📍 Matmata - Canyon</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">590 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Bivouac & sports outdoor</li>
+              <li>✔ Guides spécialisés jeunes</li>
+              <li>✔ Matériel d'escalade inclus</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Jeunes 4 étoiles -->
+      <div class="package-card" data-wilaya="gabes">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">JEUNES 4★</span>
+          <img src="https://images.unsplash.com/photo-1517451330947-7809dead78ef?w=600&q=80" alt="Jeunes confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Fun & Nature</h4>
+          <p class="card-location">📍 Chenini - Village troglodyte</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">390 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★</span>
+            <span class="stars empty">★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Campement confort</li>
+              <li>✔ Randonnée & baignade</li>
+              <li>✔ Soirée animée</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Jeunes 3 étoiles -->
+      <div class="package-card" data-wilaya="gabes">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">JEUNES 3★</span>
+          <img src="https://images.unsplash.com/photo-1517824806704-9040b037703b?w=600&q=80" alt="Jeunes standard" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weekend Jeunes</h4>
+          <p class="card-location">📍 Forêt de Béni Mtir</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">250 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★</span>
+            <span class="stars empty">★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes collectives</li>
+              <li>✔ Repas inclus</li>
+              <li>✔ Animation soirée</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- ==================== SENIORS (kairouan) - 4 FORFAITS ==================== -->
+      <!-- Seniors 5 étoiles 1 -->
+      <div class="package-card" data-wilaya="kairouan">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">SENIORS</span>
+          <img src="https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=600&q=80" alt="Camping seniors" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Camping Douceur pour Seniors</h4>
+          <p class="card-location">📍 Campements aménagés, Nord-Ouest</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 4 jours / 3 nuits</span>
+            <span class="card-price">650 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes confort sur plots</li>
+              <li>✔ Programme allégé et adapté</li>
+              <li>✔ Accompagnateur dédié + infirmerie</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Seniors 5 étoiles 2 -->
+      <div class="package-card" data-wilaya="kairouan">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-top">SENIORS 5★</span>
+          <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80" alt="Seniors luxe" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Douceur & Nature</h4>
+          <p class="card-location">📍 Kairouan - Campement de charme</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 4 jours / 3 nuits</span>
+            <span class="card-price">890 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Lodges confort avec chauffage</li>
+              <li>✔ Visites culturelles adaptées</li>
+              <li>✔ Accompagnateur dédié</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Seniors 4 étoiles -->
+      <div class="package-card" data-wilaya="kairouan">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-nature">SENIORS 4★</span>
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Seniors confort" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Évasion Seniors</h4>
+          <p class="card-location">📍 El Haouaria - Nature & calme</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 3 jours / 2 nuits</span>
+            <span class="card-price">550 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★★</span>
+            <span class="stars empty">★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Campement calme et confort</li>
+              <li>✔ Repas équilibrés</li>
+              <li>✔ Activités douces encadrées</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+      <!-- Seniors 3 étoiles -->
+      <div class="package-card" data-wilaya="kairouan">
+        <div class="card-image-wrapper">
+          <span class="card-badge badge-promo">SENIORS 3★</span>
+          <img src="https://images.unsplash.com/photo-1517824806704-9040b037703b?w=600&q=80" alt="Seniors standard" class="card-image" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Détente Seniors</h4>
+          <p class="card-location">📍 Parc national de Boukornine</p>
+          <div class="card-meta">
+            <span class="card-duration">🗓 2 jours / 1 nuit</span>
+            <span class="card-price">350 DT</span>
+          </div>
+          <div class="card-stars">
+            <span class="stars filled">★★★</span>
+            <span class="stars empty">★★</span>
+          </div>
+          <div class="card-included">
+            <strong>Inclus</strong>
+            <ul>
+              <li>✔ Tentes confort</li>
+              <li>✔ Pension complète</li>
+              <li>✔ Promenades encadrées</li>
+            </ul>
+          </div>
+          <button class="btn-reserver">Réserver Maintenant</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
