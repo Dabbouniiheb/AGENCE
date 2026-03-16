@@ -867,6 +867,7 @@ header .search-bar-container label:hover{
 
 
 
+/*-------------tunisie omra camping-------------*/
 
 
 
@@ -1415,7 +1416,7 @@ header .search-bar-container label:hover{
 
 
 
-
+    /*-------------login-------------*/
 
 
 
@@ -1696,139 +1697,3 @@ header .search-bar-container label:hover{
     text-decoration: underline;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-    background-size:cover;
-    background-position:center;
-}
-
-.login-container{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.login-card{
-    background:#fff;
-    padding:40px;
-    width:400px;
-    border-radius:15px;
-    box-shadow:0 15px 35px rgba(0,0,0,0.3);
-    text-align:center;
-}
-
-.login-card h2{
-    color:#0d6efd;
-    margin-bottom:10px;
-}
-
-.login-card p{
-    color:#666;
-    margin-bottom:25px;
-}
-
-.input-box{
-    margin-bottom:20px;
-}
-
-.input-box input{
-    width:100%;
-    padding:12px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:16px;
-    transition:0.3s;
-}
-
-.input-box input:focus{
-    border-color:#0d6efd;
-    outline:none;
-    box-shadow:0 0 8px rgba(13,110,253,0.3);
-}
-
-.options{
-    display:flex;
-    justify-content:space-between;
-    font-size:14px;
-    margin-bottom:20px;
-}
-
-.options a{
-    text-decoration:none;
-    color:#0d6efd;
-}
-
-.options a:hover{
-    text-decoration:underline;
-}
-
-.btn-login{
-    width:100%;
-    padding:12px;
-    background:#ffa500;
-    border:none;
-    border-radius:8px;
-    color:#fff;
-    font-size:16px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.btn-login:hover{
-    background:#ff7b00;
-}
-
-.register-link{
-    margin-top:20px;
-    font-size:14px;
-}
-
-.register-link a{
-    color:#0d6efd;
-    text-decoration:none;
-}
-
-.register-link a:hover{
-    text-decoration:underline;
-}*/
