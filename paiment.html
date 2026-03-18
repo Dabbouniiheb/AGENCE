@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency - Payment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style1.css">
+    <style>
+        
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        /* Header */
+               
+
+        /* Progress Bar */
+        .progress {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .progress div {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            font-weight: 500;
+            color: #6B7280;
+        }
+        .progress div.active {
+            color: #1E3A8A;
+        }
+        .progress div::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background: #E5E7EB;
+            z-index: -1;
+        }
+        .progress div:last-child::after {
+            display: none;
+        }
+
+        /* Main */
+        .main {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Left Column */
+        .form-card {
+            flex: 2;
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .form-card h3 {
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .form-card label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .form-card input[type="text"],
+        .form-card input[type="email"],
+        .form-card input[type="number"] {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #D1D5DB;
+            font-size: 14px;
+        }
+
+        /* Payment Tabs */
+        .payment-tabs {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        .payment-tabs button {
+            flex: 1;
+            padding: 10px 0;
+            border: 1px solid #D1D5DB;
+            background: white;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .payment-tabs button.active {
+            background: #1E3A8A;
+            color: white;
+            border-color: #1E3A8A;
+        }
+
+        /* Billing Address */
+        .billing {
+            display: flex;
+            gap: 10px;
+        }
+        .billing input {
+            flex: 1;
+        }
+
+        /* Checkbox */
+        .checkbox {
+            margin-bottom: 20px;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            background: #1E3A8A;
+            color: white;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2563EB;
+        }
+
+        /* Right Column */
+        .summary-card {
+            flex: 1;
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            height: fit-content;
+            position: sticky;
+            top: 30px;
+        }
+        .summary-card h4 {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .summary-card p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .price {
+            border-top: 1px solid #E5E7EB;
+            padding-top: 10px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        .promo {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .promo input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #D1D5DB;
+        }
+        .promo button {
+            padding: 8px 12px;
+            border: none;
+            background: #1E3A8A;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .promo button:hover {
+            background: #2563EB;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .main {
+                flex-direction: column;
+            }
+            .summary-card {
+                position: static;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+    
+            <a href="#" class="logo"><span>V</span>oyages</a>
+            <nav class="navbar">
+                <a href="#accueil">accueil</a>
+                <a href="#forfait">forfait</a>
+                <a href="#service">service</a>
+                <a href="#galerie">galerie</a>
+                <a href="#avis">avis</a>
+                <a href="#reserver">reserver</a>
+                <a href="#contact">contact</a>
+            </nav>
+            <div class="icons">
+                <i class="fas fa-search" id="search-btn"></i>
+                <a href="login.html">
+                    <i class="fas fa-user" id="login-btn"></i>
+                </a>
+            </div>
+            <form action="" class="search-bar-container">
+                <input type="search" id="search-bar" placeholder="racherche ici...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </form>
+        </header>
+
+        <div class="progress">
+            <div>Trip</div>
+            <div>Details</div>
+            <div class="active">Payment</div>
+        </div>
+
+        <div class="main">
+            <!-- Left Form -->
+            <div class="form-card">
+                <h3>Customer Information</h3>
+                <label>Full Name</label>
+                <input type="text" placeholder="John Doe">
+                <label>Email Address</label>
+                <input type="email" placeholder="email@example.com">
+                <label>Phone Number</label>
+                <input type="text" placeholder="+216 XXX XXX XXX">
+
+                <h3>Payment Method</h3>
+                <div class="payment-tabs">
+                    <button class="active">Credit Card</button>
+                    <button>PayPal</button>
+                    <button>Cash</button>
+                </div>
+                <label>Card Number</label>
+                <input type="text" placeholder="1234 5678 9012 3456">
+                <div class="billing">
+                    <input type="text" placeholder="MM / YY">
+                    <input type="text" placeholder="CVV">
+                </div>
+
+                <h3>Billing Address (Optional)</h3>
+                <input type="text" placeholder="Street Address">
+                <div class="billing">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="ZIP Code">
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="terms"> I agree to the <a href="#">Terms & Conditions</a>
+                </div>
+
+                <button class="btn">Pay Now</button>
+            </div>
+
+            <!-- Right Summary -->
+            <div class="summary-card">
+                <h4>Trip Summary</h4>
+                <p>Destination: Makkah</p>
+                <p>Hotel: Hilton ⭐⭐⭐⭐⭐</p>
+                <p>Dates: 12 Aug - 20 Aug</p>
+
+                <h4>Price Details</h4>
+                <p>Subtotal: 6500 TND</p>
+                <p>Taxes: 500 TND</p>
+                <p class="price">Total: 7000 TND</p>
+
+                <div class="promo">
+                    <input type="text" placeholder="Promo Code">
+                    <button>Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
