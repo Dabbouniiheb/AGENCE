@@ -1,0 +1,1974 @@
+    
+    
+
+<!DOCTYPE html>
+<html lang="Fr" prefix="og: http://ogp.me/ns#">
+<head>
+                <meta name="robots" content="noindex, follow">
+    
+        <!--Meta tags-->
+        
+
+            <title>
+                Liste Omra À La Carte
+        </title>
+    
+        <link rel="canonical" href="https://www.visionvoyages.com.tn/omra-a-la-carte/liste">
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="icon" type="image/png" href="https://admin.visionvoyages.com.tn//file_manager/source/favicons/favicon-32x32.webp">
+    <link rel="mask-icon" href="https://admin.visionvoyages.com.tn//file_manager/source/favicons/favicon-32x32.webp">
+
+                
+                
+                
+                <link href="/assets-commun/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="/assets-commun/css/bootstrap-select.css" rel="stylesheet" type="text/css"/>
+        <link href="/assets-commun/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <link href="/assets-commun/css/owl.carousel.css" rel="stylesheet" type="text/css"/>
+        <link href="/assets-commun/css/owl.theme.default.min.css" rel="stylesheet" type="text/css"/>
+
+
+        <link href="/assets-commun/flatpickr/dist/flatpickr.min.css" rel="stylesheet" type="text/css"/>
+
+        <link href="/assets-commun/css/bootstrap-select.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/assets-commun/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+                    <link href="/assets-commun/css/styles.css" rel="stylesheet" type="text/css"/>
+        
+                <link rel="stylesheet" href="/assets-commun/css/flags.css" type="text/css">
+
+                    <link href="/assets/css/custom-styles.css" rel="stylesheet" type="text/css"/>
+                
+
+       
+        
+    
+    <link rel="stylesheet" href="/assets-commun/css/mobile-sidebar.css">
+     <link rel="stylesheet" href="/assets-commun/css/choices.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets-commun/css/loading.css"/>
+
+    <style>
+        ul.pagination li a {
+            cursor: pointer;
+        }
+
+        .info-row .tagcloud a {
+            margin-right: 5px;
+        }
+    
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 99999999999;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+.empty-page .jumbotron .container {
+background-color: rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(10px);
+border-radius: 6px;
+padding: 10px;
+}
+        .empty-page .jumbotron {
+            margin-left: -33%;
+           /* width: 100%;*/
+            height: 60vh;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative !important;
+        }
+        @media screen and (max-width: 991.99px) {
+            .empty-page .jumbotron {
+                margin-left: 0;
+                /* width: 100%;*/
+                height: 50vh;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+        }
+    </style>
+
+
+
+                <!--start my stylesheet-->
+        <style>.bottom-ratings, .top-ratings {
+       overflow: visible; 
+    
+}
+
+
+#vjs-list-hotels .progress{
+    display: none;
+}</style>
+        <!--end my stylesheet-->
+        
+    </head>
+
+<body id="body-book">
+
+
+
+                            <button class="btn scrolltop-btn back-top">
+    <i class="fa fa-angle-up"></i>
+</button>
+<div class="modal fade" id="pop-reset-pass" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <ul class="login-tabs">
+                    <li class="active">
+                        réinitialiser votre mot de passe</li>
+                </ul>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-close"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Veuillez saisir votre identifiant ou adresse mail. Vous recevrez un lien pour créer un nouveau mot de passe via e-mail.</p>
+                <form action="/reset-password" method="post">
+                    <div class="form-group">
+                        <div class="input-user input-icon">
+                            <input placeholder="Entrez votre login ou adresse mail" name="username"
+                                   class="form-control">
+                            <input type="hidden" name="front_confirm_reset_password"
+                                   value="https://www.visionvoyages.com.tn/resetting/reset/token">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-block">
+                        réinitialiser nouveau mot de passe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--start header section header v1-->
+        <link rel="stylesheet" href="/assets/css/header-vision.css">
+    <script src="/assets/js/jquery.js"></script>
+
+
+    <div class="top-bar-vision">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="top-drop-downs">
+                                        <li class="top-bar-vision-contact">
+                        <a href="https://wa.me/+21653335304" target="_blank">
+
+                            <img src="/assets/images/icons/what-pers.svg" class="top-icon" alt="....">
+                            <span>+216 53335304</span></a>
+                    </li>
+                    <li class="top-bar-vision-contact">
+                        <a href="tel:+21631 363 136"> <img src="/assets/images/icons/phone.svg" class="top-icon" alt="....">
+                            <span>+216 31 363 136</span></a>
+                    </li>
+                    <li class="top-bar-vision-contact">
+                        <a href="mailto:info@visionvoyages.com.tn">  <img src="/assets/images/icons/email.svg" class="top-icon" alt="....">
+                            <span>info@visionvoyages.com.tn</span></a>
+                    </li>
+
+                    <li class="user">
+                        
+                            <a href="https://www.visionvoyages.com.tn/login" target="_top"> <img src=/assets/images/icons/user.svg class="icon-user" alt="...."> Se connecter
+                            </a>
+                        
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<header id="header-section" class="header-vision header-main nav-left hidden-sm hidden-xs">
+
+
+    <div class="container">
+        <div class="row align-center">
+            <div class="col-md-3">
+                <div class="logo">
+                    <a href="https://www.visionvoyages.com.tn/" target="_top"><img
+                                src="https://admin.visionvoyages.com.tn/file_manager/source/front/logo.png" alt="logo"></a>
+
+                </div>
+            </div>
+            <div class="col-md-9">
+
+                <nav class="navi main-nav">
+                    <ul>
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false">Voyages </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="https://www.visionvoyages.com.tn/voyages-organises/liste" target="_top">Voyages
+                                        organisés </a></li>
+                                <li><a href="https://www.visionvoyages.com.tn/voyages-a-la-carte/liste" target="_top">Voyages à la carte</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false">Omra </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="https://www.visionvoyages.com.tn/omra-organisee/liste" target="_top">Omra organisés </a>
+                                </li>
+                                <li><a href="https://www.visionvoyages.com.tn/omra-a-la-carte/liste" target="_top">Omra à la carte</a></li>
+                                <li><a href="https://www.visionvoyages.com.tn/omra-carte" target="_top">Omra spécifique</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.visionvoyages.com.tn/hotel/all-all" target="_top"> Hôtels en tunisie </a>
+                        <li><a href="https://www.visionvoyages.com.tn/circuits-en-tunisie-a-la-carte/liste" target="_top"> Circuits en tunisie </a>
+                        <li><a href="https://www.visionvoyages.com.tn/aerien/vol-search"> Vols </a></li>
+                        <li class="hidden-sm hidden-xs visible ">
+
+                                <a href="https://www.visionvoyages.com.tn/type-transfert" class="btn btn-primary transfert-btn">Demande Transfert</a>
+
+
+                        </li>
+
+                        <li class="hidden-lg visible-sm visible-xs">
+
+                            <a href="https://www.visionvoyages.com.tn/type-transfert" target="_top">Demande Transfert</a>
+
+
+                        </li>
+                        <li class="user hidden-lg visible-sm visible-xs">
+                            
+                                <a href="https://www.visionvoyages.com.tn/login" target="_top"> <img
+                                            src=/assets/images/icons/user.svg class="icon-user"
+                                            alt="...."> Se
+                                    connecter
+                                </a>
+                            
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+</header>
+<div class="header-mobile-vision visible-sm visible-xs">
+    <div class="container">
+        <!--start mobile nav-->
+        <div class="mobile-nav">
+            <span class="nav-trigger  hamburger"> <span class="bar">
+
+                    </span><span class="bar">
+
+                    </span><span class="bar">
+
+                    </span></span>
+            <div class="nav-dropdown main-nav-dropdown"></div>
+        </div>
+        <!--end mobile nav-->
+        <div class="header-logo">
+            <a href="https://www.visionvoyages.com.tn/" target="_top">
+                <img src="https://admin.visionvoyages.com.tn/file_manager/source/front/logo.png" alt="logo"></a>
+        </div>
+        <div class="header-user">
+            <ul class="account-action">
+                <li>
+                    <span class="user-icon"><i class="fa fa-user"></i></span>
+                    <div class="account-dropdown">
+                        <ul>
+
+                            <li> <a href="#" data-toggle="modal" data-target="#pop-login"> <i class="fa fa-user"></i> Se connecter / S'insrire </a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!--end header section header v1-->
+
+<!--start banner module-->
+<!--end banner module-->
+<main id="section-body">         <div class="container breadcrumb-top" id="display">
+        <ul id="breadcrumbtrail" class="breadcrumb">
+            <li><a href="/"><i class="fa fa-home"></i></a></li>
+                                            <li  class="home">
+                                        Liste Omra À La Carte
+
+                                </li>
+                    </ul>
+    </div>
+
+
+    
+    <div class="container" id="container">
+	<div class="page-title ">
+		
+		<div class="row">
+
+			<div  id="vjs-sort-voyages">
+																																																																			
+				<div class="ssc-head-line mb" v-if="voyage_loading>0"></div>
+				<template v-else>
+					<div class="col-sm-12 col-md-6 col-12  page-title-left mb-1">
+
+						<div class="title-head" v-if="nbr_voyages != 0">
+
+							${nbr_voyages}
+							Omra À La Carte
+
+						</div>
+
+
+					</div>
+					<div class="col-sm-12 col-md-6 col-12 text-right">
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<div class="sort-tab text-end" v-show="visible">
+									<span>
+										Trier par:
+									</span>
+									<select class="selectpicker bs-select-hidden" v-model="trie" ref="select">
+										<option value="prix-asc" data-content="  prix ASC <i class='fa fa-sort-amount-desc' aria-hidden='true'></i>"></option>
+										<option value="prix-desc" data-content="  prix DESC <i class='fa  fa-sort-amount-asc' aria-hidden='true'></i>"></option>
+										<option value="recommander-desc" data-content="  recommandé"></option>
+									</select>
+								</div>
+							</div>
+							<div class="col-xs-6 text-left">
+								<div class="sort-tab text-end" v-show="visible">
+									<span>
+										Afficher par:
+									</span>
+									<select class="selectpicker bs-select-hidden" v-model="paginate_per">
+																					<option value="10" selected data-content="10 éléments"></option>
+																					<option value="30" selected data-content="30 éléments"></option>
+																					<option value="50" selected data-content="50 éléments"></option>
+																					<option value="100" selected data-content="100 éléments"></option>
+																			</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</template>
+
+			</div>
+		</div>
+	</div>
+	<div class="row">
+
+					<div class="col-12 col-sm-12 col-md-3 mt-2" id="sidebar-filtre">
+				<aside id="sidebar" class="sidebar-white">
+	<div class="widget widget-range">
+		<div id="vjs-refine-result" class="widget-body" v-show="visible">
+
+			<div class="hidden-sm hidden-xs">
+				<h2 id="availibility_voyage"> 
+				
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" style="background:transparent;">
+					<!-- Fond transparent + bordure arrondie -->
+					<rect x="0.5" y="0.5" width="19" height="19" rx="3" fill="transparent" stroke="var(--color-site-2)" stroke-width="1"/>
+					
+					<!-- Icône adjustments-horizontal -->
+					<path d="M5 6.5H7.5M15 6.5H9M7.5 6.5C7.5 7.32843 6.82843 8 6 8C5.17157 8 4.5 7.32843 4.5 6.5C4.5 5.67157 5.17157 5 6 5C6.82843 5 7.5 5.67157 7.5 6.5ZM9 13.5H11M5 13.5H7.5M11 13.5C11 14.3284 10.3284 15 9.5 15C8.67157 15 8 14.3284 8 13.5C8 12.6716 8.67157 12 9.5 12C10.3284 12 11 12.6716 11 13.5ZM13.5 10H15M5 10H12.5M12.5 10C12.5 10.8284 11.8284 11.5 11 11.5C10.1716 11.5 9.5 10.8284 9.5 10C9.5 9.17157 10.1716 8.5 11 8.5C11.8284 8.5 12.5 9.17157 12.5 10Z" 
+							stroke="var(--color-site-2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				
+				
+				
+				Filtrer
+				
+				</h2>
+
+			</div>
+			<template v-if="voyage_loading>0">
+				<div class="ssc-head-line mb w-70"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+				<br>
+				<div class="ssc-head-line mb w-70"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+				<br>
+				<div class="ssc-head-line mb w-70"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+				<br>
+				<div class="ssc-head-line mb w-70"></div>
+				<div class="ssc-line mb"></div>
+				<br>
+				<div class="ssc-head-line mb w-70"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+				<br>
+				<div class="ssc-head-line mb w-70"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+				<div class="ssc-line mb"></div>
+			</template>
+
+			
+			<template v-else>
+
+
+				<div class="hidden-sm hidden-xs">
+
+					<div id="filtre_destination">
+					<hr v-if="Object.keys(liste_destinations).length>0"/>
+					<h3 class="widget-title mb-0" v-if="Object.keys(liste_destinations).length>0">Destinations</h3>
+					<div class="checkbox" v-for="(item , index) in liste_destinations">
+						<label><input type="checkbox" v-model="filtre_destinations" :value="index">${index}
+							<span class="float-right">(${item})</span>
+
+						</label>
+					</div>
+					</div>
+
+
+					<hr v-if="Object.keys(liste_themesCategorie).length>0"/>
+
+					<div   v-for="(item_categorie , index_categorie) in liste_themesCategorie">
+
+						<h3 class="widget-title mb-0" v-if="Object.keys(liste_themesCategorie).length>0">${index_categorie}</h3>
+
+							<div class="checkbox"  v-for="(item_theme , index_theme) in Object.entries(item_categorie)">
+
+
+									<label><input type="checkbox" v-model="filtre_themes" :value="item_theme[0]">${item_theme[0]}
+										<span class="float-right">(${item_theme[1]})</span>
+									</label>
+							</div>
+
+					</div>
+
+
+
+
+					<hr v-if="Object.keys(liste_pays).length>0"/>
+					<h3 class="widget-title mb-0" v-if="Object.keys(liste_pays).length>0">Pays</h3>
+					<div class="checkbox" v-for="(item , index) in liste_pays">
+						<label><input type="checkbox" v-model="filtre_pays" :value="index">${index}
+							<span class="float-right">(${item})</span>
+						</label>
+					</div>
+
+				</div>
+
+
+				<div class="visible-sm visible-xs">
+
+
+					<button type="button" data-toggle="modal" href="#sidebar-mobile" role="button" aria-expanded="false" aria-controls="sidebar-mobile" class="btn btn-info navbar-btn mb-2 ">
+
+						<span><img src="/assets-commun/images/filtrer.svg" class="mr-2">  Filtrer</span>
+					</button>
+
+					<div class="modal fade" id="sidebar-mobile" tabindex="-1" role="dialog"
+						 aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+						<div class="modal-dialog" role="document">
+
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">
+										<img src="/assets-commun/images/filtrer.svg"
+											 class="mr-2">
+										Filtrer
+									</h5>
+									<button type="button" class="close" data-dismiss="modal"
+											aria-label="Close">
+														<span aria-hidden="true">
+															&times;
+														</span>
+									</button>
+								</div>
+
+							<div class="modal-body">
+							<h3 class="widget-title mb-0" v-if="Object.keys(liste_destinations).length>0"> Destinations </h3>
+							<div class="checkbox" v-for="(item , index) in liste_destinations">
+								<label><input type="checkbox" v-model="filtre_destinations" :value="index">${index}
+									<span class="float-right">(${item})</span>
+								</label>
+							</div>
+							<hr v-if="Object.keys(liste_themes).length>0"/>
+							<h3 class="widget-title mb-0" v-if="Object.keys(liste_themes).length>0"> Themes </h3>
+							<div class="checkbox" v-for="(item , index) in liste_themes">
+								<label><input type="checkbox" v-model="filtre_themes" :value="index">${index}
+									<span class="float-right">(${item})</span>
+								</label>
+							</div>
+							<hr v-if="Object.keys(liste_pays).length>0"/>
+							<h3 class="widget-title mb-0" v-if="Object.keys(liste_pays).length>0"> Pays </h3>
+							<div class="checkbox" v-for="(item , index) in liste_pays">
+								<label><input type="checkbox" v-model="filtre_pays" :value="index">${index}
+									<span class="float-right">(${item})</span>
+								</label>
+							</div>
+						</div>
+
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+											data-dismiss="modal">
+										Continuer
+									</button>
+								</div>
+
+
+							</div>
+					</div>
+				</div>
+			</template>
+		</div>
+	</div>
+</aside>
+			</div>
+
+			<div class="col-12 col-sm-12 col-md-9 mt-2" id="contenu-liste">
+				<div class="property-listing list-view" id="vjs-list-voyages">
+    <template v-if="voyage_loading>0" v-for="item in voyage_loading">
+        <div class="ssc-card ssc-wrapper">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="ssc-square mb"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ssc-line mb"></div>
+                    <div class="ssc-line mb w-50"></div>
+                    <div class="ssc-square mb" style="height: 94px"></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="ssc-square mb"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </template>
+
+    <template v-if="voyages.length == 0 && voyage_loading == 0">
+        <div class="empty-page">
+
+
+            <div class="jumbotron jumbotron-fluid" style="background-image: url('https://admin.visionvoyages.com.tn/file_manager/source/soon.jpg')">
+                <div class="container">
+                    <h1 class="display-4">COMING SOON</h1>
+                    <p class="lead">Pour plus d'informations suivez nous : </p>
+                    <ul class="list-inline">
+                                            <li>
+                            <a class="link-ft" href="https://www.instagram.com/vision_voyages/">
+                                <img src="/assets-commun/images/icons/insta-footer.svg"
+                                     class="social-svg" alt="">
+                            </a>
+                        </li>
+                                                                                </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </template>
+
+    <div class="row" ref="listeVoyages">
+        <paginate name="pagin_voyages" :list="filteredVoyages" :per="paginate_per" tag="div"
+                  class="paginate-voyages" ref="paginator">
+            <template v-for="response in paginated('pagin_voyages')">
+                <item-voyage :response=response></item-voyage>
+            </template>
+        </paginate>
+    </div>
+    <!--end property items-->
+    <hr>
+    <!--start Pagination-->
+    <div class="pagination-main">
+        <paginate-links for="pagin_voyages" :show-step-links="true" :limit="4"
+                        :classes="{'ul': 'pagination'}"
+                        :hide-single-page="true" @click.prevent="scrollToListe">
+        </paginate-links>
+        <!--start Pagination-->
+    </div>
+</div>			</div>
+		
+	</div>
+</div>
+
+
+</main>
+<!--end main page body-->
+
+<!--start footer section-->
+    <!--start footer section-->
+    <link rel="stylesheet" href="/assets/css/footer-vision.css">
+
+
+
+
+
+
+
+
+
+<!--personel-->
+    
+        <div class="houzez-module-main module-dark-bg" id="personnel">
+            <div class="container">
+                <div class="houzez-module module-title text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="title-bloc wow fadeInUp">Prenez contact avec votre conseiller</div>
+                                <h3 class="sub-heading text-white">Forte de l'expérience de son équipe Vision Voyages
+                                    compte deux départements respectifs :Le département billetterie et le département
+                                    tourisme, veuillez choisir l'un de nos conseillers selon votre besoin !</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="carousel  slide-animated"  id="properties-carousel-promo" >
+                            
+                                <div class="item">
+                                    <div class="card-personnel">
+                                        <div class="team text-center">
+                                            <div class="online">
+                                                <a href="https://wa.me/22200289" target="_blank">
+                                                    <img src="/assets/images/icons/what-pers.svg"
+                                                         alt="icon" class="icon-pic">
+                                                </a>
+                                            </div>
+                                            <img src="https://admin.visionvoyages.com.tn/uploads/Accueil/Slider/cc778a66e261f56a9feeb18ae29341a4fedd5823.png" alt="khawla"
+                                                 class="profile-pic">
+                                        </div>
+                                        <div class="content text-center mt-3">
+                                            <h4 class="Name">Meryem Majdoub</h4>
+                                            <h6 class="fonction">Conseillère en voyage et tourisme international</h6>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            
+                                <div class="item">
+                                    <div class="card-personnel">
+                                        <div class="team text-center">
+                                            <div class="online">
+                                                <a href="https://wa.me/27226000" target="_blank">
+                                                    <img src="/assets/images/icons/what-pers.svg"
+                                                         alt="icon" class="icon-pic">
+                                                </a>
+                                            </div>
+                                            <img src="https://admin.visionvoyages.com.tn/uploads/Accueil/Slider/386ceb40abb38913d1462fe7bf174c8c416bc125.png" alt="khawla"
+                                                 class="profile-pic">
+                                        </div>
+                                        <div class="content text-center mt-3">
+                                            <h4 class="Name">Akila Mhamdi</h4>
+                                            <h6 class="fonction">Service comptabilité</h6>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            
+                                <div class="item">
+                                    <div class="card-personnel">
+                                        <div class="team text-center">
+                                            <div class="online">
+                                                <a href="https://wa.me/58606607" target="_blank">
+                                                    <img src="/assets/images/icons/what-pers.svg"
+                                                         alt="icon" class="icon-pic">
+                                                </a>
+                                            </div>
+                                            <img src="https://admin.visionvoyages.com.tn/uploads/Accueil/Slider/290f24f742aeb8700e19a3617d12dc3ffed8ad6a.png" alt="khawla"
+                                                 class="profile-pic">
+                                        </div>
+                                        <div class="content text-center mt-3">
+                                            <h4 class="Name">Helmi Kraiem</h4>
+                                            <h6 class="fonction">Conséiller en hôtellerie et en Tourisme local</h6>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                            
+
+<!--End personnel-->
+
+<!--start footer section-->
+<footer class="footer-vision">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row footer-margin-bottom">
+                <div class="col-sm-6">
+                    <div class="row-col">
+
+                        <div class="col-half no-padding text-right">
+                            <div class="icon-mail">
+                                <img src="/assets/images/icons/mail.svg" alt="mail" class="icon-news">
+                            </div>
+                        </div>
+                        <div class="col-half">
+                            <div class="footer-widget widget-about">
+
+
+                                <div class="widget-top">
+                                    <h3 class="widget-title">Gagnez du temps et de l'argent !</h3>
+                                </div>
+                                <div class="widget-body">
+                                    <p>Inscrivez-vous et nous vous enverrons les meilleures offres</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="footer-widget widget-newsletter-vision">
+                        <div class="widget-body-vision">
+                            <form id="newsletter">
+                                <div class="row-news">
+                                    <div class="form-group col-half">
+                                        <div class="input-icon">
+                                            <input class="form-control" required name="email"
+                                                   placeholder="Enter votre adresse email">
+                                        </div>
+                                    </div>
+                                    <div class="col-half">
+                                        <button class="btn  btn-light" type="submit"><i
+                                                    class="fa fa-spinner fa-spin hidden" id="load-newsletter"></i>S'inscrire
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row footer-margin-bottom">
+                <div class="col-md-4 offset-md-8">
+
+                    <div class="widget-top">
+
+                        <img src="https://admin.visionvoyages.com.tn/file_manager/source/front/logo-vision-footer.png"
+                                  class="logo-footer" alt="...">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-margin-bottom">
+                <div class="col-sm-4">
+                    <div class="footer-widget widget-about">
+
+                        <div class="widget-description">
+                            <p>Vision Voyages est une agence de Voyage Tunisienne (Licence A) depuis 2003, Agrée
+                                par l'ONTT, Membre de la FTAV .</p>
+                            <p> Vision Voyages est une sous marque de Tunisivision</p>
+
+                        </div>
+                    </div>
+                </div>
+                                                            <div class="col-md-3">
+                            <div class="footer-widget padding-right">
+                                <div class="widget-body">
+                                    <ul>
+                                                                                    <li><a href="/">ACCUEIL</a></li>
+                                                                                    <li><a href="https://www.visionvoyages.com.tn/hotel">NOS HOTELS</a></li>
+                                                                                    <li><a href="https://www.visionvoyages.com.tn/voyages-organises/liste">NOS VOYAGES</a></li>
+                                                                                    <li><a href="https://train.visionvoyages.com.tn/Billetterie/train">BILLET DE TRAIN</a></li>
+                                                                                    <li><a href="/article/apropos">A propos</a></li>
+                                                                                    <li><a href="/contact">Contact</a></li>
+                                                                                    <li><a href="/article/politique-de-confidentialite">Politique de confidentialité</a></li>
+                                                                            </ul>
+                                </div>
+                            </div>
+                        </div>
+                                                                                                                                                                                    
+                <div class="col-sm-5">
+                    <div class="footer-widget widget-contact">
+                        <div class="widget-top">
+                            <div class="widget-contact-title">Contactez-nous</div>
+                        </div>
+                        <div class="widget-body">
+                            <ul class="list-unstyled">
+
+
+                                <li><img src="/assets/images/icons/localisation.svg" class="footer-icon"
+                                         alt="...."> 11 rue Jaafer el barmaki 1084 Mutuelle ville, Tunis</li>
+                                <li><img src="/assets/images/icons/phone.svg" class="footer-icon"
+                                         alt="...."> +216 31 363 136 / 53335304
+                                </li>
+                                <li><img src="/assets/images/icons/mail.svg" class="footer-icon"
+                                         alt="...."> <a href="#">info@visionvoyages.com.tn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="footer-widget widget-contact" id="liens">
+
+                    <div class="col-md-9">
+                        <div class="hidden-sm hidden-xs">
+                            <div class="widget-top">
+                                <div class="widget-contact-title">Liens Rapides</div>
+
+                                <div class="row widget-body col-md-12">
+                                                                                                                                                                                                                                                                                <div class="col-md-4">
+                                                <ul class="list-unstyled">
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/hotel/tn-tunis-centre-ville/tous">Hôtels Tunis </a></li>
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/hotel/tn-tabarka/tous/">Hôtels Tabarka </a></li>
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/hotel/tn-hammamet/tous/">Hôtels Hammamet </a></li>
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/hotel/tn-sousse/tous/">Hôtels Sousse </a></li>
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/hotel/tn-monastir">Hôtels Monastir </a></li>
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/hotel/tn-mahdia/tous/">Hôtels Mahdia </a></li>
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/hotel/tn-djerba/tous/">Hôtels Djerba </a></li>
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/hotel/tn-tozeur/tous/">Hôtels Tozeur </a></li>
+                                                                                                            <li><a href="/">Hôtels Recommandés </a></li>
+                                                                                                    </ul>
+                                            </div>
+                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                            <div class="col-md-4">
+                                                <ul class="list-unstyled">
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/hotel/">Hôtels Tunisie </a></li>
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/landing-page/2-pack-bon-plan">Promo du Mois </a></li>
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/circuits-en-tunisie-organise/liste">Circuit Tunisie </a></li>
+                                                                                                            <li><a href="https://www.visionvoyages.com.tn/landing-page/2-pack-bon-plan">Early Booking </a></li>
+                                                                                                            <li><a href="https://www.expresstransfert.tn/">Transfert en Tunisie </a></li>
+                                                                                                    </ul>
+                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="col-md-4">
+                                                <ul class="list-unstyled">
+                                                                                                    </ul>
+                                            </div>
+                                                                                                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="visible-sm visible-xs">
+
+                        <a class="widget-top col-sm-12" data-toggle="collapse" href="#collapseExample" role="button"
+                           aria-expanded="false" aria-controls="collapseExample">
+                            <h1 class="widget-contact-title">Liens Rapides <span
+                                        class="glyphicon glyphicon-chevron-down"></span></h1>
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="widget-body">
+                                                                                                                                                                                                                                                    <div class="col-md-4">
+                                            <ul class="list-unstyled">
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/hotel/tn-tunis-centre-ville/tous">Hôtels Tunis </a></li>
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/hotel/tn-tabarka/tous/">Hôtels Tabarka </a></li>
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/hotel/tn-hammamet/tous/">Hôtels Hammamet </a></li>
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/hotel/tn-sousse/tous/">Hôtels Sousse </a></li>
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/hotel/tn-monastir">Hôtels Monastir </a></li>
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/hotel/tn-mahdia/tous/">Hôtels Mahdia </a></li>
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/hotel/tn-djerba/tous/">Hôtels Djerba </a></li>
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/hotel/tn-tozeur/tous/">Hôtels Tozeur </a></li>
+                                                                                                    <li><a href="/">Hôtels Recommandés </a></li>
+                                                                                            </ul>
+                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="col-md-4">
+                                            <ul class="list-unstyled">
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/hotel/">Hôtels Tunisie </a></li>
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/landing-page/2-pack-bon-plan">Promo du Mois </a></li>
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/circuits-en-tunisie-organise/liste">Circuit Tunisie </a></li>
+                                                                                                    <li><a href="https://www.visionvoyages.com.tn/landing-page/2-pack-bon-plan">Early Booking </a></li>
+                                                                                                    <li><a href="https://www.expresstransfert.tn/">Transfert en Tunisie </a></li>
+                                                                                            </ul>
+                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="col-md-4">
+                                            <ul class="list-unstyled">
+                                                                                            </ul>
+                                        </div>
+                                                                                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 align-end">
+
+
+                    <div class="col-suivez">
+                        <div class="widget-top">
+                            <h3 class="widget-title">Suivez nous</h3>
+                        </div>
+                        <div class="widget-body text-center">
+                            <ul class="social-icons">
+
+                                                                    <li>
+                                        <a href="https://www.facebook.com/visionvoyagesbytunisivision/?locale=fr_FR" target="_blank">
+                                            <img src="/assets/images/icons/fb.svg" class="social-icon"
+                                                 id="fb" alt="...."></a>
+                                    </li>
+                                                                                                    <li>
+                                        <a href="https://www.instagram.com/vision_voyages/" target="_blank"><img
+                                                    src="/assets/images/icons/insta.svg" id="intsa"
+                                                    class="social-icon" alt="...."></a>
+                                    </li>
+                                
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom-vision">
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p>©2026 Vision Voyages By Tunisivision - Tous droits réservés.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--end footer section-->
+
+<!--Start Scripts-->
+        <!--Start Scripts-->
+        <script type="text/javascript" src="/assets-commun/js/jquery.js"></script>
+    <script type="text/javascript" src="/assets-commun/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/assets-commun/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets-commun/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/assets-commun/js/jquery.matchHeight-min.js"></script>
+
+    <script type="text/javascript" src="/assets-commun/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="/assets-commun/js/slick.min.js"></script>
+    <script type="text/javascript" src="/assets-commun/js/custom.js"></script>
+    <script type="text/javascript" src="/assets-commun/flatpickr/dist/flatpickr.min.js"></script>
+
+    <script type="text/javascript" src="/assets-commun/js/moment.min.js"></script>
+
+        <script type="text/javascript"
+            src="/assets-commun/js/moment-locales/fr.js"></script>
+    
+    <script src="/bundles/fosjsrouting/js/router.js"></script>
+    <script src="/js/routing?callback=fos.Router.setData"></script>
+    <script src="/assets-commun/js/routing-override.js"></script>
+
+    <script type="text/javascript" src="/assets-commun/js/modernizr.custom.js"></script>
+
+
+    <script type="text/javascript" src="/assets-commun/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets-commun/js/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="/assets-commun/js/jquery.nicescroll.js"></script>
+        
+    <script src="/assets-commun/js/vue-prod.min.js"></script>
+
+<style>
+    /* Cœur rempli */
+    .heart-button .bi-heart-fill {
+        color: red;
+    }
+
+    /* Indicateur de chargement (spinner) */
+    .heart-button .loading-spinner {
+        display: none; /* Caché par défaut */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ccc;
+        border-top: 2px solid red;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+</style>
+
+<link rel="stylesheet" type="text/css" href="/assets-commun/css/daterangepicker.css"/>
+<script type="text/javascript" src="/assets-commun/js/daterangepicker.min.js"></script>
+<script type="text/javascript" src="/assets-commun/js/jquery.number.js"></script>
+<script type="text/javascript" src="/assets-commun/js/autoNumeric.min.js"></script>
+
+<link rel="stylesheet" href="/assets-commun/css/jquery-confirm.min.css">
+<script src="/assets-commun/js/jquery-confirm.min.js"></script>
+
+<script>
+    window.enabledHotelStayWorldwide = false;
+
+    if (typeof Vue != 'undefined')
+        Vue.options.delimiters = ['${', '}'];
+
+                    Vue.config.devtools = false;
+            Vue.config.productionTip = false;
+        
+    /*Vue.config.errorHandler = (err, vm, info) => {
+        // err: error trace
+        // vm: component in which error occured
+        // info: Vue specific error information such as lifecycle hooks, events etc.
+
+        // TODO: Perform any custom logic or log to server
+    };*/
+
+    function flip(o) {
+        var newObj = {}
+        Object.keys(o).forEach((el, i) => {
+            newObj[o[el]] = el;
+        });
+        return newObj;
+    }
+
+    function autoNumeric(selector, options, version = 1) {
+
+        if ($(`${selector}:not(.formatted)`).length == 0)
+            return;
+
+        if (version == 1)
+            $(`${selector}:not(.formatted)`).number(true, options.decimalPlaces, options.decimalCharacter, options.digitGroupSeparator).addClass('formatted');
+        else if (version == 2)
+            document.querySelectorAll(`${selector}:not(.formatted)`).forEach(el => {
+                let _options = Object.assign({}, options);
+
+                if (el.dataset.currencySymbol !== undefined) {
+                    _options.currencySymbol = el.dataset.currencySymbol
+                    _options.currencySymbolPlacement = AutoNumeric.options.currencySymbolPlacement.suffix
+                }
+                if (el.dataset.unformatOnSubmit !== undefined) _options.unformatOnSubmit = (el.dataset.unformatOnSubmit == 'true' ? true : false)
+                if (el.dataset.digitGroupSeparator !== undefined) _options.digitGroupSeparator = el.dataset.digitGroupSeparator
+                if (el.dataset.decimalCharacter !== undefined) _options.decimalCharacter = el.dataset.decimalCharacter
+                if (el.dataset.decimalPlaces !== undefined) _options.decimalPlaces = el.dataset.decimalPlaces
+                if (el.dataset.minimumValue !== undefined) _options.minimumValue = el.dataset.minimumValue
+                if (el.dataset.maximumValue !== undefined) _options.maximumValue = el.dataset.maximumValue
+
+                new AutoNumeric(el, _options)
+                el.classList.add("formatted")
+            })
+    }
+
+    defaultOptionsMoney = {
+        digitGroupSeparator: '',
+        decimalCharacter: '.',
+        decimalPlaces:3,
+        unformatOnSubmit: true
+    }
+
+    defaultOptionsPercent = {
+        digitGroupSeparator: '',
+        decimalCharacter: '.',
+        decimalPlaces: 2
+    }
+
+    $(document).ready(function () {
+        autoNumeric('input.money', defaultOptionsMoney);
+        autoNumeric('input.percent', defaultOptionsPercent);
+
+        autoNumeric('input.money-v2', defaultOptionsMoney, 2);
+        autoNumeric('input.percent-v2', defaultOptionsPercent, 2);
+
+        $('input.money').attr('maxlength', 11);
+        $('input.percent').attr('maxlength', 6);
+
+        // Récupérer la liste de souhaits depuis la session Symfony
+        window.wishlist = [];
+
+        // Attacher l'événement à un parent existant
+        if (document.getElementById('vjs-list-hotels') != null) {
+            document.getElementById('vjs-list-hotels').addEventListener('click', function (event) {
+                // Vérifier si l'élément cliqué est un bouton "Like"
+                if (event.target.closest('.heart-button')) {
+                    const heartButton = event.target.closest('.heart-button');
+                    const hotelId = parseInt(heartButton.getAttribute('data-hotel-id'));
+                    const heartIcon = heartButton.querySelector('.bi');
+                    const spinner = heartButton.querySelector('.loading-spinner');
+
+                    // Afficher le spinner et cacher l'icône de cœur
+                    heartIcon.style.display = 'none';
+                    spinner.style.display = 'block';
+
+                    // Envoyer une requête AJAX pour ajouter/retirer de la liste de souhaits
+                    fetch(`/wishlist/toggle/_hotelId_`.replace('_hotelId_', hotelId), {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-Requested-With': 'XMLHttpRequest',
+                        },
+                    })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Erreur lors de la requête');
+                            }
+                            return response.json();
+                        })
+
+                        .then(data => {
+                            if (data.success) {
+                                // Mettre à jour l'icône du bouton
+                                if (data.isInWishlist) {
+                                    heartIcon.classList.remove('bi-heart');
+                                    heartIcon.classList.add('bi-heart-fill');
+                                    // Ajouter l'hôtel à la liste de souhaits
+                                    wishlist.push(hotelId);
+                                } else {
+                                    heartIcon.classList.remove('bi-heart-fill');
+                                    heartIcon.classList.add('bi-heart');
+                                    // Retirer l'hôtel de la liste de souhaits
+                                    wishlist.splice(wishlist.indexOf(hotelId), 1);
+                                }
+                            } else {
+                                throw new Error(data.message || 'Erreur inconnue');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Erreur:', error);
+                            // Afficher un message d'erreur à l'utilisateur
+                            alert('Une erreur est survenue : ' + error.message);
+                        })
+                        .finally(() => {
+                            // Cacher le spinner et réafficher l'icône de cœur
+                            spinner.style.display = 'none';
+                            heartIcon.style.display = 'block';
+                        });
+                }
+            });
+        }
+    });
+    //================== Text Crope ==========================================
+    $.fn.extend({
+        toggleHtml: function (a, b) {
+            return this.html(this.html() == b ? a : b);
+        }
+    });
+
+    function checkEllipsisActive(div) {
+        var a = `<a href="javascript:void(0)" class="lire-la-suite" onclick="$(this).toggleHtml('Suite','Moins'); $(this).prev().toggleClass('text-crope')"><i>Suite</i></a>`
+        setTimeout(function () {
+            $(`${div} .text-crope`).each(function (i) {
+                if ($(this).innerHeight() < $(this)[0].scrollHeight && $(this).parent().find('.lire-la-suite').length == 0)
+                    $(a).insertAfter($(this));
+            });
+            $(`${div} .text-crope`).each(function (i) {
+                if ($(this).innerWidth() < $(this)[0].scrollWidth && $(this).parent().find('.lire-la-suite').length == 0)
+                    $(this).attr('title', $(this).html())
+            });
+        }, 500)
+    }
+
+    //checkEllipsisActive()
+    //================================================================================
+
+    
+    const slugify = str =>
+        str
+            .toLowerCase()
+            .trim()
+            .replace(/[^\w\s-]/g, '')
+            .replace(/[\s_-]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+
+    function viewAlert(msg, tag, autoClose, fntAction, titre, _options) {
+        var color = 'dark';
+        var icon = '';
+        var title = '';
+        var animation = 'zoom';
+        var closeAnimation = 'scale';
+
+        if (tag == 'success') {
+            color = 'green';
+            icon = 'icon-checkmark4';
+            title = 'Succès';
+            animation = 'scale';
+            closeAnimation = 'scale';
+        } else if (tag == 'danger') {
+            color = 'red';
+            icon = 'icon-blocked';
+            title = 'Alert!';
+            animation = 'rotateY';
+            closeAnimation = 'rotateY';
+        } else if (tag == 'warning') {
+            color = 'orange';
+            icon = 'icon-warning';
+            title = 'Attention';
+            animation = 'rotateYR';
+            closeAnimation = 'rotateYR';
+        } else if (tag == 'info') {
+            color = 'blue';
+            icon = 'icon-info3';
+            title = 'Info';
+            animation = 'rotateX';
+            closeAnimation = 'rotateX';
+        } else if (tag == 'primary') {
+            color = 'purple';
+        }
+
+        if (titre !== undefined && titre != null)
+            title = titre;
+
+        var options = {
+            icon: icon,
+            closeIcon: true,
+            type: color,
+            title: title,
+            content: msg,
+            animationBounce: 2.5,
+            closeAnimation: closeAnimation,
+            animation: animation,
+            buttons: {
+                btnOk: {
+                    text: 'OK',
+                    btnClass: 'btn-default',
+                    keys: ['enter', 'echap'],
+                }
+            }
+        };
+        if (autoClose !== undefined && autoClose != null)
+            options.autoClose = 'btnOk|' + autoClose;
+
+        if (fntAction !== undefined && fntAction != null)
+            options.buttons.btnOk.action = fntAction;
+
+        if (_options !== undefined && _options != null)
+            $.each(_options, function (index, value) {
+                options[value.key] = value.val;
+            });
+
+        $.alert(options);
+    }
+
+    function demandConfirm(title, content, txtConfirm, fntAction) {
+        $.confirm({
+            title: title,
+            content: content,
+            icon: 'icon-question3',
+            closeIcon: true,
+            type: 'blue',
+            buttons: {
+                confirm: {
+                    text: txtConfirm,
+                    btnClass: 'btn-danger',
+                    keys: ['enter'],
+                    action: fntAction
+                },
+                cancel: {
+                    text: 'Non',
+                    btnClass: 'btn-default',
+                    keys: ['echap'],
+                },
+            }
+        });
+    }
+
+    //================== Forcer le submit du formulaire une seul fois ==============================================
+    $(document).on('submit', 'form', function () {
+        form = $(this);
+        form.addClass('form-submitted');
+        setTimeout(function () {
+            form.removeClass('form-submitted');
+        }, 500);
+    })
+    $(window).on('beforeunload', function () {
+        $('.form-submitted').each(function () {
+            $(this).find('input').blur();
+            $(this).css('pointer-events', 'none');
+            btn = $(this).find('[type=submit]')
+            btn.prop('disabled', true)
+            btn.html('<i class="fa fa-spinner fa-spin"></i> <span class="text-loading">Veuillez patienter </span>')
+
+        })
+    });
+
+    //==============================================================================================================
+
+    function utf8_to_b64(str) {
+        return window.btoa(unescape(encodeURIComponent(str)));
+    }
+
+    function b64_to_utf8(str) {
+        return decodeURIComponent(escape(window.atob(str)));
+    }
+
+    Date.prototype.addDays = function (days) {
+        var date = new Date(this.valueOf());
+        date.setDate(date.getDate() + days);
+        return date;
+    }
+
+    String.prototype.removeSizeStyles = function () {
+        // Supprime tous les attributs class
+        let result = this.replace(/\s*class\s*=\s*["'][^"']*["']/gi, '');
+
+        // Supprime les propriétés de taille dans les attributs style
+        return result.replace(
+            /style\s*=\s*["'][^"']*?(width|height|min-width|min-height|max-width|max-height)\s*:\s*[^;"']+;?\s*[^"']*?["']/gi,
+            (match, p1) => {
+                // Supprime les propriétés de taille tout en préservant les autres styles
+                return match.replace(
+                    /(width|height|min-width|min-height|max-width|max-height)\s*:\s*[^;"']+;?\s*/gi,
+                    ''
+                ).replace(/\s*style\s*=\s*["']\s*["']/i, ''); // Supprime style vide
+            }
+        );
+    };
+
+    Number.prototype.formatMoney = function (decimals = 3, decimal_separator = ".", thousands_separator = " ", round = false, devise = true) {
+                let montant = 1.000
+        if (!devise)
+            montant = 1
+
+        decimals =3
+        if (round)
+            decimals = 0
+
+        var n = this * montant,
+            decimals = isNaN(decimals = Math.abs(decimals)) ? 2 : decimals,
+            decimal_separator = decimal_separator == undefined ? "." : decimal_separator,
+            thousands_separator = thousands_separator == undefined ? " " : thousands_separator,
+            s = n < 0 ? "-" : "",
+            i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(decimals))),
+            j = (j = i.length) > 3 ? j % 3 : 0;
+        return s + (j ? i.substr(0, j) + thousands_separator : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands_separator) + (decimals ? decimal_separator + Math.abs(n - i).toFixed(decimals).slice(2) : "");
+    };
+
+    $("form#newsletter").submit(function (event) {
+        event.preventDefault();
+        $('i#load-newsletter').toggleClass('hidden')
+        $.ajax({
+            type: "POST",
+            url: "/newsletter",
+            data: $(this).serialize(),
+        }).done(function (data) {
+            $('i#load-newsletter').toggleClass('hidden')
+            $("form#newsletter").get(0).reset()
+            viewAlert('Merci beaucoup ! Nous vous enverrons chaque mois les meilleures offres ', 'success')
+        });
+    });
+
+    
+    
+    $('.logo').on({
+        mousedown: function () {
+            $(this).data('timer', setTimeout(function () {
+                window.location.href = '/front/redirect-dev-route'
+            }, 3000));
+        },
+        mouseup: function () {
+            clearTimeout($(this).data('timer'));
+        }
+    });
+
+    function validatePassword() {
+        if (plain_password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Les mots de passe ne correspondent pas");
+            confirm_password.setAttribute('class', 'not_confirm_password form-control')
+        } else {
+            confirm_password.setCustomValidity('');
+            confirm_password.setAttribute('class', 'confirm_password form-control')
+        }
+    }
+
+    if ($('#plainPassword').length > 0 && $('#confirm_password').length > 0) {
+        var plain_password = document.getElementById("plainPassword")
+            , confirm_password = document.getElementById("confirm_password");
+
+        plain_password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    }
+
+    const scrollSmoothToBottom = (id) => {
+        const element = $(`div#${id}`);
+        element.animate({
+            scrollTop: element.prop("scrollHeight")
+        }, 1000);
+    }
+    const scrollToBottom = (id) => {
+        const element = document.getElementById(id);
+        element.scrollTop = element.scrollHeight;
+    }
+
+    /**
+     * Fonction externe pour afficher la pile d'appels de manière simplifiée
+     * @param {string} functionName - Nom de la fonction d'où l'appel provient
+     * @param {string} customMessage - Message personnalisé optionnel
+     */
+    function logStackTrace(functionName = 'Unknown', customMessage = '') {
+        // Récupérer la pile d'appels
+        const stack = new Error().stack.split('\n');
+
+        // Filtrer et simplifier les appels (ignorer les appels Vue internes, webpack, etc.)
+        const relevantCalls = stack
+            .slice(2) // Ignorer Error et logStackTrace
+            .filter(line => {
+                const ignored = ['vue-dev', 'webpack', 'installHook', 'evaluate', 'overrideMethod',
+                    'computedGetter', 'renderList', 'eval', 'Vue._render', 'vm9708'];
+                return !ignored.some(term => line.includes(term));
+            })
+            .slice(0, 8) // Limiter à 8 appels pertinents
+            .map(line => {
+                // Extraire et nettoyer les informations
+                const match = line.match(/at\s+(.+?)\s+\((.+?):(\d+):(\d+)\)/);
+                if (match) {
+                    const [, func, file, line, col] = match;
+                    const fileName = file.split('/').pop();
+                    return { func: func.trim(), file: fileName, line, col };
+                }
+                return null;
+            })
+            .filter(Boolean);
+
+        // Afficher le schéma simplifié
+        console.group(`%c🔍 Call Stack - ${functionName}`, 'color: #ff6b35; font-weight: bold; font-size: 13px;');
+
+        if (customMessage) {
+            console.log(`%c💬 ${customMessage}`, 'color: #004e89; font-style: italic; font-size: 11px;');
+        }
+
+        console.log('%c' + getStackDiagram(relevantCalls), 'font-family: monospace; color: #333; font-size: 11px; white-space: pre;');
+
+        // Afficher la pile complète dans un groupe collapsé
+        console.groupCollapsed('%c📋 Full Stack Trace', 'color: #666; font-size: 11px;');
+        console.trace(`Full trace from ${functionName}`);
+        console.groupEnd();
+
+        console.groupEnd();
+    }
+
+    /**
+     * Génère un schéma visuel de la pile d'appels
+     */
+    function getStackDiagram(calls) {
+        let diagram = '\n';
+        calls.forEach((call, index) => {
+            const isLast = index === calls.length - 1;
+            const prefix = isLast ? '└─' : '├─';
+            const connector = isLast ? '  ' : '│ ';
+
+            diagram += `${prefix} ${call.func} (${call.file}:${call.line})\n`;
+            if (index < calls.length - 1) {
+                diagram += `${connector}\n`;
+            }
+        });
+        return diagram;
+    }
+</script>        
+    
+
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+
+                $('.toggle-navbar').on('click', function (e) {
+                    e.preventDefault();
+                    $('body').toggleClass('navbar-open');
+
+
+                });
+
+            });
+
+        })(jQuery);
+    </script>
+    
+
+    <script src="/assets-commun/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets-commun/js/vuejs-component/vue-paginate.js"></script>
+    <script src="/assets-commun/js/vuejs-component/axios.min.js"></script>
+    <script>
+        if ($("#vjs-refine-result").length == 0)
+            $('body').append('<div id="vjs-refine-result"></div>')
+
+        var vjsRefineResult = new Vue({
+            el: "#vjs-refine-result",
+            data: {
+                voyage_loading: 0,
+                liste_destinations: [],
+                liste_themes: [],
+                liste_themesCategorie: [],
+                liste_pays: [],
+                filtre_destinations: [],
+                filtre_themes: [],
+                filtre_themesCategorie: [],
+                filtre_pays: [],
+                visible: true,
+            },
+            components: {
+                'vueSlider': window['vue-slider-component'],
+            },
+            methods: {
+                routeFiltre() {
+                    var themes = []
+                    var destinations = []
+                    var pays = []
+
+                    for (let valeur of this.filtre_themes)
+                        themes.push(vjsListvoyages.referentielle.themes[valeur])
+                    for (let valeur of this.filtre_destinations)
+                        destinations.push(vjsListvoyages.referentielle.destinations[valeur])
+                    for (let valeur of this.filtre_pays)
+                        pays.push(vjsListvoyages.referentielle.pays[valeur].id)
+
+                    var url = Routing.generate('front_omracarte_liste', {
+                        themes: themes.length == 0 ? 'all' : themes.join(','),
+                        destinations: destinations.length == 0 ? 'all' : destinations.join(','),
+                        pays: pays.length == 0 ? 'all' : pays.join(',')
+                    })
+
+                    return url;
+                }
+            },
+            mounted() {
+            },
+            updated() {
+                $('aside#sidebar').toggle(this.visible)
+            }
+        })
+
+        $(document).on('click', '.pagination-main li', function () {
+            $('html, body').animate({scrollTop: $('#sidebar').offset().top - $('header').height()}, 700, 'swing');
+        })
+
+        var vjsSortResult = new Vue({
+            el: "#vjs-sort-voyages",
+            data: {
+                nbr_voyages: 0,
+                                                trie: 'prix-asc',
+                visible: true,
+                voyage_loading: 0,
+                paginate: 10,
+            },
+            methods: {
+                selectTrieVO(event) {
+                    // this.direction = event.target.options[event.target.selectedIndex].dataset.sort
+                },
+                scrollToListe() {
+       
+        this.$refs.listeVoyages.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+
+        
+    }
+            },
+            computed: {
+                paginate_per: {
+                    get() {
+                        if (typeof vjsListvoyages != "undefined")
+                            return vjsListvoyages.paginate_per
+                        /*return 10*/
+                        return this.paginate
+                    },
+                    set(val) {
+                        vjsListvoyages.paginate_per = parseInt(val)
+                    }
+                }
+            },
+            mounted() {
+                $('#vjs-sort-voyages select').selectpicker('refresh')
+            },
+            updated() {
+                $('#vjs-sort-voyages select').selectpicker('refresh')
+            },
+            destroyed() {
+                $('#vjs-sort-voyages select').off().selectpicker('destroy')
+            }
+        })
+
+        var vjsRecapSearch = new Vue({
+            el: "#vjs-recap-search-voyages",
+            data: {
+                nbr_voyages: 0,
+                visible: true,
+                voyage_loading: 0
+            }
+        })
+    </script>
+
+
+    
+
+
+
+    <link rel="stylesheet" href="/assets/css/vision-page-voyages.css">
+
+
+
+<template id="item-voyage">
+    <div class="item-wrap">
+        <div class="property-item table-list">
+            <div class="voyage-header" id="voyage">
+
+                <div class="image-block">
+                    <figure class="item-thumb">
+                        <div class="stamp" v-if="voyage.complet == true"><img src="https://admin.visionvoyages.com.tn/file_manager/source/stamp.svg"></div>
+                        <div class="price ">
+                            <p class="price-start">A partir de</p>
+                            <h3 class="price-start">${ parseFloat(voyage.details.prix).formatMoney(3, ',', ' ',true) } ${ voyage.details.devise }                             </h3>
+
+                        </div>
+                        <a  v-if="voyage.complet == true" href="#">
+                            <img :src="voyage.photo" :alt="voyage.details.libelle" class="photo-voyage">
+                        </a>
+                        <a  v-else :href="voyage.details.route">
+                            <img :src="voyage.photo" :alt="voyage.details.libelle" class="photo-voyage">
+                        </a>
+                    </figure>
+                </div>
+
+                <div class="item-body">
+
+                    <div class="col table-cell">
+                        <div class="info-row">
+
+
+                            <h2 class="property-title">
+                                <a  v-if="voyage.complet == true" href="#">${ voyage.details.libelle }</a>
+                                <a  v-else :href="voyage.details.route">${ voyage.details.libelle }</a>
+
+                            </h2>
+
+                            <h4 class="property-location" v-if="voyage.details.pays != null && voyage.details.pays != ''">
+                                <img src="/assets/images/icons/localisation-search.svg" class="voyage-icon" alt="....">
+                                ${ voyage.details.pays}
+                            </h4>
+
+                            <h4 class="property-location ">
+                                <img src="/assets/images/icons/calendar.svg" class="voyage-icon" alt="....">
+                                Durée: ${ voyage.details.nbrJour } jours & ${ voyage.details.nbrNuit } nuits
+                            </h4>
+                            <h4 class="property-location display-inline">
+                                <img src="/assets/images/icons/calendar.svg" class="voyage-icon" alt="....">
+                                ${ voyage.depart_retour }</h4>
+                            <p>${ voyage.description }</p>
+
+                            <a :href="voyage.details.route" class="btn btn-primary">Plus d'informations
+                                <i class="fa fa fa-arrow-right fa-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                 
+
+
+                </div>
+                           </div>
+
+
+        </div>
+    </div>
+</template>
+<script>
+    $(document).on('click', '.pagination-main li', function () {
+        $('html, body').animate({scrollTop: $('#sidebar').offset().top - $('header').height()}, 700, 'swing');
+    })
+
+    let itemVoyage = {
+        template: "#item-voyage",
+        props: ['response'],
+        data: function () {
+            return {
+                showAllHotels: false,
+            }
+        },
+        computed: {
+            voyage: function () {
+                var photo = this.response.photoPrincipal;
+                // console.log("photo 1===>",photo);
+                if (photo && photo.indexOf('/http') > 0)
+                    photo = photo.replace('https://admin.visionvoyages.com.tn/', '')
+                // console.log("photo 2===>",photo);
+                depart_retour = ''
+                var description = this.response.descriptionCourte;
+                var a_partir_de = this.response.aPartirDe
+                var list_hotels = this.response.hotels;
+                var photos_pont = this.response.photosPont || [];
+                var themes_PF = this.response.themes || [];
+                if (photos_pont && photos_pont.indexOf('/http') > 0) photos_pont = photos_pont.replace('https://admin.visionvoyages.com.tn/', '')
+                // console.log("photo pont 1===>",photos_pont);
+                if (this.response.firstPeriode != null) {
+                    var depart = this.response.firstPeriode.depart.split('-')
+                    var retour = this.response.firstPeriode.retour.split('-')
+                    var departv2 = this.response.firstPeriode.depart
+                    var retourv2 = this.response.firstPeriode.retour
+                    var complet = this.response.complet
+                    console.log(complet)
+                    depart_retour = `Du ${depart[2]}/${depart[1]}/${depart[0]} au ${retour[2]}/${retour[1]}/${retour[0]}`
+                }
+
+                if (description.length > 150)
+                    description = description.slice(0, 120) + '...'
+                return {
+                    details: this.response,
+                    photo: photo,
+                    depart_retour: depart_retour,
+                    description: description,
+                    descriptionCourte: this.response.descriptionCourte,
+                    complet: complet,
+                    depart: moment(departv2).format("DD MMMM YYYY"),
+                    retour: moment(retourv2).format("DD MMMM YYYY"),
+                    partir: a_partir_de,
+                    hotels: list_hotels,
+                    photosPont: photos_pont,
+                    themes: themes_PF,
+
+                }
+
+            },
+
+            displayedHotels() {
+                if (!this.voyage.hotels) return [];
+                return this.showAllHotels
+                    ? this.voyage.hotels        // afficher tous
+                    : this.voyage.hotels.slice(0, 2); // afficher les 2 premiers
+            },
+
+
+        },
+        methods: {
+            toggleHotels() {
+                this.showAllHotels = !this.showAllHotels;
+            },
+
+            updateHotels(list_hotels) {
+                this.voyage.hotels = list_hotels || [];
+            }
+        },
+        mounted() {
+
+        },
+        updated() {
+
+        },
+        destroyed() {
+
+        }
+    }
+
+    var vjsListvoyages = new Vue({
+        el: "#vjs-list-voyages",
+        delimiters: ['${', '}'],
+        data: {
+            paginate: ['pagin_voyages'],
+            voyages: [],
+            referentielle: [],
+            voyage_loading: 0,
+            paginate_per: 10,
+        },
+        computed: {
+            filteredVoyages() {
+
+                return this.voyages
+                    .filter(voyage => {
+                        /*                         window.history.pushState('data', 'title', vjsRefineResult.routeFiltre());
+                        */
+
+                        window.history.pushState('data', 'title', vjsRefineResult.routeFiltre());
+                        return (
+                            (vjsRefineResult.filtre_destinations.length == 0 || $.inArray(voyage.destination, vjsRefineResult.filtre_destinations) != -1) &&
+                            (vjsRefineResult.filtre_themes.length == 0 || (Object.values(voyage._themes).filter(x => vjsRefineResult.filtre_themes.includes(x))).length > 0) &&
+                            (vjsRefineResult.filtre_pays.length == 0 || $.inArray(voyage.pays, vjsRefineResult.filtre_pays) != -1)
+
+                        )
+                    })
+                    .sort((a, b) => {
+
+                            let trie = vjsSortResult.trie.split('-')[0];
+                            let direction = (vjsSortResult.trie.split('-')[1] == 'asc' ? 1 : -1);
+
+                            var a1 = a[trie], b1 = b[trie];
+                            if (a1 == b1) return 0;
+                            return a1 > b1 ? 1 * direction : -1 * direction;
+                        }
+                    );
+            },
+
+        },
+                watch: {
+            filteredVoyages(newVal, oldVal) {
+                if (newVal.length !== 0 && oldVal.length === 0) {
+                    setTimeout(() => {
+                        if (this.$refs.paginator) {
+                            this.$refs.paginator.goToPage(1)
+                        }
+                    }, 50)
+                }
+            }
+        },
+                methods: {},
+        mounted() {
+            this.voyage_loading = 5
+
+            if (typeof vjsRefineResult !== 'undefined')
+                vjsRefineResult.visible = true
+
+            if (typeof vjsSortResult !== 'undefined') {
+                vjsSortResult.voyage_loading = 5
+                vjsSortResult.visible = true
+            }
+
+            if (typeof vjsRecapSearch !== 'undefined') {
+                vjsRecapSearch.voyage_loading = 5
+                vjsRecapSearch.visible = true
+            }
+
+            axios
+                .get('/voyages-organises/json-voyages/7',
+                    {
+                        params: {
+                            type: 7,
+                            themes: 'all',
+                            destinations: 'all',
+                            pays: 'all'
+                        }
+                    })
+                .then(response => {
+                    if (response.data.Erreur !== undefined)
+                        viewAlert(response.data.Erreur, 'danger')
+                    else if (response.data.Error !== undefined) {
+                        viewAlert('Erreur', 'danger')
+                        console.error(response.data.Error)
+                    } else {
+                        vjsListvoyages.referentielle = response.data.referentielle;
+
+                        if (typeof vjsRefineResult !== 'undefined') {
+                            vjsRefineResult.filtre_destinations.length = 0
+                            vjsRefineResult.filtre_themes.length = 0
+                            vjsRefineResult.filtre_pays.length = 0
+                            vjsRefineResult.voyage_loading = 0
+                            //****************************************************************************
+                            var themes = 'all'
+                            var destinations = 'all'
+                            var pays = 'all'
+
+                            if (themes != 'all' && vjsListvoyages.referentielle.themes !== undefined) {
+                                let _themes = flip(vjsListvoyages.referentielle.themes)
+                                for (let valeur of themes.split(','))
+                                    vjsRefineResult.filtre_themes.push(_themes[valeur])
+                            }
+
+                            if (destinations != 'all' && vjsListvoyages.referentielle.destinations !== undefined) {
+                                let _destinations = flip(vjsListvoyages.referentielle.destinations)
+                                for (let valeur of destinations.split(','))
+                                    vjsRefineResult.filtre_destinations.push(_destinations[valeur])
+                            }
+
+                            if (pays != 'all' && vjsListvoyages.referentielle.pays !== undefined)
+                                for (let valeur of pays.split(','))
+                                    vjsRefineResult.filtre_pays.push(Object.values(vjsListvoyages.referentielle.pays).filter(p => p.id == valeur)[0].libelle)
+                            //****************************************************************************
+                            vjsRefineResult.visible = false
+                        }
+
+                        if (typeof vjsSortResult !== 'undefined') {
+                            vjsSortResult.voyage_loading = 0
+                            vjsSortResult.visible = false
+                        }
+
+                        if (typeof vjsRecapSearch !== 'undefined') {
+                            vjsRecapSearch.voyage_loading = 0
+                            vjsRecapSearch.visible = false
+                        }
+
+                        this.voyage_loading = 0
+
+                        if (response.data.Voyage !== undefined) {
+                            var voyages = response.data.Voyage
+
+                            var filtres = response.data.filtre
+
+                            vjsListvoyages.voyages = voyages;
+                            vjsListvoyages.voyages = voyages;
+
+                            if (typeof vjsSortResult !== 'undefined') {
+                                vjsSortResult.nbr_voyages = voyages.length
+                                vjsSortResult.visible = (voyages.length > 0)
+                            }
+
+                            if (typeof vjsRecapSearch !== 'undefined') {
+                                vjsRecapSearch.nbr_voyages = voyages.length
+                                vjsRecapSearch.visible = (voyages.length > 0)
+                            }
+
+                            if (typeof vjsRefineResult !== 'undefined') {
+                                vjsRefineResult.visible = (voyages.length > 0)
+                                vjsRefineResult.liste_destinations = filtres.destinations;
+                                vjsRefineResult.liste_themes = filtres.themes;
+                                vjsRefineResult.liste_themesCategorie = filtres.themesCategorie;
+                                vjsRefineResult.liste_pays = filtres.pays;
+                            }
+
+                            if (vjsRefineResult.liste_destinations.length == 0 && vjsRefineResult.liste_themes.length == 0 && vjsRefineResult.liste_pays.length == 0) {
+                                $('#sidebar-filtre').remove()
+                                $('#contenu-liste').removeClass('col-lg-9 col-md-9')
+                            }
+                        }
+                    }
+
+
+                });
+        },
+        updated() {
+            checkEllipsisActive('#vjs-list-voyages') // Call function text-corpe
+                    },
+        components: {itemVoyage}
+    })
+
+
+
+
+</script>
+
+</body>
+</html>
