@@ -3,7 +3,9 @@ session_start();
 include('L_config.php');
 
 $error = "";
+$success = "";
 
+// --- LOGIQUE DE CONNEXION (SIGN IN) ---
 if (isset($_POST['login'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
@@ -25,6 +27,29 @@ if (isset($_POST['login'])) {
         exit();
     } else {
         $error = "Email ou mot de passe incorrect !";
+    }
+}
+
+// --- LOGIQUE D'INSCRIPTION (SIGN UP) ---
+if (isset($_POST['register'])) {
+    $nom = mysqli_real_escape_string($conn, $_POST['nom']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = $_POST['password']; // Idéalement, hachez-le avec password_hash()
+    
+    // Vérifier si l'email existe déjà
+    $checkEmail = mysqli_query($conn, "SELECT email FROM utilisateurs WHERE email='$email'");
+    
+    if (mysqli_num_rows($checkEmail) > 0) {
+        $error = "Cet email est déjà utilisé !";
+    } else {
+        // Insertion du nouvel utilisateur (le rôle est 'client' par défaut via SQL)
+        $sqlInsert = "INSERT INTO utilisateurs (nom, email, password, role) VALUES ('$nom', '$email', '$password', 'client')";
+        
+        if (mysqli_query($conn, $sqlInsert)) {
+            $success = "Compte créé avec succès ! Connectez-vous.";
+        } else {
+            $error = "Erreur lors de l'inscription.";
+        }
     }
 }
 ?>
@@ -100,29 +125,36 @@ if (isset($_POST['login'])) {
             </div>
 
             <div class="form-box register">
-                <form action="#">
-                    <h2>Sign Up</h2>
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-user'></i></span>
-                        <input type="text" required>
-                        <label>Name</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-envelope'></i></span>
-                        <input type="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <button type="submit" class="btn">Sign Up</button>
-                    <div class="login-register">
-                        <p>Already have an account?<a href="#" class="login-link">Sign in</a></p>
-                    </div>
-                </form>
-            </div>
+    <form action="login.php" method="POST"> <h2>Sign Up</h2>
+        
+        <?php if($success != ""): ?>
+            <p style="color: #2ecc71; margin-bottom: 10px;"><?php echo $success; ?></p>
+        <?php endif; ?>
+
+        <div class="input-box">
+            <span class="icon"><i class='bx bxs-user'></i></span>
+            <input type="text" name="nom" required> <label>Name</label>
+        </div>
+
+        <div class="input-box">
+            <span class="icon"><i class='bx bxs-envelope'></i></span>
+            <input type="email" name="email" required> <label>Email</label>
+        </div>
+
+        <div class="input-box">
+            <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+            <input type="password" name="password" required> <label>Password</label>
+        </div>
+
+        <div class="remember-forgot">
+            <label><input type="checkbox" required> Agree to the terms & conditions</label>
+        </div>
+
+        <button type="submit" name="register" class="btn">Sign Up</button> <div class="login-register">
+            <p>Already have an account? <a href="#" class="login-link">Sign in</a></p>
+        </div>
+    </form>
+</div>
         </div>
     </div>
 
