@@ -67,8 +67,30 @@ INSERT INTO `packages` (`id`, `wilaya`, `badge`, `badge_class`, `image_principal
 (17, 'kairouan', 'PROMO', 'badge-promo', 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4', 'Kairouan 2 jours Complet', 'Kairouan', '2 jours', 220.00, 5, 'Hôtel, Tous sites, Repas', 'Transport', 'carousel41'),
 (18, 'other', 'TOP', 'badge-top', 'https://images.unsplash.com/photo-1527631746610-bca00a040d60', 'Ksar Ouled Soltane', 'Tataouine', '1 jour', 140.00, 4, '4x4, Guide Star Wars', 'Hébergement', 'carousel42'),
 (19, 'other', 'Nature', 'badge-nature', 'https://images.unsplash.com/photo-1547234935-80c7145ec969', 'Kebili - Douz & Chott', 'Kebili', '2 jours', 380.00, 4, 'Bivouac désert, Chameau', 'Transport Tunis', 'carousel43'),
-(20, 'other', 'PROMO', 'badge-promo', 'https://images.unsplash.com/photo-1504214208698-ea1916a2195a', 'Médenine - Ksour & Marché', 'Médenine', '1 jour', 125.00, 5, 'Transport, Guide', 'Repas', 'carousel44');
+(20, 'other', 'PROMO', 'badge-promo', 'https://images.unsplash.com/photo-1504214208698-ea1916a2195a', 'Médenine - Ksour & Marché', 'Médenine', '1 jour', 125.00, 5, 'Transport, Guide', 'Repas', 'carousel44'),
 
+-- TUNIS (+3)
+(21, 'tunis', 'TOP', 'badge-top', 'image/to1.jpg', 'Four Seasons Hotel Tunis', 'Tunis', '1 jour', 85.00, 4, 'Hôtel 4★, Transport, Plage privée, Déjeuner', 'Hébergement', 'carousel15'),
+(22, 'tunis', 'Nature', 'badge-nature', 'image/f1.jpg', 'Sheraton Tunis Hotel', 'Tunis', '0.5 jour', 45.00, 4, 'Entrée musée, Guide', 'Transport', 'carousel16'),
+(23, 'tunis', 'PROMO', 'badge-promo', 'image/mv11.jpg', 'Mövenpick Hotel Du Lac Tunis', 'Tunis', '1 soir', 65.00, 5, 'Guide, Dégustation', 'Dîner', 'carousel17'),
+
+-- SOUSSE (+3)
+(24, 'sousse', 'TOP', 'badge-top', 'image/q1.jpg', 'Marhaba Beach Hotel', 'Sousse', '2 jours', 380.00, 4, 'Hôtel 4★, Demi-pension, Marina', 'Vol', 'carousel18'),
+(25, 'sousse', 'Nature', 'badge-nature', 'image/uo1.jpg', 'Riadh Palms Resort & Spa', 'Sousse', '0.5 jour', 55.00, 4, 'Entrées, Guide', 'Transport', 'carousel19'),
+(26, 'sousse', 'PROMO', 'badge-promo', 'image/l1.jpg', 'JAZ Tour KHALEF', 'Sousse', '5 jours', 720.00, 5, 'Hôtel 5★, Pension complète', 'Vol', 'carousel20'),
+
+-- TOZEUR (+2)
+(27, 'tozeur', 'Nature', 'badge-nature', 'image/naf1.jpg', 'Nefta - Corbeille', 'Tozeur', '1 jour', 180.00, 4, 'Transport, Guide', 'Hébergement', 'carousel21'),
+(28, 'tozeur', 'TOP', 'badge-top', 'image/chat1.jpg', 'Chott el Jerid', 'Tozeur', '1 jour', 150.00, 5, '4x4, Déjeuner', 'Hébergement', 'carousel22'),
+
+-- JENDOUBA (+2)
+(29, 'jendouba', 'Nature', 'badge-nature', 'image/c1.jpg', 'Bulla Regia', 'Jendouba', '1 jour', 95.00, 4, 'Transport, Entrée site', 'Repas', 'carousel23'),
+(30, 'jendouba', 'TOP', 'badge-top', 'image/e1.jpg', 'Chemtou - Marbre antique', 'Jendouba', '1 jour', 110.00, 5, 'Transport, Guide', 'Repas', 'carousel24'),
+
+-- DJERBA (+3)
+(31, 'djerba', 'TOP', 'badge-top', 'image/h1.jpg', 'Houmt Souk - Médina', 'Djerba', '1 jour', 95.00, 4, 'Transport, Guide', 'Hébergement', 'carousel33'),
+(32, 'djerba', 'Nature', 'badge-nature', 'image/plage.avif', 'Midoun - Marché & Plages', 'Djerba', '2 jours', 340.00, 4, 'Hôtel 3★, Petit déj', 'Vol', 'carousel34'),
+(33, 'djerba', 'PROMO', 'badge-promo', 'image/plage.avif', 'Djerba 7 jours All inclusive', 'Djerba', '7 jours', 1450.00, 5, 'Hôtel 5★, All inclusive, Spa', 'Vol', 'carousel35');
 --
 -- Index pour les tables déchargées
 --
