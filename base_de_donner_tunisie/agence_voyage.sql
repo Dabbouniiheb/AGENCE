@@ -115,3 +115,158 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+
+
+/*...................camping................*/
+
+
+CREATE TABLE camping (
+id INT AUTO_INCREMENT PRIMARY KEY,
+title VARCHAR(255),
+location VARCHAR(255),
+duration VARCHAR(100),
+price INT,
+stars INT,
+type VARCHAR(100),
+image VARCHAR(255)
+);
+
+
+
+
+INSERT INTO camping (title,location,duration,price,stars,type,image) VALUES
+
+('Weekend Camping Montagne','Djebel Ressas & Zaghouan','2 jours / 1 nuit',280,3,'montagne','3785221-hd_1920_1080_25fps.mp4'),
+
+('Camping Foret Ain Draham','Ain Draham Nord Ouest','3 jours / 2 nuits',420,3,'foret','6922959-uhd_3840_2160_25fps.mp4'),
+
+('Nuit sous les etoiles Douz','Dunes de Douz Sahara','2 jours / 1 nuit',350,4,'desert','desert.jpg'),
+
+('Camping Plage Surf','Cap Bon Nabeul','3 jours / 2 nuits',490,4,'plage','plage.jpg'),
+
+('Camping Famille Nature','Parcs naturels du Nord','3 jours / 2 nuits',520,4,'famille','famille.jpg'),
+
+('Trek Camping Aventure','Atlas et gorges','4 jours / 3 nuits',690,5,'aventure','aventure.jpg'),
+
+('Glamping Luxe 5 etoiles','Desert et oasis','3 jours / 2 nuits',1150,5,'luxe','luxe.jpg');
+
+
+
+
+/*...................omra...............*/
+
+
+
+CREATE DATABASE omra_db;
+USE omra_db;
+
+CREATE TABLE packages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    location VARCHAR(255),
+    duration VARCHAR(100),
+    price DECIMAL(10,2),
+    type VARCHAR(50), -- tunis, sousse...
+    stars INT,
+    description TEXT,
+    image VARCHAR(255)
+);
+
+
+CREATE TABLE services (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    package_id INT,
+    service TEXT,
+    FOREIGN KEY (package_id) REFERENCES packages(id) ON DELETE CASCADE
+);
+
+
+
+
+INSERT INTO packages 
+(title, location, duration, price, type, stars, description, image)
+VALUES 
+('Omra Économique', 'Mecque', '7 jours', 3200, 'tunis', 5, 
+'Hotel de luxe, guide privé, pension complète', 
+'image/omra/o1.lpg.jfif');
+
+
+INSERT INTO services (package_id, service) VALUES
+(1, 'Hotel de luxe'),
+(1, 'Guide privé'),
+(1, 'Pension complète');
+
+
+
+/*.........dashboard Admin............*/
+
+
+CREATE DATABASE omra_system;
+USE omra_system;
+
+-- TABLE VOYAGES
+CREATE TABLE voyages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255),
+    destination VARCHAR(255),
+    date_depart DATE,
+    prix DECIMAL(10,2),
+    personnes INT
+);
+
+INSERT INTO voyages VALUES
+(1,'Omra Ramadan','La Mecque','2026-03-20',1200,45),
+(2,'Hajj','La Mecque','2026-06-25',3500,100),
+(3,'Visite Médine','Médine','2026-04-10',800,30);
+
+-- TABLE HOTELS
+CREATE TABLE hotels (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255),
+    ville VARCHAR(255),
+    etoiles INT,
+    prix DECIMAL(10,2),
+    chambres INT
+);
+
+INSERT INTO hotels VALUES
+(1,'Hilton','La Mecque',5,150,120),
+(2,'Ajyad','La Mecque',4,90,200),
+(3,'Pullman','Médine',5,130,150);
+
+-- TABLE UTILISATEURS
+CREATE TABLE utilisateurs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    role VARCHAR(50),
+    date_inscription DATE
+);
+
+INSERT INTO utilisateurs VALUES
+(1,'Ali','ali@email.com','123456','Client','2026-01-01'),
+(2,'Sami','sami@email.com','123456','Client','2026-02-12'),
+(3,'Fatima','fatima@email.com','123456','Admin','2026-02-20');
+
+-- TABLE RESERVATIONS
+CREATE TABLE reservations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    client VARCHAR(255),
+    voyage_id INT,
+    hotel_id INT,
+    personnes INT,
+    statut VARCHAR(50),
+    FOREIGN KEY (voyage_id) REFERENCES voyages(id) ON DELETE CASCADE,
+    FOREIGN KEY (hotel_id) REFERENCES hotels(id) ON DELETE CASCADE
+);
+
+INSERT INTO reservations VALUES
+(1,'Ali',1,1,2,'En attente'),
+(2,'Sami',2,2,4,'Annulé'),
+(3,'Sami',3,1,4,'Confirmé');
+
+
