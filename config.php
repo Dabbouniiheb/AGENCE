@@ -37,3 +37,23 @@ if(!$conn){
     die("Connection failed: " . mysqli_connect_error());
 }
 ?>
+
+
+
+
+<?php
+include "config.php";
+
+$sql = "SELECT * FROM camping";
+$result = mysqli_query($conn,$sql);
+
+while($row = mysqli_fetch_assoc($result)){
+?>
+
+<h3><?php echo $row['title']; ?></h3>
+<p><?php echo $row['location']; ?></p>
+<p><?php echo $row['price']; ?> DT</p>
+
+<?php
+}
+?>
