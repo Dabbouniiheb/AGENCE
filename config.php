@@ -17,7 +17,7 @@ if (!isset($current_page)) {
     $current_page = 'index';
 }
 
-
+?>
 <?php
 
 $conn = mysqli_connect("localhost","root","","voyage_db1");

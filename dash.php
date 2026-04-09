@@ -1,6 +1,14 @@
+<?php
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header("Location: Login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
+    <title>Espace Administration</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
@@ -318,6 +326,9 @@
     </style>
 </head>
 <body>
+    <h1>Bienvenue, <?php echo $_SESSION['nom']; ?> !</h1>
+    <p>Ceci est l'interface d'administration de l'agence de voyage.</p>
+    
     <div class="container">
 
         <!-- Sidebar -->
@@ -1227,5 +1238,6 @@ function saveNotificationSettings() {
     console.log('Paramètres de notification:', { newReservation, newUser, dailyReport, additionalEmail });
 }
     </script>
+
 </body>
 </html>
