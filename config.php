@@ -16,3 +16,24 @@ $base_url = '';
 if (!isset($current_page)) {
     $current_page = 'index';
 }
+
+
+<?php
+
+$conn = mysqli_connect("localhost","root","","voyage_db1");
+
+if(!$conn){
+die("connection failed");
+}
+
+?>
+
+
+
+<?php
+$conn = mysqli_connect("localhost", "root", "", "voyage_db1");
+
+if(!$conn){
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
