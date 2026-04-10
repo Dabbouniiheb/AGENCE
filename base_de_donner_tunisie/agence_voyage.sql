@@ -270,3 +270,44 @@ INSERT INTO reservations VALUES
 (3,'Sami',3,1,4,'Confirmé');
 
 
+--omra base de donner nouvelle 
+CREATE TABLE IF NOT EXISTS forfaits (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(255) NOT NULL,
+    location VARCHAR(255),
+    wilaya VARCHAR(50),
+    prix INT,
+    duree VARCHAR(100),
+    etoiles INT,
+    badge_texte VARCHAR(50),
+    badge_class VARCHAR(50),
+    image_path VARCHAR(255),
+    inclus TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO forfaits (titre, location, wilaya, prix, duree, etoiles, badge_texte, badge_class, image_path, inclus) VALUES
+-- PARTIE 1 : TUNIS & SOUSSE
+('Omra Premium', 'Mecque & Médine', 'tunis', 5800, '15 jours', 5, 'PREMIUM 5★', 'badge-top', 'image/omra/o1.jpg', 'Vols directs, Hôtels 5★ luxe, Encadrement religieux'),
+('Omra Confort', 'Haram', 'tunis', 4200, '14 jours', 4, '4★ CONFORT', 'badge-nature', 'image/omra/o2.jpg', 'Hôtel 4★ proche, Transferts inclus, Assistance 24/7'),
+('Omra Économique', 'Médine', 'tunis', 3500, '12 jours', 3, '3★ STANDARD', 'badge-promo', 'image/omra/o3.jpg', 'Hôtel 3★, Petit-déjeuner, Guide local'),
+('Omra Prestige', 'Mecque', 'sousse', 6500, '20 jours', 5, 'VIP 5★', 'badge-top', 'image/omra/o4.jpg', 'Hôtel vue Haram, Service VIP, Ziarates incluses'),
+
+-- PARTIE 2 : JENDOUBA, SFAX, MONASTIR, NABEUL
+('Séjour Omra Familial', 'Mecque', 'jendouba', 9680, '20 jours / 19 nuit', 5, 'PRESTIGE 5★', 'badge-top', 'image/omra/o15.jpg', 'Repas adaptés famille, Transferts confortables, Guide pour familles'),
+('Omra Confort Famille', 'Haram', 'jendouba', 420, '15 jours', 4, '4★ CONFORT', 'badge-nature', 'image/omra/o16.jpg', 'Hôtel 4★, Chambres familiales, Assistance enfants'),
+('Omra Family Pack', 'Madina', 'jendouba', 8280, '10 jours', 3, '3★ STANDARD', 'badge-promo', 'image/omra/o17.jpg', 'Hôtel 3★, Chambres familiales, Assistance enfants'),
+('Omra Groupe', 'Madina', 'sfax', 5450, '15 jours', 5, 'EXPÉDITION 5★', 'badge-top', 'image/omra/o18.jpg', 'Hôtel 5★, Organisation complète, Encadrement collectif'),
+('Omra en Groupe', 'Haram', 'sfax', 4820, '13 jours / 12 nuits', 5, 'AVENTURE 5★', 'badge-top', 'image/omra/o19.jpg', 'Hôtel 5★, Organisation complète, Encadrement collectif'),
+('Omra Collective', 'Madina', 'sfax', 6900, '30 jours', 4, '4★ CONFORT', 'badge-nature', 'image/omra/o20.jpg', 'Hôtel 4★, Organisation complète, Encadrement collectif'),
+('Omra Team Experience', 'Maka', 'sfax', 5390, '12 jours / 11 nuit', 3, '3★ STANDARD', 'badge-promo', 'image/omra/o21.jpg', 'Hôtel 3★, Organisation complète, Encadrement collectif'),
+('Glamping Luxe', 'Désert & Oasis', 'monastir', 1150, '3 jours / 2 nuits', 5, 'GLAMPING 5★', 'badge-promo', 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80', 'Tentes suites, Dîners gastronomiques, Transferts 4x4'),
+('Glamping VIP', 'Monastir - Bord de mer', 'monastir', 1350, '3 jours / 2 nuits', 5, 'VIP 5★', 'badge-top', 'https://images.unsplash.com/photo-1528215747454-3d0e0902fff2?w=600&q=80', 'Tente avec jacuzzi privé, Chef personnel, Activités sur mesure'),
+('Weekend Groupe entre Amis', 'Cap Bon', 'nabeul', 320, '2 jours / 1 nuit', 5, 'GROUPE', 'badge-nature', 'https://images.unsplash.com/photo-1516567727245-6bc7f9a0f17c?w=600&q=80', 'Tentes collectives, Soirée feu de camp, Barbecue'),
+
+-- PARTIE 3 : DJERBA, GABES, KAIROUAN
+('Camping Famille & Découverte', 'Parcs naturels', 'djerba', 520, '3 jours / 2 nuits', 5, 'Famille', 'badge-nature', 'https://images.unsplash.com/photo-1476610182048-b716b8518aae?w=600&q=80', 'Tentes familiales, Activités nature, Pension complète'),
+('Family Resort Nature', 'Djerba Luxe', 'djerba', 1250, '4 jours / 3 nuits', 5, 'FAMILLE 5★', 'badge-top', 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80', 'Bungalows confort, Club enfants, Piscine'),
+('Camping Aventure Jeunes', 'Douz & Oasis', 'gabes', 390, '3 jours / 2 nuits', 5, 'JEUNES', 'badge-promo', 'https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=600&q=80', 'Bivouac nature, Dromadaire, Soirées guidées'),
+('Adventure Camp', 'Matmata', 'gabes', 590, '3 jours / 2 nuits', 5, 'JEUNES 5★', 'badge-top', 'https://images.unsplash.com/photo-1522163182402-834f871fd851?w=600&q=80', 'Bivouac & sports, Guides spécialisés, Matériel escalade'),
+('Camping Douceur Seniors', 'Nord-Ouest', 'kairouan', 650, '4 jours / 3 nuits', 5, 'SENIORS', 'badge-nature', 'https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=600&q=80', 'Tentes sur plots, Programme adapté, Accompagnateur dédié'),
+('Douceur & Nature', 'Kairouan Charme', 'kairouan', 890, '4 jours / 3 nuits', 5, 'SENIORS 5★', 'badge-top', 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80', 'Lodges avec chauffage, Visites culturelles, Accompagnateur');
+ALTER TABLE forfaits ADD COLUMN unite_prix VARCHAR(20) DEFAULT 'DT' AFTER prix;
