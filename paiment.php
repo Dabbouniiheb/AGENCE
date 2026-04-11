@@ -116,41 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Inclusion propre du pied de page (Footer) via PHP -->
     <?php include __DIR__ . "/includes/footer.php"; ?>
 
-    <!-- Script pour le fonctionnement dynamique du menu, recherche et login popup -->
-    <script>
-        let menu = document.querySelector('#menu-bar');
-        let navbar = document.querySelector('.navbar');
-        let searchBtn = document.querySelector('#search-btn');
-        let searchBar = document.querySelector('.search-bar-container');
-        let formBtn = document.querySelector('#login-btn');
-        let formClose = document.querySelector('#form-close');
-        let loginForm = document.querySelector('.login-form-container');
-
-        if(menu){
-            menu.addEventListener('click', () =>{
-                menu.classList.toggle('fa-times');
-                navbar.classList.toggle('active');
-            });
-        }
-
-        if(searchBtn){
-            searchBtn.addEventListener('click', () =>{
-                searchBtn.classList.toggle('fa-times');
-                searchBar.classList.toggle('active');
-            });
-        }
-
-        if(formBtn){
-            formBtn.addEventListener('click', () =>{
-                loginForm.classList.add('active');
-            });
-        }
-        
-        if(formClose){
-            formClose.addEventListener('click', () =>{
-                loginForm.classList.remove('active');
-            });
-        }
-    </script>
+    <!-- Script contenant la logique spécifique du menu, bouton login et page de paiement -->
+    <script src="js/paiment.js"></script>
 </body>
 </html>
