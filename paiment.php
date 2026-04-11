@@ -1,18 +1,78 @@
 <?php
+// Inclusion de la configuration de base de données
+require_once __DIR__ . '/db_paiment.php';
+
 $current_page = 'paiment';
 $message = "";
 
 // Form Processing
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fullName = htmlspecialchars($_POST['fullname'] ?? '');
-    $email = htmlspecialchars($_POST['email'] ?? '');
-    $phone = htmlspecialchars($_POST['phone'] ?? '');
-    $cardNumber = htmlspecialchars($_POST['card_number'] ?? '');
+    // 1. Récupération et nettoyage strict avec trim() et htmlspecialchars()
+    $fullName = htmlspecialchars(trim($_POST['fullname'] ?? ''));
+    $email = htmlspecialchars(trim($_POST['email'] ?? ''));
+    $phone = htmlspecialchars(trim($_POST['phone'] ?? ''));
     
-    if (!empty($fullName) && !empty($email) && !empty($cardNumber)) {
-        // Here you would connect to a database or payment gateway
-        $message = "<div style='color: #155724; padding: 10px; background: #d4edda; margin-bottom: 20px; border: 1px solid #c3e6cb; border-radius: 5px; font-size: 1.5rem;'>
-            Payment for <strong>$fullName</strong> has been processed successfully!
+    $cardNumber = htmlspecialchars(trim($_POST['card_number'] ?? ''));
+    $expiry = htmlspecialchars(trim($_POST['expiry'] ?? ''));
+    $cvv = htmlspecialchars(trim($_POST['cvv'] ?? ''));
+    
+    $address = htmlspecialchars(trim($_POST['address'] ?? ''));
+    $city = htmlspecialchars(trim($_POST['city'] ?? ''));
+    $zip = htmlspecialchars(trim($_POST['zip'] ?? ''));
+    $promoCode = htmlspecialchars(trim($_POST['promo_code'] ?? ''));
+    
+    // Valeurs par défaut pour la démo
+    $paymentMethod = "Credit Card"; // Fixé pour le moment
+    $totalPrice = 7000.00; // Total affiché dans le HTML et non passé par form
+
+    // 2. Vérification que les champs obligatoires ne sont pas vides
+    if (!empty($fullName) && !empty($email) && !empty($phone) && !empty($cardNumber)) {
+        
+        // 3. (SÉCURITÉ) Ne JAMAIS sauvegarder la carte entière ni le CVV en DB. 
+        // On stocke uniquement les 4 derniers chiffres
+        $cardNumberCleaned = str_replace(' ', '', $cardNumber); // Retire les espaces
+        $safeCardNumber = '**** **** **** ' . substr($cardNumberCleaned, -4);
+        
+        // 4. (SÉCURITÉ SQL) Utilisation des requêtes préparées via PDO (Empêche l'Injection SQL)
+        try {
+            $sql = "INSERT INTO paiements 
+                    (fullname, email, phone, card_number, expiry, cvv, address, city, zip, promo_code, payment_method, total_price) 
+                    VALUES 
+                    (:fullname, :email, :phone, :card_number, :expiry, :cvv, :address, :city, :zip, :promo_code, :payment_method, :total_price)";
+                    
+            $stmt = $pdo->prepare($sql);
+            
+            // Liaison des valeurs avec sécurité
+            $stmt->execute([
+                ':fullname' => $fullName,
+                ':email' => $email,
+                ':phone' => $phone,
+                ':card_number' => $safeCardNumber, 
+                ':expiry' => $expiry, 
+                ':cvv' => '***', // Ne pas stocker le CVV !
+                ':address' => $address,
+                ':city' => $city,
+                ':zip' => $zip,
+                ':promo_code' => $promoCode,
+                ':payment_method' => $paymentMethod,
+                ':total_price' => $totalPrice
+            ]);
+            
+            // Message de succès avec couleur verte
+            $message = "<div style='color: #155724; padding: 10px; background: #d4edda; margin-bottom: 20px; border: 1px solid #c3e6cb; border-radius: 5px; font-size: 1.5rem;'>
+                Le paiement pour <strong>$fullName</strong> a été traité et sauvegardé avec succès dans la base de données !
+            </div>";
+            
+        } catch (PDOException $e) {
+            // Affichage de l'erreur DB
+            $message = "<div style='color: #721c24; padding: 10px; background: #f8d7da; margin-bottom: 20px; border: 1px solid #f5c6cb; border-radius: 5px; font-size: 1.5rem;'>
+                Erreur Base de données : " . $e->getMessage() . "
+            </div>";
+        }
+        
+    } else {
+        $message = "<div style='color: #856404; padding: 10px; background: #fff3cd; margin-bottom: 20px; border: 1px solid #ffeeba; border-radius: 5px; font-size: 1.5rem;'>
+            Veuillez remplir toutes les informations obligatoires (Nom, Email, Téléphone, Carte).
         </div>";
     }
 }
