@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
+$dbname = 'omra_base';
 $user = 'root';
 $pass = '';
-$dbname = 'omra_base';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);

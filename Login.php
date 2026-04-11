@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
         $_SESSION['role'] = $row['role'];
 
         if ($row['role'] === 'admin') {
-            header("Location: dashboard.html");
+            header("Location: index1.php");
         } else {
             header("Location: index.html");
         }

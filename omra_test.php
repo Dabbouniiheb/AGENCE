@@ -173,45 +173,53 @@ $success = "";
   </div>
 
   <div class="packages-grid">
-    <div class="box-container">
-      <?php
-      $query = $pdo->query("SELECT * FROM forfaits");
-      while ($row = $query->fetch(PDO::FETCH_ASSOC)):
-          $inclus_items = explode(',', $row['inclus']);
-      ?>
-      
-      <div class="package-card" data-wilaya="<?php echo htmlspecialchars($row['wilaya']); ?>">
-          <div class="card-image-wrapper">
-              <span class="card-badge <?php echo $row['badge_class']; ?>">
-                  <?php echo htmlspecialchars($row['badge_texte']); ?>
-              </span>
-              <img src="<?php echo $row['image_path']; ?>" alt="Image" class="card-image" />
-          </div>
-          <div class="card-body">
-              <h4 class="card-title"><?php echo htmlspecialchars($row['titre']); ?></h4>
-              <p class="card-location">📍 <?php echo htmlspecialchars($row['location']); ?></p>
-              <div class="card-meta">
-                  <span class="card-duration">🗓 <?php echo htmlspecialchars($row['duree']); ?></span>
-                  <span class="card-price"><?php echo number_format($row['prix'], 0, '.', ' '); ?> <?php echo $row['unite_prix']; ?></span>
-              </div>
-              <div class="card-stars">
-                  <span class="stars filled"><?php echo str_repeat('★', $row['etoiles']); ?></span>
-                  <span class="stars empty"><?php echo str_repeat('★', 5 - $row['etoiles']); ?></span>
-              </div>
-              <div class="card-included">
-                  <strong>Inclus</strong>
-                  <ul>
-                      <?php foreach ($inclus_items as $item): ?>
-                          <li>✔ <?php echo trim($item); ?></li>
-                      <?php endforeach; ?>
-                  </ul>
-              </div>
-              <button class="btn-reserver">Réserver Maintenant</button>
-          </div>
+  <?php
+  $query = $pdo->query("SELECT * FROM forfaits");
+  while ($row = $query->fetch(PDO::FETCH_ASSOC)):
+      $inclus_items = explode(',', $row['inclus']);
+  ?>
+
+  <div class="package-card" data-wilaya="<?php echo htmlspecialchars($row['wilaya']); ?>">
+    
+    <div class="card-image-wrapper">
+      <span class="card-badge <?php echo $row['badge_class']; ?>">
+        <?php echo htmlspecialchars($row['badge_texte']); ?>
+      </span>
+      <img src="<?php echo $row['image_path']; ?>" alt="Image" class="card-image" />
+    </div>
+
+    <div class="card-body">
+      <h4 class="card-title"><?php echo htmlspecialchars($row['titre']); ?></h4>
+      <p class="card-location">📍 <?php echo htmlspecialchars($row['location']); ?></p>
+
+      <div class="card-meta">
+        <span class="card-duration">🗓 <?php echo htmlspecialchars($row['duree']); ?></span>
+        <span class="card-price">
+          <?php echo number_format($row['prix'], 0, '.', ' '); ?> <?php echo $row['unite_prix']; ?>
+        </span>
       </div>
 
-      <?php endwhile; ?>
-    </div> </div> </section>
+      <div class="card-stars">
+        <span class="stars filled"><?php echo str_repeat('★', $row['etoiles']); ?></span>
+        <span class="stars empty"><?php echo str_repeat('★', 5 - $row['etoiles']); ?></span>
+      </div>
+
+      <div class="card-included">
+        <strong>Inclus</strong>
+        <ul>
+          <?php foreach ($inclus_items as $item): ?>
+            <li>✔ <?php echo trim($item); ?></li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+
+      <button class="btn-reserver">Réserver Maintenant</button>
+    </div>
+
+  </div>
+
+  <?php endwhile; ?>
+</div> </div> </section>
     </main>
     <script>
   let menu = document.querySelector('#menu-bar');
