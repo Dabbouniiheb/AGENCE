@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --orange:#ffa500;
+}
+
+*{
+    font-family: "nunito" , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize; 
+    outline: none; 
+    border:none ;
+    text-decoration: none; 
+    transition: all .2s linear;
+}
+
+*::selection{
+    background-color: var(--orange);
+    color: #fff;
+}
+html{
+    font-size: 70%;
+    overflow-x:hidden ;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #f9fafb; /* Light background typically used in payment pages */
+}
+section
+{
+    padding: 2rem 9%;
+}
+
+/* ================== HEADER & NAVBAR ================== */
+header{
+    position: fixed;
+    top:0 ;
+    left: 0;
+    right: 0;
+    background: #333;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    padding: 2rem 9%;
+}
+header .logo{
+    font-size: 2.5rem;
+    font-weight:bolder ;
+    color: #fff;
+    text-transform: uppercase;
+}
+header .logo span{
+    color: var(--orange);
+}
+header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+header .navbar a{
+    color: #fff;
+    font-size: 2rem;
+    margin:0 0.8rem;
+}
+header .navbar a:hover{
+    color: var(--orange);
+}
+header .icons i{
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+header .icons i:hover{
+    color: var(--orange);
+}
+header .search-bar-container{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 2rem;
+    background: #333;
+    border-top: .1rem solid rgba(255,255,255,.2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+header .search-bar-container.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+header .search-bar-container #search-bar{
+    width: 100%;
+    padding: 1rem;
+    text-transform: none;
+    color: #333;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+}
+header .search-bar-container label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+header .search-bar-container label:hover{
+    color: var(--orange);
+}
+#menu-bar{
+    color: #fff;
+    border: .1rem solid #fff;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* ================== LOGIN FORM CONTAINER ================== */
+.login-form-container{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form-container.active{
+    top: 0;
+}
+.login-form-container form{
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    width: 50rem;
+}
+.login-form-container form h3{
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+.login-form-container form .box{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: .6rem 0;
+    border: .1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+}
+.login-form-container form .box:focus{
+    border-color: var(--orange);
+}
+.login-form-container form #remember{
+    margin: 2rem 0;
+}
+.login-form-container form label{
+    font-size: 1.5rem;
+}
+.login-form-container form .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1.7rem;
+    display: block;
+    width: 100%;
+}
+.login-form-container form .btn:hover{
+    background: rgba(255, 165, 0,.2);
+    color: var(--orange);
+}
+.login-form-container form p{
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}
+.login-form-container form p a{
+    color: var(--orange);
+}
+.login-form-container form p a:hover{
+    color: #333;
+    text-decoration: underline;
+}
+.login-form-container #form-close{
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ================== FOOTER ================== */
+.footer{
+    background: #333;
+    padding: 2rem 9%;
+}
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.footer .box-container .box{
+    padding:1rem 0 ;
+    flex: 1 1 25rem;
+}
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding: .7rem 0;
+    color: #fff;
+}
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+.footer .box-container .box a:hover{
+    color:var(--orange) ;
+    text-decoration:underline;
+}
+.footer .credit{
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    border-top: .1rem solid rgba(255, 255,255, 0.2);
+}
+.footer .credit span{
+    color: var(--orange);
+}
+.footer .box-container .box h5{
+    display: block;
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+.footer .box-container .box h5:hover{
+    color:var(--orange) ;
+    text-decoration:underline;
+}
+
+
+/* ================== PAYMENT PAGE ORIGINAL CSS ================== */
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 120px auto 40px auto; /* Increased top margin for fixed header */
+}
+
+/* Progress Bar */
+.progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.progress div {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    font-weight: 500;
+    color: #6B7280;
+    font-size: 1.6rem;
+}
+.progress div.active {
+    color: #1E3A8A;
+}
+.progress div::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: #E5E7EB;
+    z-index: -1;
+}
+.progress div:last-child::after {
+    display: none;
+}
+
+/* Main */
+.main {
+    display: flex;
+    gap: 30px;
+}
+
+/* Left Column */
+.form-card {
+    flex: 2;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.form-card h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.form-card label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #D1D5DB;
+    font-size: 1.4rem;
+}
+
+/* Payment Tabs */
+.payment-tabs {
+    display: flex;
+    margin-bottom: 15px;
+}
+.payment-tabs button {
+    flex: 1;
+    padding: 10px 0;
+    border: 1px solid #D1D5DB;
+    background: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.payment-tabs button.active {
+    background: #1E3A8A;
+    color: white;
+    border-color: #1E3A8A;
+}
+
+/* Billing Address */
+.billing {
+    display: flex;
+    gap: 10px;
+}
+.billing input {
+    flex: 1;
+}
+
+/* Checkbox */
+.checkbox {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background: #1E3A8A;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #2563EB;
+}
+
+/* Right Column */
+.summary-card {
+    flex: 1;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+.summary-card h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+.summary-card p {
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+.price {
+    border-top: 1px solid #E5E7EB;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.6rem!important;
+}
+.promo {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.promo input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #D1D5DB;
+    font-size: 1.4rem;
+}
+.promo button {
+    padding: 8px 12px;
+    border: none;
+    background: #1E3A8A;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+.promo button:hover {
+    background: #2563EB;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column;
+    }
+    .summary-card {
+        position: static;
+    }
+}

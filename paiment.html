@@ -5,223 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Agency - Payment</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style1.css">
-    <style>
-        
-
-        /* Container */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
-        }
-
-        /* Header */
-               
-
-        /* Progress Bar */
-        .progress {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-        .progress div {
-            flex: 1;
-            text-align: center;
-            position: relative;
-            font-weight: 500;
-            color: #6B7280;
-        }
-        .progress div.active {
-            color: #1E3A8A;
-        }
-        .progress div::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: 0;
-            width: 100%;
-            height: 2px;
-            background: #E5E7EB;
-            z-index: -1;
-        }
-        .progress div:last-child::after {
-            display: none;
-        }
-
-        /* Main */
-        .main {
-            display: flex;
-            gap: 30px;
-        }
-
-        /* Left Column */
-        .form-card {
-            flex: 2;
-            background: #FFFFFF;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .form-card h3 {
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        .form-card label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-            font-size: 14px;
-        }
-        .form-card input[type="text"],
-        .form-card input[type="email"],
-        .form-card input[type="number"] {
-            width: 100%;
-            padding: 10px 12px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            border: 1px solid #D1D5DB;
-            font-size: 14px;
-        }
-
-        /* Payment Tabs */
-        .payment-tabs {
-            display: flex;
-            margin-bottom: 15px;
-        }
-        .payment-tabs button {
-            flex: 1;
-            padding: 10px 0;
-            border: 1px solid #D1D5DB;
-            background: white;
-            cursor: pointer;
-            font-weight: 500;
-        }
-        .payment-tabs button.active {
-            background: #1E3A8A;
-            color: white;
-            border-color: #1E3A8A;
-        }
-
-        /* Billing Address */
-        .billing {
-            display: flex;
-            gap: 10px;
-        }
-        .billing input {
-            flex: 1;
-        }
-
-        /* Checkbox */
-        .checkbox {
-            margin-bottom: 20px;
-        }
-
-        /* Button */
-        .btn {
-            display: inline-block;
-            width: 100%;
-            padding: 15px;
-            background: #1E3A8A;
-            color: white;
-            font-weight: 600;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #2563EB;
-        }
-
-        /* Right Column */
-        .summary-card {
-            flex: 1;
-            background: #FFFFFF;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            height: fit-content;
-            position: sticky;
-            top: 30px;
-        }
-        .summary-card h4 {
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        .summary-card p {
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-        .price {
-            border-top: 1px solid #E5E7EB;
-            padding-top: 10px;
-            margin-top: 10px;
-            font-weight: 600;
-        }
-        .promo {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        .promo input {
-            flex: 1;
-            padding: 8px;
-            border-radius: 8px;
-            border: 1px solid #D1D5DB;
-        }
-        .promo button {
-            padding: 8px 12px;
-            border: none;
-            background: #1E3A8A;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .promo button:hover {
-            background: #2563EB;
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .main {
-                flex-direction: column;
-            }
-            .summary-card {
-                position: static;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/paiment.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div id="menu-bar" class="fas fa-bars"></div>
-    
-            <a href="#" class="logo"><span>V</span>oyages</a>
-            <nav class="navbar">
-                <a href="#accueil">accueil</a>
-                <a href="#forfait">forfait</a>
-                <a href="#service">service</a>
-                <a href="#galerie">galerie</a>
-                <a href="#avis">avis</a>
-                <a href="#reserver">reserver</a>
-                <a href="#contact">contact</a>
-            </nav>
-            <div class="icons">
-                <i class="fas fa-search" id="search-btn"></i>
-                <a href="login.html">
-                    <i class="fas fa-user" id="login-btn"></i>
-                </a>
-            </div>
-            <form action="" class="search-bar-container">
-                <input type="search" id="search-bar" placeholder="racherche ici...">
-                <label for="search-bar" class="fas fa-search"></label>
-            </form>
-        </header>
 
+    <!-- debut de la section d'en-tete -->
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="index.php" class="logo"><span>V</span>oyages</a>
+        <nav class="navbar">
+            <a href="index.php#accueil">accueil</a>
+            <a href="index.php#forfait">forfait</a>
+            <a href="index.php#service">service</a>
+            <a href="index.php#galerie">galerie</a>
+            <a href="index.php#avis">avis</a>
+            <a href="index.php#reserver">reserver</a>
+            <a href="index.php#contact">contact</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <a href="lindex_login.html">
+                <i class="fas fa-user" id="login-btn"></i>
+            </a>
+        </div>
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="recherche ici...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    </header>
+    
+    <!-- login form container -->
+    <div class="login-form-container">
+        <i class="fas fa-times" id="form-close"></i>
+        <form action="">
+            <h3>login</h3>
+            <input type="email" class="box" placeholder="entrer votre email">
+            <input type="password" class="box" placeholder="entrer votre mot de passe">
+            <input type="submit" value="login maintenant" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remember">remember me</label>
+            <p>forget password? <a href="#">click here</a></p>
+            <p>don't have an account? <a href="#">register now</a></p>
+        </form>
+    </div>
+
+    <div class="container">
+        
         <div class="progress">
             <div>Trip</div>
             <div>Details</div>
@@ -285,5 +117,80 @@
             </div>
         </div>
     </div>
+    
+    <!-- debut de la section footer -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>a propos de nous</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quisquam officia magni adipisci accusamus a excepturi quasi error quia cumque.</p> 
+            </div>
+            <div class="box">
+                <h3>emplacement de la succursale</h3>
+                <a href="#">india</a>
+                <a href="#">USA</a>
+                <a href="#">japan</a>
+                <a href="#">france</a>
+            </div>
+            <div class="box">
+                <h3>liens rapides </h3>
+                <a href="index.php#accueil">accueil</a>
+                <a href="index.php#forfait">forfait</a>
+                <a href="index.php#service">service</a>
+                <a href="index.php#galerie">galerie</a>
+                <a href="index.php#avis">avis</a>
+                <a href="index.php#reserver">reserver</a>
+                <a href="index.php#contact">contact</a>
+            </div>
+            <div class="box">
+                <h3>contact-nous</h3>
+                <a href="https://www.facebook.com/voyage" target="_blank">
+                    <img src="image/facebook.png" alt="Facebook" width="20rem" height="20rem" /> Facebook
+                </a>
+                <a href="https://www.instagram.com/voyage" target="_blank">
+                    <img src="image/instagrame.avif" alt="Instagram" width="20rem" height="20rem" /> Instagram
+                </a>
+                <a href="https://x.com/voyage" target="_blank">
+                    <img src="image/twitter.avif" alt="twitter" width="20rem" height="20rem"/> twitter
+                </a>
+                <a href="https://www.linkedin.com/in/voyage" target="_blank">
+                    <img src="image/linkedin.webp" alt="LinkedIn" width="20rem" height="20rem" /> LinkedIn
+                </a>
+                <h5>Email : info@traveltourisme.com</h5>
+                <h5>phone : +1234 567 890</h5>
+                <h5>Adress : 123 Travel street,tourism city</h5>
+            </div>
+        </div>
+        <h1 class="credit"> 2025/2026 créer par | <span>yassmine ben hmida</span> | </h1>
+    </section>
+    <!-- fin de la section footer -->
+
+    <script>
+        // Adding the Javascript needed for your header
+        let menu = document.querySelector('#menu-bar');
+        let navbar = document.querySelector('.navbar');
+        let searchBtn = document.querySelector('#search-btn');
+        let searchBar = document.querySelector('.search-bar-container');
+        let formBtn = document.querySelector('#login-btn');
+        let formClose = document.querySelector('#form-close');
+        let loginForm = document.querySelector('.login-form-container');
+
+        menu.addEventListener('click', () =>{
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        });
+
+        searchBtn.addEventListener('click', () =>{
+            searchBtn.classList.toggle('fa-times');
+            searchBar.classList.toggle('active');
+        });
+
+        formBtn.addEventListener('click', () =>{
+            loginForm.classList.add('active');
+        });
+        formClose.addEventListener('click', () =>{
+            loginForm.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
