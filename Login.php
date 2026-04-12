@@ -7,50 +7,70 @@ $success = "";
 
 // --- LOGIQUE DE CONNEXION (SIGN IN) ---
 if (isset($_POST['login'])) {
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    // Nettoyage de l'email
+    $email = htmlspecialchars(trim($_POST['email']));
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM utilisateurs WHERE email='$email' AND password='$password'";
-    $result = mysqli_query($conn, $sql);
+    // Requête préparée pour éviter l'Injection SQL
+    $stmt = mysqli_prepare($conn, "SELECT id, nom, password, role FROM utilisateurs WHERE email=?");
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
-    if (mysqli_num_rows($result) === 1) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['user_id'] = $row['id'];
-        $_SESSION['nom'] = $row['nom'];
-        $_SESSION['role'] = $row['role'];
+    if ($row = mysqli_fetch_assoc($result)) {
+        // Vérification du mot de passe (ATTENTION: ne marche qu'avec des mots de passe fraîchement inscrits et hashés)
+        if (password_verify($password, $row['password']) || $password === $row['password'] /* fallback en attendant la migration totale */) {
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['nom'] = $row['nom'];
+            $_SESSION['role'] = $row['role'];
 
-        if ($row['role'] === 'admin') {
-            header("Location: index1.php");
+            // Modification: on redirige vers index.php, pas index.html
+            if ($row['role'] === 'admin' || $row['role'] === 'Admin') {
+                header("Location: index1.php");
+            } else {
+                header("Location: index.php");
+            }
+            exit();
         } else {
-            header("Location: index.html");
+            $error = "Mot de passe incorrect !";
         }
-        exit();
     } else {
-        $error = "Email ou mot de passe incorrect !";
+        $error = "Email introuvable !";
     }
+    mysqli_stmt_close($stmt);
 }
 
 // --- LOGIQUE D'INSCRIPTION (SIGN UP) ---
 if (isset($_POST['register'])) {
-    $nom = mysqli_real_escape_string($conn, $_POST['nom']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = $_POST['password']; // Idéalement, hachez-le avec password_hash()
+    // Nettoyage stricte
+    $nom = htmlspecialchars(trim($_POST['nom']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $password = $_POST['password'];
     
-    // Vérifier si l'email existe déjà
-    $checkEmail = mysqli_query($conn, "SELECT email FROM utilisateurs WHERE email='$email'");
+    // Hachage ultra-sécurisé du mot de passe
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     
-    if (mysqli_num_rows($checkEmail) > 0) {
+    // Vérifier si l'email existe déjà avec requête préparée
+    $stmtCheck = mysqli_prepare($conn, "SELECT email FROM utilisateurs WHERE email=?");
+    mysqli_stmt_bind_param($stmtCheck, "s", $email);
+    mysqli_stmt_execute($stmtCheck);
+    mysqli_stmt_store_result($stmtCheck);
+    
+    if (mysqli_stmt_num_rows($stmtCheck) > 0) {
         $error = "Cet email est déjà utilisé !";
     } else {
-        // Insertion du nouvel utilisateur (le rôle est 'client' par défaut via SQL)
-        $sqlInsert = "INSERT INTO utilisateurs (nom, email, password, role) VALUES ('$nom', '$email', '$password', 'client')";
+        // Insertion sécurisée du nouvel utilisateur (empêche l'injection SQL)
+        $stmtInsert = mysqli_prepare($conn, "INSERT INTO utilisateurs (nom, email, password, role) VALUES (?, ?, ?, 'client')");
+        mysqli_stmt_bind_param($stmtInsert, "sss", $nom, $email, $hashed_password);
         
-        if (mysqli_query($conn, $sqlInsert)) {
-            $success = "Compte créé avec succès ! Connectez-vous.";
+        if (mysqli_stmt_execute($stmtInsert)) {
+            $success = "Compte créé avec succès ! Vous pouvez maintenant vous connecter.";
         } else {
-            $error = "Erreur lors de l'inscription.";
+            $error = "Erreur système lors de l'inscription.";
         }
+        mysqli_stmt_close($stmtInsert);
     }
+    mysqli_stmt_close($stmtCheck);
 }
 ?>
 <!DOCTYPE html>
@@ -92,7 +112,7 @@ if (isset($_POST['register'])) {
             
         <div class="logreg-box">
             <div class="form-box login">
-                <form action="login.php" method="POST">
+                <form action="Login.php" method="POST">
                     <h2>Sign In</h2>
                     
                     <?php if($error != ""): ?>
@@ -125,7 +145,7 @@ if (isset($_POST['register'])) {
             </div>
 
             <div class="form-box register">
-    <form action="login.php" method="POST"> <h2>Sign Up</h2>
+    <form action="Login.php" method="POST"> <h2>Sign Up</h2>
         
         <?php if($success != ""): ?>
             <p style="color: #2ecc71; margin-bottom: 10px;"><?php echo $success; ?></p>

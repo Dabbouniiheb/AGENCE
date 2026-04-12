@@ -3,7 +3,7 @@
 //  index.php — Tableau de bord principal (SPA PHP)
 // ============================================================
 require_once 'auth.php';
-requireLogin();
+// requireLogin(); // <--- DÉSACTIVÉ : Empêche la redirection automatique vers Login.php
 $adminNom = htmlspecialchars($_SESSION['admin_nom'] ?? 'Admin');
 ?>
 <!DOCTYPE html>

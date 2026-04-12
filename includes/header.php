@@ -18,7 +18,7 @@ $nav_base = ($current_page === 'tunisie') ? 'index.php' : '';
         </nav>
         <div class="icons">
             <i class="fas fa-search" id="search-btn"></i>
-            <a href="lindex_login.html">
+            <a href="Login.php">
                 <i class="fas fa-user" id="login-btn"></i>
             </a>
         </div>
@@ -31,14 +31,14 @@ $nav_base = ($current_page === 'tunisie') ? 'index.php' : '';
     <div class="login-form-container">
 
         <i class="fas fa-times" id="form-close"></i>
-        <form action="">
+        <form action="Login.php" method="POST">
             <h3>login</h3>
-            <input type="email" class="box" placeholder="entrer votre email">
-            <input type="password" class="box" placeholder="entrer votre mode passe">
-            <input type="submit" value="login mantenant" class="btn">
+            <input type="email" name="email" class="box" placeholder="entrer votre email" required>
+            <input type="password" name="password" class="box" placeholder="entrer votre mode passe" required>
+            <input type="submit" name="login" value="login mantenant" class="btn">
             <input type="checkbox" id="remember">
             <label for="remember">remember me</label>
             <p>forget password? <a href="#">click here</a></p>
-            <p>don't have and account? <a href="#">register now</a></p>
+            <p>don't have and account? <a href="Login.php">register now</a></p>
         </form>
     </div>  
