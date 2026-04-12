@@ -42,18 +42,14 @@ if(!$conn){
 
 
 <?php
-include "config.php";
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "comp"; // Remplacez par le nom de votre base
 
-$sql = "SELECT * FROM camping";
-$result = mysqli_query($conn,$sql);
+$conn = mysqli_connect($host, $user, $pass, $dbname);
 
-while($row = mysqli_fetch_assoc($result)){
-?>
-
-<h3><?php echo $row['title']; ?></h3>
-<p><?php echo $row['location']; ?></p>
-<p><?php echo $row['price']; ?> DT</p>
-
-<?php
+if (!$conn) {
+    die("Connexion échouée: " . mysqli_connect_error());
 }
 ?>

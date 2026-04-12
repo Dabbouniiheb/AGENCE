@@ -5,7 +5,6 @@
 require_once 'auth.php';
 require_once 'db.php';
 
-requireLogin();
 
 header('Content-Type: application/json; charset=utf-8');
 
