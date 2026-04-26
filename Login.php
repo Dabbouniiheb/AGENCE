@@ -1,77 +1,37 @@
 <?php
-session_start();
-include('L_config.php');
+// ============================================
+// login.php — Page de connexion Admin
+// ============================================
+require_once 'db.php';
+require_once 'auth.php';
 
-$error = "";
+
+
 $success = "";
+$error = '';
 
-// --- LOGIQUE DE CONNEXION (SIGN IN) ---
-if (isset($_POST['login'])) {
-    // Nettoyage de l'email
-    $email = htmlspecialchars(trim($_POST['email']));
-    $password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = trim($_POST['email'] ?? '');
+    $password = trim($_POST['password'] ?? '');
 
-    // Requête préparée pour éviter l'Injection SQL
-    $stmt = mysqli_prepare($conn, "SELECT id, nom, password, role FROM utilisateurs WHERE email=?");
-    mysqli_stmt_bind_param($stmt, "s", $email);
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
+    if ($email && $password) {
+        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE email = ? AND role = 'Admin' LIMIT 1");
+        $stmt->execute([$email]);
+        $user = $stmt->fetch();
 
-    if ($row = mysqli_fetch_assoc($result)) {
-        // Vérification du mot de passe (ATTENTION: ne marche qu'avec des mots de passe fraîchement inscrits et hashés)
-        if (password_verify($password, $row['password']) || $password === $row['password'] /* fallback en attendant la migration totale */) {
-            $_SESSION['user_id'] = $row['id'];
-            $_SESSION['nom'] = $row['nom'];
-            $_SESSION['role'] = $row['role'];
-
-            // Modification: on redirige vers index.php, pas index.html
-            if ($row['role'] === 'admin' || $row['role'] === 'Admin') {
-                header("Location: index1.php");
-            } else {
-                header("Location: index.php");
-            }
-            exit();
+        if ($user && $password === $user['mot_de_passe'])  {
+            $_SESSION['admin_id']   = $user['id'];
+            $_SESSION['admin_nom']  = $user['nom'];
+            $_SESSION['admin_role'] = $user['role'];
+            header('Location: index1.php');
+            exit;
         } else {
-            $error = "Mot de passe incorrect !";
+            header('Location: index.html');
+            exit;
         }
-    } 
-    else {
-        $error = "Email introuvable !";
-    }
-    mysqli_stmt_close($stmt);
-}
-
-// --- LOGIQUE D'INSCRIPTION (SIGN UP) ---
-if (isset($_POST['register'])) {
-    // Nettoyage stricte
-    $nom = htmlspecialchars(trim($_POST['nom']));
-    $email = htmlspecialchars(trim($_POST['email']));
-    $password = $_POST['password'];
-    
-    // Hachage ultra-sécurisé du mot de passe
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-    
-    // Vérifier si l'email existe déjà avec requête préparée
-    $stmtCheck = mysqli_prepare($conn, "SELECT email FROM utilisateurs WHERE email=?");
-    mysqli_stmt_bind_param($stmtCheck, "s", $email);
-    mysqli_stmt_execute($stmtCheck);
-    mysqli_stmt_store_result($stmtCheck);
-    
-    if (mysqli_stmt_num_rows($stmtCheck) > 0) {
-        $error = "Cet email est déjà utilisé !";
     } else {
-        // Insertion sécurisée du nouvel utilisateur (empêche l'injection SQL)
-        $stmtInsert = mysqli_prepare($conn, "INSERT INTO utilisateurs (nom, email, password, role) VALUES (?, ?, ?, 'client')");
-        mysqli_stmt_bind_param($stmtInsert, "sss", $nom, $email, $hashed_password);
-        
-        if (mysqli_stmt_execute($stmtInsert)) {
-            $success = "Compte créé avec succès ! Vous pouvez maintenant vous connecter.";
-        } else {
-            $error = "Erreur système lors de l'inscription.";
-        }
-        mysqli_stmt_close($stmtInsert);
+        $error = 'Veuillez remplir tous les champs.';
     }
-    mysqli_stmt_close($stmtCheck);
 }
 ?>
 <!DOCTYPE html>

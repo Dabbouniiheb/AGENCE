@@ -1,11 +1,9 @@
 <?php
-// ============================================================
-//  auth.php — Gestion de session
-// ============================================================
+// ============================================
+// includes/auth.php — Gestion de la session
+// ============================================
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+session_start();
 
 function isLoggedIn(): bool {
     return isset($_SESSION['admin_id']);
@@ -13,13 +11,15 @@ function isLoggedIn(): bool {
 
 function requireLogin(): void {
     if (!isLoggedIn()) {
-        header('Location: Login.php');
+        header('Location: login.php');
         exit;
     }
 }
 
-function logout(): void {
-    session_destroy();
-    header('Location: Login.php');
-    exit;
+function getCurrentAdmin(): array {
+    return [
+        'id'   => $_SESSION['admin_id']   ?? null,
+        'nom'  => $_SESSION['admin_nom']  ?? 'Admin',
+        'role' => $_SESSION['admin_role'] ?? 'Admin',
+    ];
 }
