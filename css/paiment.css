@@ -352,9 +352,9 @@ header .search-bar-container label:hover{
     font-size: 1.4rem;
 }
 .payment-tabs button.active {
-    background: #1E3A8A;
+    background: #ffa500;
     color: white;
-    border-color: #1E3A8A;
+    border-color: #ffa500;
 }
 
 /* Billing Address */
@@ -377,7 +377,7 @@ header .search-bar-container label:hover{
     display: inline-block;
     width: 100%;
     padding: 15px;
-    background: #1E3A8A;
+    background: #ffa500;
     color: white;
     font-weight: 600;
     border: none;
@@ -387,7 +387,7 @@ header .search-bar-container label:hover{
     transition: background 0.3s;
 }
 .btn:hover {
-    background: #2563EB;
+    background: #e69500;
 }
 
 /* Right Column */
@@ -432,14 +432,14 @@ header .search-bar-container label:hover{
 .promo button {
     padding: 8px 12px;
     border: none;
-    background: #1E3A8A;
+    background: #ffa500;
     color: white;
     border-radius: 8px;
     cursor: pointer;
     font-size: 1.4rem;
 }
 .promo button:hover {
-    background: #2563EB;
+    background: #e69500;
 }
 
 /* Responsive */
