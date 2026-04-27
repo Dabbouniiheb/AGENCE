@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['admin_id']   = $user['id'];
             $_SESSION['admin_nom']  = $user['nom'];
             $_SESSION['admin_role'] = $user['role'];
-            header('Location: index1.php');
+            header('Location: admin.php');
             exit;
         } else {
             header('Location: index.html');
