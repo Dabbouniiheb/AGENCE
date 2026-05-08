@@ -1,36 +1,66 @@
 <?php
 // ============================================
-// login.php — Page de connexion Admin
+// login.php — Page de connexion
 // ============================================
+session_start();
 require_once 'db.php';
 require_once 'auth.php';
-
-
 
 $success = "";
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     $email = trim($_POST['email'] ?? '');
     $password = trim($_POST['password'] ?? '');
 
     if ($email && $password) {
-        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE email = ? AND role = 'Admin' LIMIT 1");
-        $stmt->execute([$email]);
+
+        // Recherche utilisateur
+        $stmt = $pdo->prepare("
+            SELECT * FROM utilisateurs
+            WHERE email = ?
+            AND mot_de_passe = ?
+            LIMIT 1
+        ");
+
+        $stmt->execute([$email, $password]);
+
         $user = $stmt->fetch();
 
-        if ($user && $password === $user['mot_de_passe'])  {
-            $_SESSION['admin_id']   = $user['id'];
-            $_SESSION['admin_nom']  = $user['nom'];
-            $_SESSION['admin_role'] = $user['role'];
-            header('Location: admin.php');
-            exit;
+        if ($user) {
+
+            // Vérification du rôle
+            if ($user['role'] === 'Admin') {
+
+                $_SESSION['admin_id']   = $user['id'];
+                $_SESSION['admin_nom']  = $user['nom'];
+                $_SESSION['admin_role'] = $user['role'];
+
+                header('Location: admin.php');
+                exit;
+
+            } 
+            elseif ($user['role'] === 'Client') {
+                echo("client ok");
+                $_SESSION['client_id']   = $user['id'];
+                $_SESSION['client_nom']  = $user['nom'];
+                $_SESSION['client_role'] = $user['role'];
+
+                header('Location: index.html');
+                exit;
+            }
+
         } else {
-            header('Location: index.html');
-            exit;
+
+            $error = "Email ou mot de passe incorrect.";
+
         }
+
     } else {
-        $error = 'Veuillez remplir tous les champs.';
+
+        $error = "Veuillez remplir tous les champs.";
+
     }
 }
 ?>
