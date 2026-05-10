@@ -662,66 +662,52 @@
 
 
 <script>
-let stars = document.querySelectorAll(".rating i");
-let ratingInput = document.getElementById("rating");
+// Gestion de la recherche
+let searchBtn = document.querySelector('#search-btn');
+let searchBar = document.querySelector('.search-bar-container');
 
-stars.forEach(star => {
-  star.addEventListener("click", () => {
-    let value = star.getAttribute("data-value");
-    ratingInput.value = value;
-
-    stars.forEach(s => {
-      s.classList.remove("active");
-      if (s.getAttribute("data-value") <= value) {
-        s.classList.add("active");
-      }
+if (searchBtn && searchBar) {
+    searchBtn.addEventListener('click', () => {
+        searchBtn.classList.toggle('fa-times');
+        searchBar.classList.toggle('active');
     });
-  });
-});
+}
 
-
-let searchBtn=document.querySelector('#search-btn');
-let searchBar=document.querySelector('.search-bar-container');
-
-let formBtn=document.querySelector('#login-btn');
-let loginForm=document.querySelector('.login-form-container');
-let formClose=document.querySelector('#form-close');
-
+// Gestion du menu mobile
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 
-
-window.onscroll = () =>{
-    searchBtn.classList.remove('fa-times');
-    searchBar.classList.remove('active');
-
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
-    loginForm.classList.remove('active');
+if (menu && navbar) {
+    menu.addEventListener('click', () => {
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+    });
 }
-menu.addEventListener('click', () =>{
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-});
 
-searchBtn.addEventListener('click', () =>{
-    searchBtn.classList.toggle('fa-times');
-    searchBar.classList.toggle('active');
-});
+// Gestion du login (Sécurisé : ne plante pas si le HTML est commenté)
+let formBtn = document.querySelector('#login-btn');
+let loginForm = document.querySelector('.login-form-container');
+let formClose = document.querySelector('#form-close');
 
-formBtn.addEventListener('click', () =>{
-    loginForm.classList.add('active');
-});
-formClose.addEventListener('click', () =>{
-    loginForm.classList.remove('active');
-});
+if (formBtn && loginForm) {
+    formBtn.addEventListener('click', () => {
+        loginForm.classList.add('active');
+    });
+}
+if (formClose && loginForm) {
+    formClose.addEventListener('click', () => {
+        loginForm.classList.remove('active');
+    });
+}
 
-/*bouton voir plus*/
+// --- SOLUTION POUR LE BOUTON VOIR PLUS ---
 const btn = document.getElementById("showMoreBtn");
-    const moreCards = document.getElementById("moreCards");
+const moreCards = document.getElementById("moreCards");
 
+if (btn && moreCards) {
     btn.addEventListener("click", function () {
-        if (moreCards.style.display === "none") {
+        // On vérifie "none" ou vide pour le premier clic
+        if (moreCards.style.display === "none" || moreCards.style.display === "") {
             moreCards.style.display = "block";
             btn.innerHTML = "↑ Voir moins";
         } else {
@@ -729,6 +715,16 @@ const btn = document.getElementById("showMoreBtn");
             btn.innerHTML = "↓ Voir plus";
         }
     });
+}
+
+// Reset au scroll
+window.onscroll = () => {
+    if (searchBtn) searchBtn.classList.remove('fa-times');
+    if (searchBar) searchBar.classList.remove('active');
+    if (menu) menu.classList.remove('fa-times');
+    if (navbar) navbar.classList.remove('active');
+    if (loginForm) loginForm.classList.remove('active');
+};
 </script>
 
     

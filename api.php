@@ -1,17 +1,20 @@
 <?php
 // ============================================
 // api.php — API AJAX (GET/POST/DELETE)
+//Il agit comme un Contrôleur
 // ============================================
 require_once 'db.php';
 require_once 'auth.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
+//Vérification de sécurité : Il appelle "isLoggedIn()". Si vous n'êtes pas connecté, l'API refuse de répondre.
 if (!isLoggedIn()) {
     echo json_encode(['error' => 'Non authentifié']);
     exit;
 }
 
+//Le système d'Actions : Le code utilise une variable "$action" (reçue via l'URL ou un formulaire) pour savoir quoi faire.
 $action = $_GET['action'] ?? $_POST['action'] ?? '';
 
 // ─── HELPER ────────────────────────────────────────
@@ -26,7 +29,8 @@ if ($action === 'stats') {
 
     $today = date('Y-m-d');
 
-    $res_today = $pdo->query("SELECT COUNT(*) FROM reservations WHERE DATE(date_reservation) = '$today'")->fetchColumn();
+    $res_today = $pdo->query("SELECT COUNT(*) FROM reservations WHERE DATE(date_reservation) = '$today'")->fetchColumn(); //Calcule le nombre de réservations du jour.
+    //Compte le total des voyages, hôtels et utilisateurs.
     $total_voyages = $pdo->query("SELECT COUNT(*) FROM voyages")->fetchColumn();
     $total_hotels  = $pdo->query("SELECT COUNT(*) FROM hotels")->fetchColumn();
     $total_users   = $pdo->query("SELECT COUNT(*) FROM utilisateurs")->fetchColumn();
@@ -59,10 +63,12 @@ if ($action === 'stats') {
 }
 
 // ─── VOYAGES ───────────────────────────────────────
+//Lecture (get_voyages, get_hotels) : Récupère la liste complète depuis la base.
 if ($action === 'get_voyages') {
     respond(['data' => $pdo->query("SELECT * FROM voyages ORDER BY created_at DESC")->fetchAll()]);
 }
-
+//Écriture (add_, edit_, delete_) : Utilise des requêtes préparées (avec des ?) 
+//pour insérer, modifier ou supprimer des entrées de manière sécurisée.
 if ($action === 'add_voyage' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare("INSERT INTO voyages (nom, destination, date_depart, prix, nb_personnes, description) VALUES (?,?,?,?,?,?)");
     $stmt->execute([
@@ -121,6 +127,8 @@ if ($action === 'delete_hotel' && $_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // ─── RÉSERVATIONS ──────────────────────────────────
+//La fonction get_reservations fait une Jointure SQL (LEFT JOIN). 
+//Cela permet d'afficher le nom du voyage et de l'hôtel au lieu de simples numéros d'ID.
 if ($action === 'get_reservations') {
     $data = $pdo->query("
         SELECT r.*, v.nom AS voyage_nom, h.nom AS hotel_nom
@@ -180,6 +188,8 @@ if ($action === 'add_utilisateur' && $_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if ($action === 'edit_utilisateur' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($_POST['mot_de_passe'])) {
+
+        //password_hash pour que les mots de passe ne soient jamais stockés "en clair" dans la base.
         $hash = password_hash($_POST['mot_de_passe'], PASSWORD_DEFAULT);
         $stmt = $pdo->prepare("UPDATE utilisateurs SET nom=?, email=?, mot_de_passe=?, role=? WHERE id=?");
         $stmt->execute([trim($_POST['nom']), trim($_POST['email']), $hash, $_POST['role'], (int)$_POST['id']]);
@@ -207,7 +217,7 @@ if ($action === 'save_parametres' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $keys = ['site_name','langue','devise','fuseau_horaire','deux_facteurs','alertes_connexion',
              'duree_session','email_nouvelle_reservation','email_nouvel_utilisateur',
              'rapport_quotidien','email_notification'];
-    $stmt = $pdo->prepare("INSERT INTO parametres (cle, valeur) VALUES (?,?) ON DUPLICATE KEY UPDATE valeur=VALUES(valeur)");
+    $stmt = $pdo->prepare("INSERT INTO parametres (cle, valeur) VALUES (?,?) ON DUPLICATE KEY UPDATE valeur=VALUES(valeur)"); //Si le paramètre existe, mets-le à jour ; sinon, crée-le
     foreach ($keys as $key) {
         if (isset($_POST[$key])) {
             $stmt->execute([$key, $_POST[$key]]);
