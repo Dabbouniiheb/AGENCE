@@ -19,19 +19,17 @@
     <div id="menu-bar" class="fas fa-bars"></div>
     <a href="#" class="logo"><span>V</span>oyages</a>
     <nav class="navbar">
-        <a href="#accueil">accueil</a>
-        <a href="#forfait">forfaits camping</a>
-        <a href="#service">services</a>
-        <a href="#galerie">galerie</a>
-        <a href="#avis">avis</a>
-        <a href="#reserver">reserver</a>
-        <a href="#contact">contact</a>
+        <a href="index.html#accueil">accueil</a>
+        <a href="index.html#forfait">forfaits camping</a>
+        <a href="index.html#service">services</a>
+        <a href="index.html#galerie">galerie</a>
+        <a href="index.html#avis">avis</a>
+        <a href="index.html#reserver">reserver</a>
+        <a href="index.html#contact">contact</a>
     </nav>
     <div class="icons">
         <i class="fas fa-search" id="search-btn"></i>
-        <a href="lindex_login.html">
-          <i class="fas fa-user" id="login-btn"></i>
-        </a>
+        <a href="Login.php"><i class="fas fa-user" id="login-btn"></i></a>
     </div>
     <form action="" class="search-bar-container">
         <input type="search" id="search-bar" placeholder="rechercher un séjour camping..." />
@@ -39,7 +37,7 @@
     </form>
   </header>
 
-  <!-- Login form -->
+  <!---- Login form 
   <div class="login-form-container">
     <i class="fas fa-times" id="form-close"></i>
     <form action="">
@@ -52,10 +50,10 @@
         <p>forget password? <a href="#">click here</a></p>
         <p>don't have an account? <a href="#">register now</a></p>
     </form>
-  </div>
+  </div>-->
 
   <!-- HERO BANNER -->
-  <section class="hero">
+  <section class="hero" style="background: url('image/co.jpg') center center / cover no-repeat;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>CAMPING</h1>
@@ -270,13 +268,13 @@
         </div>
         <div class="box">
           <h3>liens rapides </h3>
-          <a href="#accueil">accueil</a>
-          <a href="#forfait">forfaits camping</a>
-          <a href="#service">services</a>
-          <a href="#galerie">galerie</a>
-          <a href="#avis">avis</a>
-          <a href="#reserver">reserver</a>
-          <a href="#contact">contact</a>
+          <a href="index.html#accueil">Accueil</a>
+          <a href="index.html#forfait">Forfait</a>
+          <a href="index.html#service">Service</a>
+          <a href="index.html#galerie">Galerie</a>
+          <a href="index.html#avis">Avis</a>
+          <a href="index.html#reserver">Réserver</a>
+          <a href="index.html#contact">Contact</a>
         </div>
         <div class="box">
             <h3>contactez-nous</h3>
