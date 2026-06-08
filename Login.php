@@ -3,8 +3,20 @@
 // login.php — Page de connexion
 // ============================================
 session_start();
-require_once 'db.php';
-require_once 'auth.php';
+
+// Connexion dédiée à la base demandée (phpMyAdmin: voyage_db1)
+$conn = mysqli_connect("localhost", "root", "", "voyage_db1");
+if (!$conn) {
+    die("Connexion échouée: " . mysqli_connect_error());
+}
+mysqli_set_charset($conn, "utf8mb4");
+
+// Compatibilité: priorité à `utilisateur` (demandé), fallback `utilisateurs`
+$table = "utilisateur";
+$tableCheck = mysqli_query($conn, "SHOW TABLES LIKE 'utilisateur'");
+if (!$tableCheck || mysqli_num_rows($tableCheck) === 0) {
+    $table = "utilisateurs";
+}
 
 $success = "";
 $error = '';
@@ -14,53 +26,97 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email'] ?? '');
     $password = trim($_POST['password'] ?? '');
 
-    if ($email && $password) {
+    if (isset($_POST['register'])) {
+        $nom = trim($_POST['nom'] ?? '');
 
-        // Recherche utilisateur
-        $stmt = $pdo->prepare("
-            SELECT * FROM utilisateurs
-            WHERE email = ?
-            AND mot_de_passe = ?
-            LIMIT 1
-        ");
+        if ($nom && $email && $password) {
+            $checkSql = "SELECT id FROM {$table} WHERE email = ? LIMIT 1";
+            $check = mysqli_prepare($conn, $checkSql);
+            mysqli_stmt_bind_param($check, "s", $email);
+            mysqli_stmt_execute($check);
+            $checkResult = mysqli_stmt_get_result($check);
 
-        $stmt->execute([$email, $password]);
+            if ($checkResult && mysqli_fetch_assoc($checkResult)) {
+                $error = "Email déjà utilisé.";
+            } else {
+                $hash = password_hash($password, PASSWORD_DEFAULT);
 
-        $user = $stmt->fetch();
+                // Colonnes demandées: name/nom, email, password
+                $insertSql = "INSERT INTO {$table} (nom, email, password) VALUES (?, ?, ?)";
+                $stmt = mysqli_prepare($conn, $insertSql);
+                if ($stmt) {
+                    mysqli_stmt_bind_param($stmt, "sss", $nom, $email, $hash);
+                    if (mysqli_stmt_execute($stmt)) {
+                        $success = "Compte créé avec succès.";
+                    } else {
+                        $error = "Erreur lors de l'inscription.";
+                    }
+                } else {
+                    // Fallback si la colonne s'appelle mot_de_passe au lieu de password
+                    $insertSql = "INSERT INTO {$table} (nom, email, mot_de_passe) VALUES (?, ?, ?)";
+                    $stmt = mysqli_prepare($conn, $insertSql);
+                    if ($stmt) {
+                        mysqli_stmt_bind_param($stmt, "sss", $nom, $email, $hash);
+                        if (mysqli_stmt_execute($stmt)) {
+                            $success = "Compte créé avec succès.";
+                        } else {
+                            $error = "Erreur lors de l'inscription.";
+                        }
+                    } else {
+                        $error = "Structure de table incompatible (colonnes utilisateur).";
+                    }
+                }
+            }
+        } else {
+            $error = "Veuillez remplir tous les champs.";
+        }
+    }
 
+    if (isset($_POST['login']) && $email && $password) {
+        // Recherche utilisateur par email
+        $querySql = "SELECT * FROM {$table} WHERE email = ? LIMIT 1";
+        $stmt = mysqli_prepare($conn, $querySql);
+        mysqli_stmt_bind_param($stmt, "s", $email);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        $user = $result ? mysqli_fetch_assoc($result) : null;
+
+        $storedHash = '';
         if ($user) {
+            if (isset($user['password'])) {
+                $storedHash = $user['password'];
+            } elseif (isset($user['mot_de_passe'])) {
+                $storedHash = $user['mot_de_passe'];
+            }
+        }
 
-            // Vérification du rôle
-            if ($user['role'] === 'Admin') {
+        if ($user && $storedHash && password_verify($password, $storedHash)) {
 
-                $_SESSION['admin_id']   = $user['id'];
-                $_SESSION['admin_nom']  = $user['nom'];
-                $_SESSION['admin_role'] = $user['role'];
+            // Session utilisateur
+            $_SESSION['id'] = $user['id'] ?? null;
+            $_SESSION['nom'] = $user['nom'] ?? '';
+            $_SESSION['email'] = $user['email'] ?? '';
+            $_SESSION['role'] = $user['role'] ?? 'client';
 
+            $role = strtolower(trim((string)($_SESSION['role'] ?? 'client')));
+            if ($role === 'admin') {
+                $_SESSION['admin_id'] = $_SESSION['id'];
+                $_SESSION['admin_nom'] = $_SESSION['nom'];
+                $_SESSION['admin_role'] = $_SESSION['role'];
                 header('Location: admin.php');
                 exit;
-
-            } 
-            elseif ($user['role'] === 'Client') {
-                echo("client ok");
-                $_SESSION['client_id']   = $user['id'];
-                $_SESSION['client_nom']  = $user['nom'];
-                $_SESSION['client_role'] = $user['role'];
-
+            } else {
+                $_SESSION['client_id'] = $_SESSION['id'];
+                $_SESSION['client_nom'] = $_SESSION['nom'];
+                $_SESSION['client_role'] = $_SESSION['role'];
                 header('Location: index.html');
                 exit;
             }
-
         } else {
-
             $error = "Email ou mot de passe incorrect.";
-
         }
-
-    } else {
-
+    } elseif (isset($_POST['login'])) {
         $error = "Veuillez remplir tous les champs.";
-
     }
 }
 ?>
